@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments | Shifa Al Bawadi Medical</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i data-lucide="clock" class="icon-sm"></i> 24/7 Emergency Services</span>
+                <span><i data-lucide="map-pin" class="icon-sm"></i> Al Makarunah Branch, Jeddah</span>
+            </div>
+            <div class="top-contact">
+                <a href="tel:0126625908"><i data-lucide="phone" class="icon-sm"></i> 012 6625908</a>
+                <a href="tel:+966536312869"><i data-lucide="smartphone" class="icon-sm"></i> +966 536312869</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="logo">
+                <img src="./assets/transparent_logo.png" alt="Shifa Al Bawadi Logo" id="logo-img">
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="departments.html" class="active">Departments</a>
+                <a href="doctors.html">Doctors</a>
+                <a href="store.html">Offers & Store</a>
+                <a href="dermatology.html">Dermatology</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="mobile-toggle" id="mobile-toggle"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="internal-header departments-header">
+            <div class="container">
+                <h1>Our Medical Departments</h1>
+                <p>Comprehensive healthcare facilities backed by state-of-the-art clinical technology.</p>
+            </div>
+        </section>
+
+        <!-- Departments Section -->
+        <section class="departments section-padding">
+            <div class="container">
+                <div class="dept-grid">
+                    <a href="contact.html" class="dept-card">
+                        <img src="./assets/ent.jpg" alt="ENT (Ear, Nose, Throat)">
+                        <div class="dept-info">
+                            <h3>ENT (Ear, Nose, Throat)</h3>
+                            <p>From tonsilitis to hearing impairment, we treat all head and neck ailments efficiently.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="contact.html" class="dept-card">
+                        <div class="dept-icon"><i data-lucide="smile"></i></div>
+                        <div class="dept-info">
+                            <h3>Dental Services</h3>
+                            <p>Root canals, braces, teeth whitening, and general dental surgery.</p>
+                        </div>
+                    </a>
+                    <a href="contact.html" class="dept-card">
+                        <img src="./assets/ophthalmology.jpg" alt="Ophthalmology">
+                        <div class="dept-info">
+                            <h3>Ophthalmology</h3>
+                            <p>Vision correction, cataract surgery, and modern optical center services available all
+                                day.</p>
+                        </div>
+                    </a>
+                    <a href="contact.html" class="dept-card">
+                        <div class="dept-icon"><i data-lucide="activity"></i></div>
+                        <div class="dept-info">
+                            <h3>Orthopedic</h3>
+                            <p>Treating sports injuries, bone fractures, and providing comprehensive physical
+                                rehabilitation.</p>
+                        </div>
+                    </a>
+                    <a href="contact.html" class="dept-card">
+                        <div class="dept-icon"><i data-lucide="heart"></i></div>
+                        <div class="dept-info">
+                            <h3>Internal Medicine</h3>
+                            <p>Managing chronic conditions like diabetes, hypertension, and asthma through routine
+                                checks.</p>
+                        </div>
+                    </a>
+                    <a href="contact.html" class="dept-card">
+                        <div class="dept-icon"><i data-lucide="baby"></i></div>
+                        <div class="dept-info">
+                            <h3>Pediatrics</h3>
+                            <p>Gentle, compassionate, and expert care tailored strictly for newborns, infants, and
+                                adolescents.</p>
+                        </div>
+                    </a>
+                    <a href="dermatology.html" class="dept-card">
+                        <div class="dept-icon"><i data-lucide="sun"></i></div>
+                        <div class="dept-info">
+                            <h3>Dermatology & Laser</h3>
+                            <p>Advanced aesthetic treatments, hair removal, and skin rejuvenation logic.</p>
+                        </div>
+                    </a>
+                    <a href="store.html" class="dept-card">
+                        <div class="dept-icon"><i data-lucide="pill"></i></div>
+                        <div class="dept-info">
+                            <h3>24/7 Pharmacy</h3>
+                            <p>Always stocked, covering prescriptive medicine and over-the-counter supplements.</p>
+                        </div>
+                    </a>
+                    <a href="departments.html" class="dept-card">
+                        <div class="dept-icon"><i data-lucide="droplet"></i></div>
+                        <div class="dept-info">
+                            <h3>Urology</h3>
+                            <p>Specialized care for urinary tract conditions and male reproductive health.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer snippet -->
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>&copy; 2026 Shifa Al Bawadi Medical Services Co. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

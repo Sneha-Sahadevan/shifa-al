@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers & Packages | Shifa Al Bawadi Store</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i data-lucide="clock" class="icon-sm"></i> 24/7 Emergency Services</span>
+                <span><i data-lucide="map-pin" class="icon-sm"></i> Al Makarunah Branch, Jeddah</span>
+            </div>
+            <div class="top-contact">
+                <a href="tel:0126625908"><i data-lucide="phone" class="icon-sm"></i> 012 6625908</a>
+                <a href="tel:+966536312869"><i data-lucide="smartphone" class="icon-sm"></i> +966 536312869</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="logo">
+                <img src="./assets/transparent_logo.png" alt="Shifa Al Bawadi Logo" id="logo-img">
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="departments.html">Departments</a>
+                <a href="doctors.html">Doctors</a>
+                <a href="store.html" class="active">Offers & Store</a>
+                <a href="dermatology.html">Dermatology</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="mobile-toggle" id="mobile-toggle"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="internal-header">
+            <div class="container">
+                <h1>Online Medical Store</h1>
+                <p>Browse and purchase our exclusive medical packages, laser sessions, and comprehensive health checks
+                    online.</p>
+            </div>
+        </section>
+
+        <!-- Store Filters -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="department-filters" id="store-filters">
+                    <button class="filter-btn active" data-filter="all">All Packages</button>
+                    <button class="filter-btn" data-filter="dermatology">Dermatology & Laser</button>
+                    <button class="filter-btn" data-filter="dental">Dental</button>
+                    <button class="filter-btn" data-filter="health">Health Checks</button>
+                </div>
+
+                <div class="offers-grid" id="offers-container">
+                    <!-- Dermatology -->
+                    <div class="offer-card popular-offer package-card" data-category="dermatology">
+                        <div class="popular-badge">Top Seller</div>
+                        <div class="offer-price">SAR 499</div>
+                        <h3>Full Body Laser Session</h3>
+                        <p>One complete session without back/stomach. Uses advanced cooling technology.</p>
+                        <ul class="text-left" style="margin: 15px 0; font-size: 0.9rem; color: var(--text-muted);">
+                            <li><i data-lucide="check" class="icon-sm" style="color:var(--secondary)"></i> No pain</li>
+                            <li><i data-lucide="check" class="icon-sm" style="color:var(--secondary)"></i> Expert
+                                technicians</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary w-100">Add to Cart</a>
+                    </div>
+
+                    <div class="offer-card package-card" data-category="dermatology">
+                        <div class="offer-price">SAR 990</div>
+                        <h3>3 Laser Sessions (Bikini/Underarm)</h3>
+                        <p>Special package for 3 focused sessions.</p>
+                        <a href="contact.html" class="btn btn-outline-dark w-100 mt-3">Add to Cart</a>
+                    </div>
+
+                    <div class="offer-card package-card" data-category="dermatology">
+                        <div class="offer-price">SAR 850</div>
+                        <h3>Deep Skin Cleansing (HydraFacial)</h3>
+                        <p>Advanced facial cleansing and peeling for instant glow.</p>
+                        <a href="contact.html" class="btn btn-outline-dark w-100 mt-3">Add to Cart</a>
+                    </div>
+
+                    <!-- Dental -->
+                    <div class="offer-card package-card" data-category="dental">
+                        <div class="offer-price">SAR 199</div>
+                        <h3>Teeth Whitening Routine</h3>
+                        <p>Complete teeth cleaning and polishing plus consultation.</p>
+                        <a href="contact.html" class="btn btn-outline-dark w-100 mt-3">Add to Cart</a>
+                    </div>
+
+                    <!-- Health Checkup -->
+                    <div class="offer-card popular-offer package-card" data-category="health">
+                        <div class="popular-badge">Foundation Day Offer</div>
+                        <div class="offer-price">SAR 299</div>
+                        <h3>Comprehensive Wellness Check</h3>
+                        <p>Includes CBC, Vitamin D, B12, Thyroid, Lipid profile, and glucose analysis.</p>
+                        <a href="contact.html" class="btn btn-primary w-100 mt-3">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer snippet -->
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>&copy; 2026 Shifa Al Bawadi Medical Services Co. All Rights Reserved.</p>
+                <div class="bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+    <script>
+        // Packages filtering logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.package-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button state
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    // Filter cards based on data-category matching
+                    cards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+
+                        if (filterValue === 'all' || cardCategory === filterValue) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
