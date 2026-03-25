@@ -277,6 +277,24 @@ body {
     height: 48px;
 }
 
+.accreditation-link {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.accreditation-logo {
+    height: 40px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.accreditation-logo:hover {
+    transform: scale(1.05);
+}
+
 
 
 .nav-links {
@@ -608,14 +626,17 @@ body {
 }
 
 .practitioner-card {
-    background: var(--bg-main);
-    border-radius: var(--radius-md);
+    background: #FFFFFF;
+    border-radius: var(--radius-sm);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
     text-align: center;
     cursor: pointer;
     transition: var(--transition);
-    border: none;
+    border: 1px solid var(--border-color);
+    position: relative;
+    padding-top: 60px; /* Space for fixed-height header */
+    min-width: 0; /* Prevents large intrinsic PNG sizes from overriding exactly 1fr width constraints in CSS Grid */
 }
 
 .practitioner-card:hover {
@@ -624,16 +645,21 @@ body {
 }
 
 .card-header {
-    background-color: #38B0AE;
-    /* Teal / Cyan */
-    color: white;
-    padding: 15px 10px 10px;
+    background-color: #FFFFFF !important;
+    color: var(--primary);
+    padding: 0;
     display: flex;
     flex-direction: column;
-    border-bottom-left-radius: 50% 20px;
-    border-bottom-right-radius: 50% 20px;
-    position: relative;
-    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 10;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .dept-title {
@@ -642,49 +668,56 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 3px;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--primary); /* Fix color visibility */
+    display: block;
+}
+
+body.lang-ar .dept-title {
+    display: none;
 }
 
 .dept-arabic {
     font-size: 1.15rem;
     font-weight: 700;
+    display: none;
+}
+
+body.lang-ar .dept-arabic {
+    display: block;
 }
 
 .img-wrapper {
-    background-color: #38B0AE;
-    margin-top: -15px;
-    /* pull up behind rounded header */
-    padding-top: 25px;
+    background-color: #FFFFFF !important;
+    margin-top: 0;
+    padding-top: 0;
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 2px, transparent 2px);
-    background-size: 20px 20px;
+    display: none;
 }
 
 .practitioner-img {
-    width: 220px;
-    height: 220px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1; /* 1:1 perfectly trims the bottom 20% of the 800x1000 canvas to remove blank space natively */
     object-fit: cover;
-    object-position: top;
-    border-radius: 50%;
-    margin-bottom: -50px;
+    object-position: top; /* Locks the high head level from the python script */
+    border-radius: 0;
     position: relative;
     z-index: 2;
-    border: 4px solid var(--bg-main);
+    border: none;
+    display: block;
 }
 
 .practitioner-details {
-    padding: 60px 20px 20px;
-    background-color: var(--bg-main);
+    padding: 20px;
+    background-color: #FFFFFF;
+    text-align: center;
 }
 
 .practitioner-name {
@@ -1342,4 +1375,20 @@ body {
     transform: translateY(-50%);
     width: 150px;
     height: auto;
+}
+
+/* Scroll Revealing Animations */
+.fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

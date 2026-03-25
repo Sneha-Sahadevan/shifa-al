@@ -1,0 +1,489 @@
+Alice 17 in 1 Comprehensive Instrument
+NV-WA16 user manual
+01Preface
+Notice
+Manufacturer's Responsibility
+Guarantee
+In this manual
+Please use it safelyWarning：       First of all, let us express our heartfelt gratitude to the customers who have purchased our company's instruments
+This manual is written for customer service to better use this instrument.We hope that our company's products and
+services will bring you respectful treatment.。
+        This product must be used strictly in accordance with the instructions in this manual,Any consequences resulting
+from misuse or misuse of methods other than those speciﬁed in the instruction manual shall be the responsibility of 
+the individual,The company does not assume any responsibility. Our company does not provide any form of guarantee
+Including (but not limited to) implied warranties of merchantability and suitability for a speciﬁc purpose.Our company 
+shall not be liable for any errors contained in this material, or for incidental or indirect damages caused by the provision
+actual performance, and use of this manual.This manual contains proprietary information protected by patent law. 
+All rights reserved. Without the written consent of our company, no part of this manual may be photographed, copied,
+copied, or translated into any other language.The content contained in the manual can be changed without
+notiﬁcation to the user.
+        Our company is only responsible for the safety and reliability of the instrument under the following circumstances
+Namely, assembly operations, readjustment, improvement, and maintenance are all carried out by personnel
+recognized by our company.The relevant electrical equipment complies with national standards and the instruments
+are used in accordance with operating instructions.
+        This is a beauty instrument.
+        If the beauty institution responsible for using this instrument cannot achieve a satisfactory operating plan, it will
+cause abnormal instrument failure and may endanger personal health. Currently, our company will provide a paid
+circuit diagram and a list of calibration methods and other information to assist users in repairing the instrument
+parts classiﬁed by our company as repairable by appropriate and qualiﬁed technicians upon request.
+        Manufacturing process and raw materials: Our company guarantees that the instruments (except for accessories) 
+will have no production process or raw material failures within one year from the date of shipment under frequent use
+and maintenance. Any inspection conducted by our company is not perfect.
+        This user manual contains all general information about this instrument. This is the starting point for new users to
+start using this instrument, as it provides a general introduction to the system, explains how it works, and introduces
+the installation and various operating methods of this instrument. You can ﬁnd the required information through the
+directory.
+        This manual is for personnel who are familiar with the beauty knowledge related to this instrument and have
+experience in using beauty operation equipment.
+        The following are the symbols used in the instrument and manual. In order to use the instrument correctly, prevent
+harm to operators and patients, protect the instrument from damage, and avoid property damage, please pay attention
+to the types and meanings of the following symbols.
+warningsIndicates that failure to use in accordance with
+norms can result in signiﬁcant injury to personnel
+Indicates that failure to use in accordance with
+norms may result in signiﬁcant injury to persons
+Indicates that non-compliant use may result in
+personnel injury or instrument failuredistress
+take note of
+take note of Please consult the manual
+note Reminders to emphasize important informationThe notation indicates mandatory items
+A symbol indicates a prohibited item
+Marks indicate items for attention
+Indicates that the type of protection to which the
+equipment belongs is Type B
+021. Precautions
+1.1 Precautions for Use
+1) Please do not use parallel sockets to avoid ﬁre accidents;
+2)  When replacing a fuse, be sure to turn oﬀ the power switch to avoid ﬁre and electric shock to personnel;
+3) Must use 220V ± 22 V, 50HZ ± 1 HZ power supply and eﬀectively grounded sockets;
+4) There is a risk of ﬁre or electric shock when using damaged or processed power cords;
+5) Do not excessively bend or twist the power cord to avoid ﬁre or electric shock accidents;
+6) When the instrument is loose, dropped or damaged, please contact the company in a timely manner;
+7) Do not use this instrument in unstable environments such as tilting, vibration, and impact;
+8) There should be no water or debris entering the interior of the instrument. In case of foreign objects entering,
+     please contact our company in a timely manner;
+9) When moving the instrument, the power plug must be unplugged ﬁrst;
+10) When moving the instrument, vibration should be avoided as much as possible;
+11) The instrument should be placed in a stable place, with at least 5cm of space left around to ensure air
+       circulation and facilitate heat dissipation of the instrument;
+12) The instrument should not be covered with anything to prevent blockage of the ventilation opening;
+13) Avoid using this instrument in the following environments: places exposed to sunlight; High humidity
+       environment; Near water environment; Vibration and inclined places; Strong magnetic ﬁeld environment
+       etc; Places where electromagnetic waves and impulse voltages occur; Storage facilities for chemical drugs
+       and places with corrosive gases;
+14）This instrument shall not be placed or used near radios, televisions, copiers, fax machines, etc;
+15）Do not use it in conjunction with other instruments (such as microwaves) to avoid interference between
+         instruments and cause misoperation.
+1）Be sure to read the user manual carefully before starting up. The operator must be familiar with the user
+      manual and operating methods, and the instrument must be managed by a dedicated person;
+2）Please ask professional personnel to guide the setting of operating parameters;
+3）Conﬁrm whether the instrument is in normal operation before use;
+4）To conﬁrm whether the grounding wire is connected correctly;
+5）To conﬁrm whether all wires are correctly connected and safe;
+6） When using instruments together, it is important to use them correctly, otherwise there may be danger and
+       extreme caution must be taken.
+1）When abnormal situations occur during the operation of the instrument or patient, the operator should
+      immediately remove the operating handle from the patient, press the stop switch, and stop the use of
+      the instrument;
+2）During the operation of the instrument, it is necessary to continuously observe the condition of the
+      beauty customer and the instrument, and pay attention to any abnormal situations at any time;
+3）This instrument should be used correctly by skilled operators, and personnel other than operators
+      are not allowed to use this instrument.
+1) After the operation is completed, place the control handle back on the control handle rack.
+2) After using the operating handle, the probe should be cleaned properly for future use.Warning:
+1.2 Precautions before use
+1.3 Precautions during use
+1.4 Precautions after use:Warning:
+warningAttention:
+Attention:
+Attention:
+031.5 Precautions for faults, storage, and inspection Warning:
+1.6 Warning and informative instructions Warning:1) Please do not use the instrument in case of abnormal situations. In case of smoke and burnt smell that
+     cannot be operated, there is a risk of ﬁre and electric shock if continued use. Please quickly press the stop
+     button, turn oﬀ the power, unplug the power plug, and immediately contact our company or dealer;
+2) Personnel other than technical personnel are absolutely not allowed to repair or modify instruments.
+     This instrument must not be opened internally; Δ  Attention:
+3) Instruments and components must be inspected regularly；
+4) Do not use cleaning tools that may damage the protective coating of the instrument, such as brushes,
+     brooms, etc;
+5) When the instrument is not used for more than 2 weeks, it must be carefully checked before reuse.
+        When connecting high-frequency equipment and this instrument to the same patient at the same time, the
+electrode position of this instrument may cause burns to the patient's skin tissue and may also cause damage to
+the instrument. When using this instrument near shortwave or microwave equipment (1m), the output of the
+instrument may be unstable due to microwave interference.
+        Using electrodes close to the chest increases the risk of heart ﬁbrillation.
+1、Individuals with sensitive skin and severe acne
+2、Rhythmic devices, implantable deﬁbrillators, or other electromagnetic implantable medical devices
+3、Patients with severe diabetes, hypertension and hyperlipidemia
+4、Individuals with skin infectious diseasesWarning:
+Warning:Attention:
+2. Contraindications
+04Annotations
+The instrument images in this manual are for reference only,
+and colors may vary from batch to batch,
+The design will be optimized based on the actual product12.1-inch integrated
+capacitor screen
+Resolution: 1024x6003. Instrument Overview
+Large size silent wheelErgonomics
+Plug-in bottleHandles and
+Accessory Racks
+Bottles A, B, C, D3.1 Front Explanation
+053.2 Black explanation
+According to the
+the chart below
+Adjustment
+corresponding parameters
+According to the
+the chart above
+Place the
+the appropriate handle
+Power switch,
+Fuses, power sockets
+Three in one module
+Unable to power on
+please prioritize checking
+Is the fuse here blownAccessory rack
+Power socket moduleAdjusting knob
+According to the side
+diagram next to the
+Plug in the handle connectoroutput interface
+Tray with face mask
+MAX
+MINABCD
+Select
+Water
+Air
+Air
+063.3 Side DescriptionWater Polished ABCD Bottles
+Selection
+Hydrofacial Water
+ﬂow regulation
+Hydrofacial
+vacuum regulation
+Diamond Dermbarasion
+Vacuum regulation
+4. Instrument installation instructions
+4.1 Unpacking and Inspection
+4.2 Preservation Environment
+4.3 Installation accessories4.1.1 Carefully remove the instrument and accessories from the packaging box, and store the
+         packagingmaterials for future transportation or storage. Count the attachments.
+4.1.2 Check for any mechanical damage.
+4.3.1 Install the corresponding accessory rack on the host according to the text and image information
+          prompts below the output interfaces on both sides of the instrument.
+4.3.2 According to the text and image information prompts next to the output interfaces on both sides of the
+          instrument, insert the accessories into the corresponding interfaces. Then place the accessories neatly
+          on the accessory rack.If there are any issues, please contact our sales department or agent immediately.
+The instrument should be placed in a clean and ventilated room with a temperature of 5 ℃~40 ℃ and a
+humidity not exceeding 80%, avoiding direct sunlight. And ensure that the ventilation openings are not blocked,
+ensuring that there is at least 5cm of clearance around the instrument. Remember not to place items on the
+instrument, even temporary ones are not allowed.Attention:
+Air ﬁlter
+Waste water bottle
+075. Handle operation methods and steps
+Fixed functional area
+Change to the
+functions selection areaBack to
+language settings
+Functions selection area
+Back to Fixed
+Functions area
+If additional optional functions are required after purchasing the instrum ent,
+After receiving the function handle, follow the operation method provided by  customer
+service to automatically add corresponding functions.
+085.1.1 Select the water mill cleaning icon in the function selection area, and transfer the essence solution into
+         the original solution bottle;
+5.1.2 Select the icon A, B, C, or D of the original liquid bottle on the upper right side of the host knob,
+         adjust the negative pressure intensity and water ﬂow size, click the start button to operate;
+When the prompt on the right indicates that the waste liquid bottle is also full, this function will not be
+available and needs to be operated according to the prompt before it can be used normally
+5.1 The use of hydrofacial  function
+Start/PauseCurrent function icon
+Time adjustment
+Return to
+function selection
+
+09
+5.2.1 Select the V-face icon in the function selection area;
+5.2.2 Adjust time and work intensity, click the start button, and operate on the face;5.2 The use of the V-face function
+Intensity
+ModeStart/PauseCurrent
+function icon
+Time
+adjustment
+Back to
+function selection
+Intensity
+ModeStart/PauseCurrent
+function icon
+Time
+adjustment
+Back to
+function selection
+5.3.1 Select the ﬁve pole color light micro electric icon in the function selection area;
+5.3.2 Adjust time and work intensity, click the start button, and operate on the face;5.3 The Use of Five Pole Color Light Microelectric Function
+10
+5.4.1 Select the water oxygen gun icon in the function selection area;
+5.4.2 Fill the original solution bottle with the original solution, click the start button, and proceed with the operation;5.4 The use of water oxygen spray  function
+Start/Pause
+Start/PauseCurrent
+function icon
+Time
+adjustment
+Back to
+function selection
+Current
+function icon
+Time
+adjustment
+Back to
+function selection
+5.5.1 Select the ﬂat head vibration atomization icon in the function selection area;
+5.5.2 Adjust the energy intensity and mode, click the start button to operate;5.5 The use of ﬂat head vibration atomization function
+Intensity
+Mode
+11
+5.6.1 Select the bipolar temperature wave icon in the function selection area;
+5.6.2 Adjust the time and work intensity, click the start button, and operate on the face or eyes;5.6 The use of bipolar temperature wave function
+5.7.1 Select the vibrating shovel function icon in the function selection area;
+5.7.2 Adjust energy intensity and mode, click the start button, and proceed with the operation;5.7 The use of the skin scrubber functionIntensity
+ModeStart/PauseCurrent
+function icon
+Time
+adjustment
+Back to
+function selection
+Intensity
+ModeStart/PauseCurrent
+function icon
+Time
+adjustment
+Back to
+function selection
+12
+5.8.1 Select the ice hammer icon in the function selection area;
+5.8.2 Click the start button to proceed with the operation;5.8 The use of cold hammer function
+Start/PauseCurrent
+function icon
+Time
+adjustment
+Back to
+function selection
+Current
+function icon
+Time
+adjustment
+Back to
+function selection
+5.9.1 Select the quadrupole scroll wheel icon in the function selection area;
+5.9.2 Adjust time and work intensity, click the start button, and proceed with the operation;5.9 The use of the quadrupole roller function (optional)
+Intensity
+ModeStart/Pause
+13
+5.10.1 Select the oxygen bubble icon in the function selection area;
+5.10.2 Adjust the time, select the probe to be used and the working intensity, click the start button
+            and operate on the face;5.10 The use of oxygen bubble function (optional)
+Intensity
+ModeStart/Pause
+Probe TypeCurrent
+function icon
+Time
+adjustment
+Back to
+function selection
+Current
+function icon
+Time
+adjustment
+Back to
+function selection
+5.11.1 Select the Meiban pen icon in the function selection area;
+5.11.2 Adjust time and work intensity, click the start button, and proceed with the operation;5.11 Use of spot removal Function (Optional)
+Intensity
+ModeStart/Pause
+5.12.1 Select the ozone ion icon in the function selection area;
+5.12.2 Adjust time and work intensity, click the start button, and proceed with the operation;5.12 The use of ozone ion function (optional)
+Intensity
+ModeStart/Pause
+5.13.1 Select the brick and stone micro carved icon in the function selection area;
+5.13.2 Click the start button to proceed with the operation;5.13 The use of diamond dermabrasion (optional)
+Start/PauseCurrent
+function icon
+Time
+adjustment
+Back to
+function selectionCurrent
+function icon
+Time
+adjustment
+Back to
+function selection
+14
+5.14.1 Select the electric microcrystalline icon in the function selection area;
+5.14.2 Click the start button, adjust the options on the controller, and then proceed with the operation;5.14 The use of electric microcrystalline function (optional)
+Start/Pause
+5.15.1 Select the pointed vibration atomization icon in the function selection area;
+5.15.2 Adjust time and work intensity, click the start button, and proceed with the operation;5.15 The use of pointed ultrasonic function (optional)
+Intensity
+ModeStart/PauseCurrent
+function icon
+Time
+adjustment
+Back to
+function selectionCurrent
+function icon
+Time
+adjustment
+Back to
+function selection
+15
+5.16.1 Select the colored light mask icon in the function selection area;
+5.16.2 Click the start button, adjust the options on the mask, and then proceed with the operation;
+5.17.1 Insert the high-frequency handle directly into the corresponding interface of the host;
+5.17.2 Install the required operating head in the front section and op erate it after adjusting the
+           strength at the back end of the handle;5.16 Use of Colorful Mask Function (Optional)
+Start/PauseCurrent
+function icon
+Time
+adjustment
+Back to
+function selection
+5.17 The use of high-frequency function (optional)
+16
+6.1 Do not use irritating skincare or cosmetics within 24 hours after using the instrument
+      and pay attention to sun protection
+6.2 Apply pure moisturizing facial mask for one week
+6.3 For those with thin skin stratum corneum or severe redness and redness in the cheekbones
+       the use of a water polishing pen is prohibited
+6.4 For those with thin skin stratum corneum or severe redness and blood streaks on
+       the cheekbones, the cheekbones should not be worn for too long during RF video operation
+6.5 Patients with severe allergies and severe acne cannot operate
+7.1 Maintenance
+7.2 MaintenanceIf the patient feels uncomfortable, the operation should be stopped immediately to ensure user safety.Warning:
+Warning:Attention:6. Precautions
+7. Maintenance and repair
+7.1.1 Daily inspection
+Management personnel must inspect instruments and components.
+a）Is there a reliable connection between the power socket and the ground? If not, please replace the power socket.
+b）Whether the power cord is deformed, broken, or disconnected: visually inspect whether the cord
+hasdeteriorated or deformed. In some cases, it may cause a ﬁre due to leakage. Please replace the
+power cord with a new one immediately.
+c）Check if there are any abnormalities or broken wires in the control handle: visually inspect whether
+the output line has deteriorated or deformed. If so, replace it immediately.
+d）Please check if the prompts before using the instrument are correct. If not, please stop using it.
+7.1.2 Cleaning
+      When cleaning the instrument, dust must be wiped with a dry and soft cloth, and dirt should be wiped
+      with a soft and damp cloth. Before cleaning this instrument, the power switch must be turned oﬀ and
+      the power cord disconnected.
+7.1.3  Replacement of fuses
+a) Speciﬁcation of power fuse 8A（ Ф 5 x 20mm)
+b) When replacing a fuse, please follow the following steps:
+1）Turn oﬀ the power switch;
+2）Unplug the power plug;
+3）Pry open the fuse housing with a screwdriver;
+4）Remove the damaged fuse and replace it with a new one;
+5）Replace the outer shell of the fuse to its original position;
+6）Plug in the power plug.
+7.1.4 When using the instrument for a long time (more than one year) and cleaning the internal dust stains,
+        it should be carried out by professional maintenance personnel. 
+7.1.5  When the instrument is not in use, it should be placed in a well ventilated and dry place
+         and the instrument should be covered with a dust cover.
+7.2.1 After purchasing the instrument, it is necessary to ﬁll out the warranty card and send it to the
+         manufacturer or agent in order to have the warranty eﬀect; From the date of issuing the invoice for
+         the purchased machine, it is a one-year free warranty for our company's product quality issues
+         with the host (note: warranty is provided with the purc hase ticket and warranty card; the warranty
+         scope here is limited to the instrument host and does n ot include consumables such as accessories
+         that need to be replaced regularly).
+7.2.2 After the warranty period, please contact the manufacturer directly to provide service guarantee.
+7.2.3 When repairing this machine, you must contact our customer service department or dealer. 
+         Do not repair it without authorization, open it yourself,  and our company will not provide warranty.When replacing a fuse, to prevent electric shock, please turn oﬀ the power and unplug the power plug.
+17
+8. Common Troubles and Troubleshooting Methods
+10.  Replacement of accessories
+11. Storage and transportation
+12. Term of Use9. Manufacturer's responsibility 8.1 Instruments can not work properly, do not easily disassemble, should bewiththecompany's
+       customer service department or distributor, by identifying the cause of the failure.
+8.2 Before requesting repair service, check the instrument according to the table below to
+       see if you can handle the problem yourself.
+9.1 The products produced should comply with the product standards, if not in line with our 
+      company is responsible for replacement, return.
+9.2 Because of the product manufacturing defects caused by personal and property damage
+       our company bears the corresponding responsibility, but one of the following circumstances.
+       We are not responsible:
+Parts must be purchased from us when they need to be replaced.
+11.1 Storage: The instrument should be stored in the original box, placed in a well-ventilated
+        clean room, the box should be padded, the ambient temperature is -10 ℃ ~ 40 ℃,
+        the relative humidity is not greater than 93%, does not allow harmful gases, ﬂammable
+        explosive substances and corrosive gases.
+11.2 Transportation: the instrument under packing conditions is suitable for transportation by road,
+        railroad, air and waterway, it should be prevented from violent vibration and shock during
+        loading and unloading and transportation, and it should not be subjected to moisture
+        and it should not be mixed with ﬂammable and corrosive substances, and the speciﬁc
+        requirements should be stipulated in accordance with the order contract.
+12.1 The warranty period of this instrument is 1 year. (Note: human damage is excluded)
+12.2 Warranty for accessories is limited to 3 months. (Note: human damage is excluded)
+12.3 Instruments that have exceeded their service life need to be tested and approved by
+         the engineer for continued use, and the performance of the instrument needs to be
+         tested by the engineer at regular intervals during subsequent use.
+12.4 End-of-life instruments and accessories that have exceeded their useful life should be
+         disposed of in accordance with the relevant local regulations.fault phenomenon CausesTroubleshooting and
+Solutions
+No response
+after booting upPower plug not inserted into outlet;
+Power switch not turned on;
+Power supply fuse blown.Check plugs and sockets
+are not plugged in properly;
+A handle
+Doesn't work properlyJoystick start button not clicked
+Probe not properly installed
+The working head is damaged
+Behind the instrument
+Connector not properly installedClick the handle start button
+Check that the probe is mounted correctly
+Replace working head or silicone ring
+Reinstallation
+leak Silicone ring for sealing bit
+Damaged or missing
+Improper installationReplace silicone ring for sealing
+Send back to factory for repair
+a) Purchasers, operating users do not follow the instructions fo r operation and use, do not follow
+     the safety precautions, warning instructions;
+b) Violation of product transportation, installation, use, mainte nance, storage and other
+     provisions resulting in damage to products, persons and pro perty.
+9.3 Our company implements lifelong maintenance and technical service for the products, and will repair
+       for the users free of charge for the manufacturing quality problems occurring during the speciﬁed quality
+       guarantee period.
+18
+hydroabrasive
+cleanse
+V-shaped face
+Water Oxygen
+airbrush
+bipolar warming
+point-blank shovelFour-pole roller
+(Optional)
+Oxygen Renewal Bubble
+(Optional)Hydro-abrasive cleaning head
+Diamond micro-engraving head
+(Optional)
+Oxygen Bubble Massage Head (Optional)
++ other silicone ring + fuse
+power cable (of an appliance etc)High-frequency probe (optional)
+Spot Pen Probe (optional)Blemish Pen Function
+(Optional)
+Ozone Ion
+(optional)
+Diamond Micro-Engraving
+(Optional)
+Motorized Microcrystalline
+(Optional)
+Tip vibration atomization
+(Optional)
+Color light mask
+(Optional)
+High Frequency
+(Optional)ingredients list
+Pentapole Color Light
+microelectronic
+Flat head
+Vibration atomization
+sledgehammer

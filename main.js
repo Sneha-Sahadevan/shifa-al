@@ -23,6 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
             currentLang = 'ar';
         }
 
+        // Set attributes for CSS-based language switching
+        if (currentLang === 'ar') {
+            document.documentElement.setAttribute('lang', 'ar');
+            document.body.classList.add('lang-ar');
+        } else {
+            document.documentElement.setAttribute('lang', 'en');
+            document.body.classList.remove('lang-ar');
+        }
+
         const langSwitcherWrapper = document.createElement('div');
         langSwitcherWrapper.className = 'custom-lang-wrapper';
         langSwitcherWrapper.innerHTML = `
@@ -148,12 +157,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         doctorCards.forEach(card => {
             card.addEventListener('click', () => {
-                // Populate data
-                modalImg.src = card.getAttribute('data-img');
-                modalName.textContent = card.getAttribute('data-name');
-                modalSpec.textContent = card.getAttribute('data-spec');
-                modalTime.textContent = card.getAttribute('data-time');
-                modalDesc.textContent = card.getAttribute('data-desc');
+                // Populate data from elements instead of attributes
+                const img = card.querySelector('.practitioner-img');
+                const name = card.querySelector('.practitioner-name');
+                const spec = card.querySelector('.practitioner-spec');
+                const time = card.querySelector('.practitioner-schedule');
+                const desc = card.querySelector('.practitioner-hover-info p');
+
+                if (img) {
+                    // Show the FULL image (non-standardized version if available)
+                    let fullImgSrc = img.src;
+                    if (fullImgSrc.includes('_standard.png')) {
+                        fullImgSrc = fullImgSrc.replace('_standard.png', '.png');
+                    }
+                    modalImg.src = fullImgSrc;
+
+                    // Fallback to .jpg if the high-res .png original is missing
+                    modalImg.onerror = function() {
+                        if (this.src.endsWith('.png')) {
+                           this.src = this.src.replace('.png', '.jpg');
+                           this.onerror = null; // Prevent infinite loop
+                        }
+                    };
+                }
+                if (name) modalName.textContent = name.textContent;
+                if (spec) modalSpec.textContent = spec.textContent;
+                if (time) modalTime.textContent = time.textContent;
+                if (desc) modalDesc.textContent = desc.textContent;
 
                 // Open modal
                 modalOverlay.classList.add('active');
