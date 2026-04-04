@@ -203,6 +203,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Trigger backend API call on Book Now interactions
+    document.querySelectorAll('.offer-card a.btn-primary').forEach(btn => {
+        if (btn.textContent.trim() === 'Book Now') {
+            btn.addEventListener('click', () => {
+                const card = btn.closest('.offer-card');
+                const deptName = card && card.querySelector('h3') ? card.querySelector('h3').textContent.trim() : 'Unknown Service';
+                
+                fetch('/api/notify-booking', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: `User clicked Book Now for ${deptName} on the website.`,
+                        department: deptName
+                    })
+                }).catch(err => console.error('Backend notification failed:', err));
+            });
+        }
+    });
+
 });
 
 // Helper for mobile styles

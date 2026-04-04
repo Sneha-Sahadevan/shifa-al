@@ -44,7 +44,7 @@
                 <a href="doctors.html">Doctors</a>
                 <a href="store.html" class="active">Offers & Store</a>
                 <a href="dermatology.html">Dermatology</a>
-                <a href="blog.html">Blog</a>
+
                 <a href="contact.html">Contact</a>
             </nav>
             <div class="nav-actions">
@@ -62,61 +62,313 @@
             </div>
         </section>
 
-        <!-- Store Filters -->
+                <!-- Store Filters -->
         <section class="section-padding">
             <div class="container">
-                <div class="department-filters" id="store-filters">
-                    <button class="filter-btn active" data-filter="all">All Packages</button>
-                    <button class="filter-btn" data-filter="dermatology">Dermatology & Laser</button>
-                    <button class="filter-btn" data-filter="dental">Dental</button>
-                    <button class="filter-btn" data-filter="health">Health Checks</button>
+                <style>
+                    .category-selector { margin-bottom: 20px; text-align: center; }
+                    .category-sel { padding: 10px; margin: 5px; border-radius: 20px; border: 1px solid var(--primary); background: transparent; color: var(--primary); cursor: pointer; font-weight: 600; }
+                    .category-sel.active { background: var(--primary); color: white; }
+                    .subcategory-container { display: none; text-align: center; margin-bottom: 30px; padding: 15px; background: var(--bg-light); border-radius: 10px; }
+                    .subcategory-container.active { display: block; }
+                    .subcat-btn { padding: 8px 15px; margin: 5px; border-radius: 15px; border: 1px solid var(--secondary); background: transparent; color: var(--secondary); cursor: pointer; font-size: 0.9rem; }
+                    .subcat-btn.active { background: var(--secondary); color: white; }
+                    .offers-grid { display: none; }
+                    .offers-grid.active { display: grid; }
+                    .offer-card { display: none; }
+                    .custom-select-wrapper { position: relative; width: 100%; margin: 10px 0; user-select: none; text-align: left; }
+                    .custom-select { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 5px; background: white; cursor: pointer; color: var(--text-main); font-size: 0.95rem; }
+                    .custom-select:after { content: "▼"; font-size: 0.7em; color: var(--text-muted); }
+                    .custom-options { position: absolute; top: 100%; left: 0; right: 0; background: white; border: 1px solid var(--border-color); border-top: none; border-radius: 0 0 5px 5px; box-shadow: var(--shadow-md); z-index: 10; display: none; max-height: 180px; overflow-y: auto; }
+                    .custom-select-wrapper.open .custom-options { display: block; }
+                    .custom-select-wrapper.open .custom-select { border-radius: 5px 5px 0 0; }
+                    .custom-option { padding: 8px 12px; cursor: pointer; border-bottom: 1px solid #f0f0f0; font-size: 0.95rem; }
+                    .custom-option:last-child { border-bottom: none; }
+                    .custom-option:hover { background: var(--bg-light); }
+                    .custom-option.selected { background: var(--primary-light); font-weight: 600; }
+                </style>
+
+                <div class="category-selector" id="main-categories">
+                    <button class="category-sel active" data-cat="all">All Offers</button>
+                    <button class="category-sel" data-cat="laser">Laser Hair Removal</button>
+                    <button class="category-sel" data-cat="injectables">Beauty Injectables</button>
+                    <button class="category-sel" data-cat="hyperhidrosis">Hyperhidrosis</button>
+                    <button class="category-sel" data-cat="advanced">Advanced Skin & Hair</button>
+                    <button class="category-sel" data-cat="meso">Mesotherapy</button>
+                    <button class="category-sel" data-cat="facial">Facial & Glow</button>
+                    <button class="category-sel" data-cat="acne">Acne & Brightening</button>
+                    <button class="category-sel" data-cat="lip">Lip Care</button>
+                    <button class="category-sel" data-cat="peel">Peeling & Renewal</button>
                 </div>
 
-                <div class="offers-grid" id="offers-container">
-                    <!-- Dermatology -->
-                    <div class="offer-card popular-offer package-card" data-category="dermatology">
+                <!-- Subcategories -->
+                <div class="subcategory-container" id="sub-laser">
+                    <button class="subcat-btn active" data-sub="laser-male">Male</button>
+                    <button class="subcat-btn" data-sub="laser-female">Female</button>
+                </div>
+                <!-- Other categories have no subcats for layout minimalism, we just show all or they can be added similarly. Based on instructions, we mainly filter subcats for laser. For others, we just display all cards under that category. -->
+
+                <div class="offers-grid active" id="offers-container">
+                    
+                    <!-- LASER: MALE -->
+                    <div class="offer-card package-card" data-cat="laser" data-sub="laser-male">
+                        <h3>Beard Contouring Laser</h3>
+                        <p>Precise beard line contouring. Includes free retouch.</p>
+                        <div class="custom-select-wrapper">
+    <div class="custom-select">1 Session - 99<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    <div class="custom-options">
+        <div class="custom-option selected">1 Session - 99<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">3 Sessions - 240<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">6 Sessions - 420<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    </div>
+</div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Beard%20Contouring%20Laser.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="laser" data-sub="laser-male">
+                        <h3>Male: One Area</h3>
+                        <p>Face, armpits, half arm, abdomen, or chest. Includes free retouch.</p>
+                        <div class="custom-select-wrapper">
+    <div class="custom-select">1 Session - 130<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    <div class="custom-options">
+        <div class="custom-option selected">1 Session - 130<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">3 Sessions - 360<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">6 Sessions - 660<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    </div>
+</div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Male%3A%20One%20Area.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
+                    </div>
+
+                    <!-- LASER: FEMALE -->
+                    <div class="offer-card package-card" data-cat="laser" data-sub="laser-female">
+                        <h3>Female: One Area</h3>
+                        <p>Face, armpits, half arms, bikini, abdomen, or half legs. Free retouch.</p>
+                        <div class="custom-select-wrapper">
+    <div class="custom-select">1 Session - 90<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    <div class="custom-options">
+        <div class="custom-option selected">1 Session - 90<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">3 Sessions - 240<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">6 Sessions - 420<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    </div>
+</div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Female%3A%20One%20Area.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="laser" data-sub="laser-female">
                         <div class="popular-badge">Top Seller</div>
-                        <div class="offer-price">SAR 499</div>
-                        <h3>Full Body Laser Session</h3>
-                        <p>One complete session without back/stomach. Uses advanced cooling technology.</p>
-                        <ul class="text-left" style="margin: 15px 0; font-size: 0.9rem; color: var(--text-muted);">
-                            <li><i data-lucide="check" class="icon-sm" style="color:var(--secondary)"></i> No pain</li>
-                            <li><i data-lucide="check" class="icon-sm" style="color:var(--secondary)"></i> Expert
-                                technicians</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-primary w-100">Add to Cart</a>
+                        <h3>Full Body (without back & abdomen)</h3>
+                        <p>Smooth full body laser covering major areas. Free retouch.</p>
+                        <div class="custom-select-wrapper">
+    <div class="custom-select">1 Session - 200<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    <div class="custom-options">
+        <div class="custom-option selected">1 Session - 200<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">4 Sessions - 720<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    </div>
+</div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Full%20Body%20%28without%20back%20%26%20abdomen%29.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="laser" data-sub="laser-female">
+                        <h3>Full Body (Complete Coverage)</h3>
+                        <p>Comprehensive laser including back & abdomen. Free retouch.</p>
+                        <div class="custom-select-wrapper">
+    <div class="custom-select">1 Session - 220<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    <div class="custom-options">
+        <div class="custom-option selected">1 Session - 220<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">4 Sessions - 800<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    </div>
+</div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Full%20Body%20%28Complete%20Coverage%29.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
                     </div>
 
-                    <div class="offer-card package-card" data-category="dermatology">
-                        <div class="offer-price">SAR 990</div>
-                        <h3>3 Laser Sessions (Bikini/Underarm)</h3>
-                        <p>Special package for 3 focused sessions.</p>
-                        <a href="contact.html" class="btn btn-outline-dark w-100 mt-3">Add to Cart</a>
+                    <!-- INJECTABLES -->
+                    <div class="offer-card package-card" data-cat="injectables" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 250+</div>
+                        <h3>Botox Injection</h3>
+                        <p>Anti-aging and wrinkle reduction.</p>
+                        <div class="custom-select-wrapper">
+    <div class="custom-select">One Area (Bunny lines/gummy smile/brow lift) - 250<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    <div class="custom-options">
+        <div class="custom-option selected">One Area (Bunny lines/gummy smile/brow lift) - 250<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">1 ml Botox - 660<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    </div>
+</div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Botox%20Injection.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="injectables" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 700</div>
+                        <h3>Dermal Fillers (1 ml)</h3>
+                        <p>Restore volume and contour lines.</p>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Dermal%20Fillers%20%281%20ml%29.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-3">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="injectables" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 1,100</div>
+                        <h3>Profhilo Therapy</h3>
+                        <p>Deep skin hydration and tightening bio-remodeling.</p>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Profhilo%20Therapy.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-3">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="injectables" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 800</div>
+                        <h3>Salmon DNA Therapy</h3>
+                        <p>Cellular regeneration and intensive skin renewal.</p>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Salmon%20DNA%20Therapy.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-3">Book Now</a>
                     </div>
 
-                    <div class="offer-card package-card" data-category="dermatology">
-                        <div class="offer-price">SAR 850</div>
-                        <h3>Deep Skin Cleansing (HydraFacial)</h3>
-                        <p>Advanced facial cleansing and peeling for instant glow.</p>
-                        <a href="contact.html" class="btn btn-outline-dark w-100 mt-3">Add to Cart</a>
+                    <!-- HYPERHIDROSIS -->
+                    <div class="offer-card package-card" data-cat="hyperhidrosis" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 1,200</div>
+                        <h3>Underarm Botox</h3>
+                        <p>Treat excessive sweating effectively.</p>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Underarm%20Botox.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-3">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="hyperhidrosis" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 1,400</div>
+                        <h3>Hands/Feet Botox</h3>
+                        <p>Stop excessive sweating in hands or feet.</p>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Hands/Feet%20Botox.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-3">Book Now</a>
                     </div>
 
-                    <!-- Dental -->
-                    <div class="offer-card package-card" data-category="dental">
-                        <div class="offer-price">SAR 199</div>
-                        <h3>Teeth Whitening Routine</h3>
-                        <p>Complete teeth cleaning and polishing plus consultation.</p>
-                        <a href="contact.html" class="btn btn-outline-dark w-100 mt-3">Add to Cart</a>
+                    <!-- ADVANCED SKIN -->
+                    <div class="offer-card package-card" data-cat="advanced" data-sub="">
+                        <h3>Plasma Renewal Therapy</h3>
+                        <p>Hair or skin rejuvenation using PRP.</p>
+                        <div class="custom-select-wrapper">
+    <div class="custom-select">1 Session - 299<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    <div class="custom-options">
+        <div class="custom-option selected">1 Session - 299<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">4 Sessions + Free Analysis - 999<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    </div>
+</div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Plasma%20Renewal%20Therapy.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="advanced" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 799</div>
+                        <h3>Plasma + Exosome Therapy</h3>
+                        <p>Advanced regenerative treatment for skin/hair. Includes free analysis.</p>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Plasma%20%2B%20Exosome%20Therapy.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-3">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="advanced" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 450</div>
+                        <h3>Pigmentation Treatment</h3>
+                        <p>Target stubborn pigmentation (face/under-eye).</p>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Pigmentation%20Treatment.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-3">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="advanced" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 150</div>
+                        <h3>AI Skin & Hair Analysis</h3>
+                        <p>Add-on detailed analysis using advanced AI.</p>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20AI%20Skin%20%26%20Hair%20Analysis.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-3">Book Now</a>
                     </div>
 
-                    <!-- Health Checkup -->
-                    <div class="offer-card popular-offer package-card" data-category="health">
-                        <div class="popular-badge">Foundation Day Offer</div>
-                        <div class="offer-price">SAR 299</div>
-                        <h3>Comprehensive Wellness Check</h3>
-                        <p>Includes CBC, Vitamin D, B12, Thyroid, Lipid profile, and glucose analysis.</p>
-                        <a href="contact.html" class="btn btn-primary w-100 mt-3">Add to Cart</a>
+                    <!-- MESOTHERAPY -->
+                    <div class="offer-card package-card" data-cat="meso" data-sub="">
+                        <h3>Mesotherapy Revitalization</h3>
+                        <p>Facial radiance, lip pinkening, or hair density enhancement.</p>
+                        <div class="custom-select-wrapper">
+    <div class="custom-select">1 Session - 250<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    <div class="custom-options">
+        <div class="custom-option selected">1 Session - 250<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">3 Sessions + Free Analysis - 699<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    </div>
+</div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Mesotherapy%20Revitalization.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
                     </div>
+
+                    <!-- FACIAL & GLOW -->
+                    <div class="offer-card package-card" data-cat="facial" data-sub="">
+                        <h3>HydraFacial Cleansing</h3>
+                        <p>Deep skin cleansing and impurity removal.</p>
+                        <div class="custom-select-wrapper">
+    <div class="custom-select">Basic HydraFacial - 230<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    <div class="custom-options">
+        <div class="custom-option selected">Basic HydraFacial - 230<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">HydraFacial + Phototherapy - 320<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    </div>
+</div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20HydraFacial%20Cleansing.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="facial" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 150</div>
+                        <h3>Deep Clean + Meso-Dermapen</h3>
+                        <p>Facial cleanser with dermapen rejuvenation.</p>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Deep%20Clean%20%2B%20Meso-Dermapen.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-3">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="facial" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 250</div>
+                        <h3>Hydrascalp Deep Cleaning</h3>
+                        <p>Purifying scalp detox treatment.</p>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Hydrascalp%20Deep%20Cleaning.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-3">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="facial" data-sub="">
+                        <h3>Bleaching Services</h3>
+                        <p>Face and eyebrow brightening.</p>
+                        <div class="custom-select-wrapper">
+    <div class="custom-select">1 Session Face/Eyebrow - 90<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    <div class="custom-options">
+        <div class="custom-option selected">1 Session Face/Eyebrow - 90<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">2 Sessions Facial - 150<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">1 Session Full Face & Eyebrow - 160<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    </div>
+</div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Bleaching%20Services.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
+                    </div>
+
+                    <!-- ACNE & BRIGHTENING -->
+                    <div class="offer-card package-card" data-cat="acne" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 140</div>
+                        <h3>Carbon Laser Facial</h3>
+                        <p>Clean pores, balance oil, and glow.</p>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Carbon%20Laser%20Facial.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-3">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="acne" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 230</div>
+                        <h3>Fractional Laser</h3>
+                        <p>Skin resurfacing for scars and deep rejuvenation.</p>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Fractional%20Laser.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-3">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="acne" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 199</div>
+                        <h3>Knee & Elbow Brightening</h3>
+                        <p>1 session carbon laser focused on joints.</p>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Knee%20%26%20Elbow%20Brightening.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-3">Book Now</a>
+                    </div>
+
+                    <!-- LIP CARE -->
+                    <div class="offer-card package-card" data-cat="lip" data-sub="">
+                        <h3>Lip Rejuvenation & Pinkening</h3>
+                        <p>Restore natural lip color and hydration.</p>
+                        <div class="custom-select-wrapper">
+    <div class="custom-select">Carbon Laser Pink Lips - 99<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    <div class="custom-options">
+        <div class="custom-option selected">Carbon Laser Pink Lips - 99<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">Fractional + Carbon Combo - 299<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">Lip Meso + Carbon Combo - 350<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    </div>
+</div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Lip%20Rejuvenation%20%26%20Pinkening.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
+                    </div>
+
+                    <!-- PEELING -->
+                    <div class="offer-card package-card" data-cat="peel" data-sub="">
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 199</div>
+                        <h3>Chemical Peel Skin Renewal</h3>
+                        <p>Remove dead cells and unveil fresh skin.</p>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Chemical%20Peel%20Skin%20Renewal.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-3">Book Now</a>
+                    </div>
+                    <div class="offer-card package-card" data-cat="peel" data-sub="">
+                        <h3>Cold Peel Therapy</h3>
+                        <p>Gentle but effective resurfacing for sensitive areas.</p>
+                        <div class="custom-select-wrapper">
+    <div class="custom-select">Small Area - 350<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    <div class="custom-options">
+        <div class="custom-option selected">Small Area - 350<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+        <div class="custom-option">Intimate Area - 450<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+    </div>
+</div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20an%20appointment%20for%20Cold%20Peel%20Therapy.%20I%20clicked%20the%20Book%20Now%20button%20on%20your%20website." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
+                    </div>
+
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+                    <p style="font-weight: 600; color: #555; font-size: 0.95rem;">*PRICES ARE EXCLUSIVE OF VAT</p>
                 </div>
             </div>
         </section>
@@ -136,33 +388,101 @@
     </footer>
     <script src="main.js"></script>
     <script>
-        // Packages filtering logic
+            // Advanced Packages filtering logic
         document.addEventListener('DOMContentLoaded', () => {
-            const filterBtns = document.querySelectorAll('.filter-btn');
+            const categories = document.querySelectorAll('.category-sel');
+            const subcategories = document.querySelectorAll('.subcat-btn');
             const cards = document.querySelectorAll('.package-card');
+            const offersGrid = document.getElementById('offers-container');
+            const subLaser = document.getElementById('sub-laser');
 
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Update active button state
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
+            function updateView(activeCat, activeSub) {
+                // hide all first
+                cards.forEach(c => c.style.display = 'none');
+                offersGrid.classList.add('active'); // ensure grid is shown
+                
+                // Show subcategory filters if laser is active
+                if(activeCat === 'laser') {
+                    subLaser.classList.add('active');
+                } else {
+                    subLaser.classList.remove('active');
+                }
 
-                    const filterValue = btn.getAttribute('data-filter');
-
-                    // Filter cards based on data-category matching
-                    cards.forEach(card => {
-                        const cardCategory = card.getAttribute('data-category');
-
-                        if (filterValue === 'all' || cardCategory === filterValue) {
-                            card.style.display = '';
+                cards.forEach(card => {
+                    const cCat = card.getAttribute('data-cat');
+                    const cSub = card.getAttribute('data-sub');
+                    
+                    if (activeCat === 'all') {
+                        card.style.display = 'flex';
+                    } else if (cCat === activeCat) {
+                        if (cCat === 'laser') {
+                            if (cSub === activeSub) {
+                                card.style.display = 'flex';
+                            }
                         } else {
-                            card.style.display = 'none';
+                            card.style.display = 'flex';
                         }
+                    }
+                });
+            }
+
+            categories.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    categories.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const cat = btn.getAttribute('data-cat');
+                    
+                    let sub = '';
+                    if (cat === 'laser') {
+                        // default sub for laser
+                        const actSubBtn = document.querySelector('.subcat-btn.active');
+                        if(actSubBtn) sub = actSubBtn.getAttribute('data-sub');
+                    }
+                    
+                    updateView(cat, sub);
+                });
+            });
+
+            subcategories.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    subcategories.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const cat = document.querySelector('.category-sel.active').getAttribute('data-cat');
+                    const sub = btn.getAttribute('data-sub');
+                    
+                    updateView(cat, sub);
+                });
+            });
+
+            // Start with All Offers active
+            updateView('all', '');
+
+            // Custom Select dropdown logic
+            document.querySelectorAll('.custom-select-wrapper').forEach(wrapper => {
+                const select = wrapper.querySelector('.custom-select');
+                const options = wrapper.querySelectorAll('.custom-option');
+                select.addEventListener('click', () => {
+                    document.querySelectorAll('.custom-select-wrapper').forEach(w => {
+                        if(w !== wrapper) w.classList.remove('open');
+                    });
+                    wrapper.classList.toggle('open');
+                });
+                options.forEach(opt => {
+                    opt.addEventListener('click', () => {
+                        select.innerHTML = opt.innerHTML;
+                        options.forEach(o => o.classList.remove('selected'));
+                        opt.classList.add('selected');
+                        wrapper.classList.remove('open');
                     });
                 });
             });
-        });
-    </script>
+            document.addEventListener('click', (e) => {
+                if(!e.target.closest('.custom-select-wrapper')) {
+                    document.querySelectorAll('.custom-select-wrapper').forEach(w => w.classList.remove('open'));
+                }
+            });
+        });</script>
 </body>
 
 </html>

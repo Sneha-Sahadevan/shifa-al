@@ -1205,6 +1205,13 @@ body.lang-ar .dept-arabic {
     position: relative;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.offer-card .btn {
+    margin-top: auto !important;
 }
 
 .offer-card:hover {
@@ -1237,50 +1244,7 @@ body.lang-ar .dept-arabic {
     text-transform: uppercase;
 }
 
-/* Blog / Articles Section */
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
 
-.blog-card {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-}
-
-.placeholder-gray {
-    background-color: #E2E8F0;
-    height: 200px;
-    width: 100%;
-}
-
-.blog-content {
-    padding: 24px;
-}
-
-.blog-date {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.read-more {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    color: var(--primary);
-    font-weight: 600;
-    margin-top: 15px;
-    font-size: 0.95rem;
-}
-
-.read-more:hover {
-    color: var(--secondary);
-}
 
 /* Internal Page Headers */
 .internal-header {
@@ -1350,16 +1314,14 @@ body.lang-ar .dept-arabic {
 
 @media (max-width: 992px) {
 
-    .offers-grid,
-    .blog-grid {
+    .offers-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
 
-    .offers-grid,
-    .blog-grid {
+    .offers-grid {
         grid-template-columns: 1fr;
     }
 }
