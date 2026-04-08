@@ -1,34 +1,105 @@
-window.googleTranslateElementInit = function () {
-    new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'ar,en', // Provide English and Arabic
-        autoDisplay: false
-    }, 'google_translate_element');
+const dict = {
+    "Home": "الرئيسية",
+    "About": "من نحن",
+    "Departments": "الأقسام",
+    "Doctors": "الأطباء",
+    "Offers & Store": "العروض والمتجر",
+    "Dermatology": "الأمراض الجلدية",
+    "Contact": "اتصل بنا",
+    "24/7 Emergency Services": "خدمات الطوارئ 24/7",
+    "Al Makarunah Branch, Jeddah": "فرع المكرونة، جدة",
+    "Contact Us": "تواصل معنا",
+    "About Us": "من نحن",
+    "Welcome to Shifa Al Bawadi": "مرحبا بك في شفاء البوادي",
+    "Your health, our continuous commitment": "صحتك، التزامنا الدائم",
+    "20+ Years of Experience": "أكثر من 20 عامًا من الخبرة",
+    "Multi-Specialty Services": "خدمات متعددة التخصصات",
+    "Advanced Medical Technology": "تكنولوجيا طبية متقدمة",
+    "Thousands of Happy Patients": "آلاف المرضى السعداء",
+    "Our Vision": "رؤيتنا",
+    "Our Mission": "مهمتنا",
+    "Our Facilities": "مرافقنا",
+    "Our Core Values": "قيمنا الأساسية",
+    "Patient First": "المريض أولاً",
+    "Excellence": "التميز",
+    "Integrity": "النزاهة",
+    "Innovation": "الابتكار",
+    "Compassion": "التعاطف",
+    "Our Branches": "فروعنا",
+    "Insurance Partners": "شركاء التأمين",
+    "Start Your Journey to Better Health Today": "ابدأ رحلتك نحو صحة أفضل اليوم",
+    "Experience trusted care with our expert medical team.": "جرب الرعاية الموثوقة مع فريقنا الطبي الخبير.",
+    "Book an Appointment": "احجز موعدا",
+    "Submit Request": "إرسال طلب",
+    "Visit Our Clinic": "قم بزيارة عيادتنا",
+    "Call Us Now": "اتصل بنا الآن",
+    "Our Medical Departments": "أقسامنا الطبية",
+    "Meet Our Professionals": "تعرف على أطبائنا",
+    "All Departments": "جميع الأقسام",
+    "Dental": "الأسنان",
+    "ENT": "الأنف والأذن والحنجرة",
+    "General Physician": "طبيب عام",
+    "Orthopedic": "العظام",
+    "Internal Medicine": "باطنية",
+    "Gynecology": "نسائية",
+    "Pediatrics": "أطفال",
+    "Laboratory": "مختبر",
+    "Radiology": "أشعة",
+    "Urology": "مسالك بولية",
+    "24/7 Emergency": "طوارئ 24/7",
+    "Ultrasound": "السونار",
+    "X-ray & ECG": "الأشعة وتخطيط القلب",
+    "CT Scan": "الأشعة المقطعية",
+    "Panoramic X-ray": "الأشعة البانورامية",
+    "4D Ultrasound": "سونار رباعي الأبعاد",
+    "Pharmacy": "الصيدلية",
+    "Opticals": "البصريات"
 };
 
-window.switchLanguage = function (lang) {
-    document.cookie = `googtrans=/en/${lang}; path=/`;
-    if (window.location.hostname !== '') {
-        document.cookie = `googtrans=/en/${lang}; domain=${window.location.hostname}; path=/`;
+function translateDOM(lang) {
+    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    let n;
+    while(n = walk.nextNode()) {
+        if(n.parentElement && n.parentElement.tagName !== 'SCRIPT' && n.parentElement.tagName !== 'STYLE') {
+            const trimmed = n.nodeValue.trim();
+            if(trimmed.length > 1) {
+                // Save original English
+                if(!n.parentElement.hasAttribute('data-en-text')) {
+                    n.parentElement.setAttribute('data-en-text', trimmed);
+                }
+                const og = n.parentElement.getAttribute('data-en-text');
+                
+                if(lang === 'ar' && dict[og]) {
+                    n.nodeValue = n.nodeValue.replace(trimmed, dict[og]);
+                } else if(lang === 'en' && og) {
+                    n.nodeValue = n.nodeValue.replace(trimmed, og);
+                }
+            }
+        }
     }
+}
+
+window.switchLanguage = function (lang) {
+    localStorage.setItem('shifa_lang', lang);
+    window.location.hash = `#lang=${lang}`;
     window.location.reload();
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Inject Custom Language Switcher ---
     const topBarContainer = document.querySelector('.top-bar-content');
     if (topBarContainer) {
         let currentLang = 'en';
-        if (document.cookie.includes('googtrans=/en/ar') || document.cookie.includes('googtrans=%2Fen%2Far')) {
+        if (window.location.hash.includes('lang=ar') || localStorage.getItem('shifa_lang') === 'ar') {
             currentLang = 'ar';
         }
 
-        // Set attributes for CSS-based language switching
         if (currentLang === 'ar') {
             document.documentElement.setAttribute('lang', 'ar');
+            document.documentElement.setAttribute('dir', 'rtl');
             document.body.classList.add('lang-ar');
         } else {
             document.documentElement.setAttribute('lang', 'en');
+            document.documentElement.setAttribute('dir', 'ltr');
             document.body.classList.remove('lang-ar');
         }
 
@@ -42,18 +113,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     <option value="ar" style="color: #333;" ${currentLang === 'ar' ? 'selected' : ''}>Arabic (العربية)</option>
                 </select>
             </div>
-            <div id="google_translate_element" style="display:none;"></div>
         `;
 
-        // Insert it before the contact info
         const topContactElement = document.querySelector('.top-contact');
         if (topContactElement) {
             topBarContainer.insertBefore(langSwitcherWrapper, topContactElement);
         }
 
-        const gtScript = document.createElement('script');
-        gtScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-        document.body.appendChild(gtScript);
+        // Apply translations via JS instead of Google Auto-Translate
+        translateDOM(currentLang);
     }
 
     // Initialize Lucide icons

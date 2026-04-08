@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <div id="google_translate_element" style="position:absolute; top:10px; right:10px; z-index:999;"></div>
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container top-bar-content">
@@ -40,9 +41,6 @@
             <a href="index.html" class="logo">
                 <img src="./assets/transparent_logo.png" alt="Shifa Al Bawadi Logo" id="logo-img">
             </a>
-            <a href="assets/certificate.pdf" target="_blank" class="accreditation-link">
-                <img src="assets/accreditation.png" class="accreditation-logo" alt="Accreditation Logo">
-            </a>
             <nav class="nav-links" id="nav-links">
                 <a href="index.html" class="active">Home</a>
                 <a href="about.html">About</a>
@@ -50,13 +48,17 @@
                 <a href="doctors.html">Doctors</a>
                 <a href="store.html">Offers & Store</a>
                 <a href="dermatology.html">Dermatology</a>
-
                 <a href="contact.html">Contact</a>
             </nav>
-            <div class="nav-actions">
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
-                    <i data-lucide="menu"></i>
-                </button>
+            <div class="nav-right">
+                <a href="assets/certificate.pdf" target="_blank" class="accreditation-link">
+                    <img src="assets/accreditation.png" class="accreditation-logo" alt="Accreditation Logo">
+                </a>
+                <div class="nav-actions">
+                    <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -112,20 +114,26 @@
 
                 <div class="offers-grid">
                     <div class="offer-card">
-                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 199</div>
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR"
+                                style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;">
+                            199</div>
                         <h3>Teeth Whitening Routine</h3>
                         <p>Complete teeth cleaning and polishing plus consultation.</p>
                         <a href="store.html" class="btn btn-primary mt-3">Book Package</a>
                     </div>
                     <div class="offer-card popular-offer">
                         <div class="popular-badge">Most Popular</div>
-                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 499</div>
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR"
+                                style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;">
+                            499</div>
                         <h3>Dermatology Laser Session</h3>
                         <p>Full body laser session. Expert care and smooth results.</p>
                         <a href="store.html" class="btn btn-primary mt-3">Book Package</a>
                     </div>
                     <div class="offer-card">
-                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;"> 299</div>
+                        <div class="offer-price"><img src="assets/sar.jpeg" alt="SAR"
+                                style="height: 1em; width: auto; vertical-align: middle; margin-right: 5px; mix-blend-mode: multiply;">
+                            299</div>
                         <h3>Comprehensive Health Check</h3>
                         <p>Vitamin D, CBC, and full routine lab checkup.</p>
                         <a href="store.html" class="btn btn-primary mt-3">Book Package</a>
@@ -226,6 +234,17 @@
     </footer>
 
     <script src="main.js"></script>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'ar',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

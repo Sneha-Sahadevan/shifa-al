@@ -7,7 +7,7 @@
     <title>About Us | Shifa Al Bawadi Medical</title>
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
@@ -34,9 +34,6 @@
             <a href="index.html" class="logo">
                 <img src="./assets/transparent_logo.png" alt="Shifa Al Bawadi Logo" id="logo-img">
             </a>
-            <a href="assets/certificate.pdf" target="_blank" class="accreditation-link">
-                <img src="assets/accreditation.png" class="accreditation-logo" alt="Accreditation Logo">
-            </a>
             <nav class="nav-links" id="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html" class="active">About</a>
@@ -44,11 +41,15 @@
                 <a href="doctors.html">Doctors</a>
                 <a href="store.html">Offers & Store</a>
                 <a href="dermatology.html">Dermatology</a>
-
                 <a href="contact.html">Contact</a>
             </nav>
-            <div class="nav-actions">
-                <button class="mobile-toggle" id="mobile-toggle"><i data-lucide="menu"></i></button>
+            <div class="nav-right">
+                <a href="assets/certificate.pdf" target="_blank" class="accreditation-link">
+                    <img src="assets/accreditation.png" class="accreditation-logo" alt="Accreditation Logo">
+                </a>
+                <div class="nav-actions">
+                    <button class="mobile-toggle" id="mobile-toggle"><i data-lucide="menu"></i></button>
+                </div>
             </div>
         </div>
     </header>
@@ -88,38 +89,191 @@
         <section class="mission-vision section-padding bg-light">
             <div class="container">
                 <div class="mission-grid">
-                    <div class="content-card">
-                        <div class="card-icon-wrapper"><i data-lucide="eye"></i></div>
-                        <h3>Our Vision</h3>
+                    <div class="content-card bg-pattern-gradient">
+                        <div class="card-watermark"><i data-lucide="leaf"></i></div>
+                        <div class="card-header-horizontal">
+                            <div class="card-icon-wrapper"><i data-lucide="leaf"></i></div>
+                            <div class="card-title-group">
+                                <h3>Our Vision</h3>
+                                <span class="card-subtitle">LEADING WITH PURPOSE</span>
+                            </div>
+                        </div>
                         <p>To be recognized as a leading healthcare provider in the region, known for excellence in
                             medical care, innovation, and exceptional patient experience.</p>
                     </div>
-                    <div class="content-card active-card">
-                        <div class="card-icon-wrapper"><i data-lucide="target"></i></div>
-                        <h3>Our Mission</h3>
+                    <div class="content-card bg-pattern-gradient">
+                        <div class="card-watermark"><i data-lucide="target"></i></div>
+                        <div class="card-header-horizontal">
+                            <div class="card-icon-wrapper"><i data-lucide="target"></i></div>
+                            <div class="card-title-group">
+                                <h3>Our Mission</h3>
+                                <span class="card-subtitle">CARE THAT CHANGES LIVES</span>
+                            </div>
+                        </div>
                         <p>To provide comprehensive, accessible, and high-quality healthcare services that enhance the
-                            well-being and quality of life of our patients</p>
+                            well-being and quality of life of our patients.</p>
                     </div>
-                    <div class="content-card">
-                        <div class="card-icon-wrapper"><i data-lucide="building"></i></div>
-                        <h3>Our Facilities</h3>
-                        <ul style="text-align: left; padding-left: 20px; color: #64748B; margin-top: 15px; margin-bottom: 0;">
-                            <li style="margin-bottom: 5px;">Modern and fully equipped consultation rooms</li>
-                            <li style="margin-bottom: 5px;">Advanced diagnostic and imaging technology</li>
-                            <li style="margin-bottom: 5px;">Sterile and safe clinical environment</li>
-                            <li style="margin-bottom: 5px;">Comfortable and patient-friendly infrastructure</li>
+                    <div class="content-card bg-pattern-gradient">
+                        <div class="card-watermark"><i data-lucide="sparkles"></i></div>
+                        <div class="card-header-horizontal">
+                            <div class="card-icon-wrapper"><i data-lucide="sparkles"></i></div>
+                            <div class="card-title-group">
+                                <h3>Our Facilities</h3>
+                                <span class="card-subtitle">BUILT FOR BETTER HEALTH</span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Modern and fully equipped consultation rooms</li>
+                            <li>Advanced diagnostic and imaging technology</li>
+                            <li>Sterile and safe clinical environment</li>
+                            <li>Comfortable and patient-friendly infrastructure</li>
                         </ul>
                     </div>
-                    <div class="content-card">
-                        <div class="card-icon-wrapper"><i data-lucide="heart"></i></div>
-                        <h3>Our Core Values</h3>
-                        <ul style="text-align: left; padding-left: 20px; color: #64748B; margin-top: 15px; margin-bottom: 0;">
-                            <li style="margin-bottom: 5px;">Patient First</li>
-                            <li style="margin-bottom: 5px;">Excellence</li>
-                            <li style="margin-bottom: 5px;">Integrity</li>
-                            <li style="margin-bottom: 5px;">Innovation</li>
-                            <li style="margin-bottom: 5px;">Compassion</li>
+                    <div class="content-card bg-pattern-gradient">
+                        <div class="card-watermark"><i data-lucide="gem"></i></div>
+                        <div class="card-header-horizontal">
+                            <div class="card-icon-wrapper"><i data-lucide="gem"></i></div>
+                            <div class="card-title-group">
+                                <h3>Our Core Values</h3>
+                                <span class="card-subtitle">THE HEART OF WHO WE ARE</span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Patient First</li>
+                            <li>Excellence</li>
+                            <li>Integrity</li>
+                            <li>Innovation</li>
+                            <li>Compassion</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medical Services Section -->
+        <section class="medical-services-section" style="background: #ffffff; padding: 100px 0;">
+            <div class="container">
+                <!-- Title Section with Gradient Line -->
+                <div class="medical-services-title-wrapper" style="display: flex; align-items: flex-start; margin-bottom: 60px;">
+                    <div class="gradient-line"
+                        style="width: 5px; height: 65px; background: linear-gradient(to bottom, #0D9488, #EF4444); margin-right: 25px; border-radius: 10px;">
+                    </div>
+                    <div>
+                        <h2
+                            style="font-family: 'Outfit', sans-serif; font-size: clamp(2.5rem, 5vw, 3.5rem); color: #0F172A; margin: 0; font-weight: 800; line-height: 1.1;">
+                            Medical Services</h2>
+                    </div>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="services-grid">
+                    <!-- Service 1: 24/7 Emergency -->
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <img src="assets/medical_services/emergency.png" alt="24/7 Emergency">
+                        </div>
+                        <div class="service-info-row">
+                            <div class="service-icon-box"><i data-lucide="clock"></i></div>
+                            <div class="service-text-content">
+                                <h3>24/7 Emergency</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 2: Ultrasound -->
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <img src="assets/medical_services/ultrasound.png" alt="Ultrasound">
+                        </div>
+                        <div class="service-info-row">
+                            <div class="service-icon-box"><i data-lucide="waves"></i></div>
+                            <div class="service-text-content">
+                                <h3>Ultrasound</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 3: X-ray & ECG -->
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <img src="assets/medical_services/xray_ecg.png" alt="X-ray & ECG">
+                        </div>
+                        <div class="service-info-row">
+                            <div class="service-icon-box"><i data-lucide="activity"></i></div>
+                            <div class="service-text-content">
+                                <h3>X-ray & ECG</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 4: CT Scan -->
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <img src="assets/medical_services/ct_scan.png" alt="CT Scan">
+                        </div>
+                        <div class="service-info-row">
+                            <div class="service-icon-box"><i data-lucide="scan"></i></div>
+                            <div class="service-text-content">
+                                <h3>CT Scan</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 5: Panoramic X-ray -->
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <img src="assets/medical_services/panoramic_xray.png" alt="Panoramic X-ray">
+                        </div>
+                        <div class="service-info-row">
+                            <div class="service-icon-box"><i data-lucide="scan"></i></div>
+                            <div class="service-text-content">
+                                <h3>Panoramic X-ray</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 6: 4D Ultrasound -->
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <img src="assets/medical_services/4d_ultrasound.png" alt="4D Ultrasound">
+                        </div>
+                        <div class="service-info-row">
+                            <div class="service-icon-box"><i data-lucide="smile"></i></div>
+                            <div class="service-text-content">
+                                <h3>4D Ultrasound</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 7: Laboratory -->
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <img src="assets/medical_services/laboratory.png" alt="Laboratory">
+                        </div>
+                        <div class="service-info-row">
+                            <div class="service-icon-box"><i data-lucide="flask-conical"></i></div>
+                            <div class="service-text-content">
+                                <h3>Laboratory</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 8: Pharmacy -->
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <img src="assets/medical_services/pharmacy.png" alt="Pharmacy">
+                        </div>
+                        <div class="service-info-row">
+                            <div class="service-icon-box"><i data-lucide="pill"></i></div>
+                            <div class="service-text-content">
+                                <h3>Pharmacy</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 9: Opticals -->
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <img src="assets/medical_services/opticals.png" alt="Opticals">
+                        </div>
+                        <div class="service-info-row">
+                            <div class="service-icon-box"><i data-lucide="glasses"></i></div>
+                            <div class="service-text-content">
+                                <h3>Opticals</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -223,101 +377,127 @@
                 </div>
 
                 <!-- Partners Grid -->
-                <div class="partners-grid"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 50px 30px; align-items: center; justify-items: center;">
+                <div class="partners-grid">
                     <!-- Bupa -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/bupaa.jpg" alt="Bupa Insurance"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/bupaa.jpg" alt="Bupa Insurance">
                     </div>
                     <!-- Tawuniya -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/tawuniya.jpg" alt="Tawuniya"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/tawuniya.jpg" alt="Tawuniya">
                     </div>
                     <!-- Malath -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/malath.gif" alt="Malath Insurance"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/malath.gif" alt="Malath Insurance">
                     </div>
                     <!-- MEDGULF -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/medgulf.png" alt="MEDGULF"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/medgulf.png" alt="MEDGULF">
                     </div>
                     <!-- Al Rajhi Takaful -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/al rajhi.png" alt="Al Rajhi Takaful"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/al rajhi.png" alt="Al Rajhi Takaful">
                     </div>
                     <!-- Nextcare -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/nextcare.png" alt="Nextcare"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/nextcare.png" alt="Nextcare">
                     </div>
                     <!-- Arabian Shield -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/arabian.jpg" alt="Arabian Shield"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/arabian.jpg" alt="Arabian Shield">
                     </div>
                     <!-- TCS -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/tcs.png" alt="TCS"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/tcs.png" alt="TCS">
                     </div>
                     <!-- SAICO -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/saico.jpg" alt="SAICO"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/saico.jpg" alt="SAICO">
                     </div>
                     <!-- Gulf Union -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/gulf.jpg" alt="Gulf Union"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/gulf.jpg" alt="Gulf Union">
                     </div>
                     <!-- Al Etihad -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/aletihad.jpg" alt="Al Etihad"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/aletihad.jpg" alt="Al Etihad">
                     </div>
                     <!-- GlobeMed -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/globe.svg" alt="GlobeMed"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/globe.svg" alt="GlobeMed">
                     </div>
                     <!-- Al Jazira Takaful -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/aljazira.png" alt="Al Jazira Takaful"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/aljazira.png" alt="Al Jazira Takaful">
                     </div>
                     <!-- Allianz -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/allianz.png" alt="Allianz"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/allianz.png" alt="Allianz">
                     </div>
                     <!-- Saudi Enaya -->
-                    <div class="partner-item" data-aos="zoom-in"
-                        style="width: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
-                        <img src="./assets/saudi.png" alt="Saudi Enaya"
-                            style="width: 100%; max-width: 160px; height: auto; object-fit: contain;">
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/saudi.png" alt="Saudi Enaya">
+                    </div>
+                    <!-- Walaa -->
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/walaa.png" alt="Walaa Insurance">
+                    </div>
+                    <!-- Amana -->
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/amana.png" alt="Amana Insurance">
+                    </div>
+                    <!-- Salama -->
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/salama.png" alt="Salama Insurance">
+                    </div>
+                    <!-- Mutakamela -->
+                    <div class="partner-item" data-aos="zoom-in">
+                        <img src="./assets/mutakamela.png" alt="Mutakamela Insurance">
                     </div>
                 </div>
             </div>
         </section>
+
+        <style>
+            .partners-grid {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 40px 20px;
+                align-items: center;
+                justify-items: center;
+            }
+            @media (max-width: 992px) {
+                .partners-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            @media (max-width: 576px) {
+                .partners-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            .partner-item {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.3s ease;
+            }
+            .partner-item:hover {
+                transform: translateY(-5px);
+            }
+            .partner-item img {
+                width: 100%;
+                max-width: 110px;
+                height: auto;
+                object-fit: contain;
+                filter: grayscale(20%);
+                transition: filter 0.3s ease;
+            }
+            .partner-item:hover img {
+                filter: grayscale(0%);
+            }
+        </style>
 
         <!-- Final CTA Section -->
         <section class="cta-section" style="background: linear-gradient(135deg, #EBF4FA, #dbeafe); padding: 80px 0; border-top: 1px solid var(--border-color); position: relative; overflow: hidden;">
