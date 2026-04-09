@@ -246,6 +246,21 @@ body {
     margin: 20px auto 0 !important;
 }
 
+@media (max-width: 1140px) {
+    .navbar.hero-nav {
+        margin: 20px 10px 0 !important;
+        max-width: calc(100% - 20px) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar.hero-nav {
+        border-radius: 12px !important;
+        margin: 10px 10px 0 !important;
+        top: 10px !important;
+    }
+}
+
 .navbar.hero-nav.scrolled {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05)) !important;
     backdrop-filter: blur(35px) !important;
@@ -343,14 +358,48 @@ body {
     cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+    .navbar.hero-nav .navbar-content {
+        padding: 0 20px;
+    }
+    .mobile-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10, 61, 98, 0.95);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        border-bottom: 3px solid var(--secondary);
+        border-radius: 0 0 20px 20px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+}
+
 /* --- Hero Section --- */
 .hero {
     position: relative;
-    height: 700px;
+    min-height: 500px;
+    height: 80vh;
     display: flex;
     align-items: center;
     margin-top: -150px;
-    /* Shift up to cover top-bar and expanded liquid glass navbar */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 180px 0 80px;
+        margin-top: -100px;
+    }
 }
 
 .hero-bg {
@@ -364,14 +413,19 @@ body {
     z-index: 1;
 }
 
+@media (max-width: 768px) {
+    .hero-bg {
+        background-attachment: scroll; /* Better for mobile devices */
+    }
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    /* Subtle dark tint over the whole image for readability */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 2;
 }
 
@@ -382,7 +436,7 @@ body {
 }
 
 .hero-text-box {
-    max-width: 600px;
+    max-width: 700px;
 }
 
 .hero-text-box h1 {
@@ -671,6 +725,8 @@ body {
     gap: 30px;
 }
 
+
+
 .dept-card {
     display: flex;
     flex-direction: column;
@@ -769,6 +825,8 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
+
+
 
 .practitioner-card {
     background: #FFFFFF;
@@ -1258,76 +1316,14 @@ body.lang-ar .dept-arabic {
 }
 
 /* Responsiveness */
-@media (max-width: 992px) {
-    .hero {
-        height: auto;
-        min-height: 500px;
-    }
-
-    .hero-overlay {
-        background: rgba(255, 255, 255, 0.85);
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .feature-box {
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .about-wrapper,
-    .contact-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .mission-grid,
-    .dept-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .doctors-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 @media (max-width: 768px) {
     .top-bar {
         display: none;
     }
 
-    .nav-actions .btn {
-        display: none;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .mobile-toggle {
-        display: block;
-    }
-
-    .mission-grid,
-    .dept-grid,
-    .doctors-grid,
-    .footer-grid,
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-text-box h1 {
-        font-size: 2.2rem;
-    }
-
     .bottom-flex {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
         text-align: center;
     }
 }
@@ -1341,6 +1337,8 @@ body.lang-ar .dept-arabic {
     gap: 30px;
     margin-top: 20px;
 }
+
+
 
 .offer-card {
     background: rgba(255, 255, 255, 0.1);
@@ -1409,12 +1407,10 @@ body.lang-ar .dept-arabic {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/lines.png') center/cover no-repeat;
 }
 
-.departments-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/clinic2.jpg') center/100% 100% no-repeat;
-}
-
-.store-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/offers_bkd.jpg') center/cover no-repeat;
+@media (max-width: 768px) {
+    .internal-header {
+        padding: 120px 0 50px; /* More top padding to account for mobile navbar bubble */
+    }
 }
 
 .internal-header h1 {
@@ -1429,6 +1425,20 @@ body.lang-ar .dept-arabic {
     max-width: 600px;
     margin: 0 auto;
 }
+
+.about-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/lines.png') center/cover no-repeat;
+}
+
+.store-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/offers_bkd.jpg') center/cover no-repeat;
+}
+
+.doctors-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/web banner.png') center/cover no-repeat;
+}
+
+
 
 .highlight-link {
     color: var(--secondary) !important;
@@ -1462,19 +1472,7 @@ body.lang-ar .dept-arabic {
     border-color: var(--primary);
 }
 
-@media (max-width: 992px) {
 
-    .offers-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-
-    .offers-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* Scroll Revealing Animations */
 .fade-in-up {
@@ -1684,4 +1682,176 @@ body.lang-ar .dept-arabic {
 
 [dir="rtl"] .service-text-content {
     text-align: right;
+}
+
+/* ==========================================================================
+   STRICT MOBILE-ONLY OVERRIDES (MAX-WIDTH: 768PX)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 🔷 1. Container Fix & Side Spacing */
+    .container {
+        padding: 0 16px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* 🔷 2. Grid & Card Layout (1 card per row) */
+    .mission-grid,
+    .dept-grid,
+    .doctors-grid,
+    .offers-grid,
+    .features-grid,
+    .footer-grid,
+    .contact-layout,
+    .about-wrapper,
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        display: grid !important;
+        gap: 30px !important;
+    }
+
+    .feature-box {
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .feature-box:last-child {
+        border-bottom: none !important;
+    }
+
+    /* 🔷 3. Typography Scaling */
+    h1, .hero-text-box h1 { font-size: 2.2rem !important; }
+    h2, .section-title { font-size: 1.8rem !important; }
+    h3 { font-size: 1.5rem !important; }
+    p, .hero-text-box p { font-size: 1rem !important; }
+
+    /* 🔷 4. Button Fix (Full Width) */
+    .btn, 
+    .hero-btns .btn,
+    .offer-card .btn,
+    .appointment-form .btn {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+        display: block !important;
+        text-align: center !important;
+    }
+    
+    .hero-btns {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    /* 🔷 5. Filter Buttons (Horizontal Scroll) */
+    .store-filters,
+    .department-filters {
+        display: flex !important;
+        justify-content: flex-start !important;
+        gap: 12px !important;
+        margin: 0 0 30px 0 !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        padding: 10px 5px !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .store-filters::-webkit-scrollbar,
+    .department-filters::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .filter-btn {
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* 🔷 6. Image Handling */
+    img, 
+    .about-main-img, 
+    .service-image-container img, 
+    .practitioner-img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+    }
+
+    /* 🔷 7. Navbar Fix (Hamburger) */
+    .top-bar {
+        display: none !important;
+    }
+
+    .navbar.hero-nav {
+        border-radius: 12px !important;
+        margin: 10px 10px 0 !important;
+        top: 10px !important;
+        max-width: calc(100% - 20px) !important;
+    }
+
+    .navbar-content {
+        padding: 0 15px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+
+    .nav-links {
+        display: none !important; /* Managed by JS class toggle */
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: rgba(10, 61, 98, 0.98) !important;
+        flex-direction: column !important;
+        padding: 20px !important;
+        gap: 15px !important;
+        border-bottom: 3px solid var(--secondary) !important;
+        text-align: center !important;
+        border-radius: 0 0 15px 15px !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .mobile-toggle {
+        display: block !important;
+    }
+    
+    .nav-right .accreditation-link {
+        display: block !important;
+    }
+    
+    .accreditation-logo {
+        height: 32px !important;
+        width: auto !important;
+    }
+
+    /* 🔷 8. Spacing Fix & Hero Gaps */
+    .section-padding {
+        padding: 40px 0 !important;
+    }
+    
+    .hero {
+        height: auto !important;
+        min-height: 480px !important;
+        padding: 140px 0 60px !important;
+        margin-top: -80px !important;
+    }
+    
+    .hero-bg {
+        background-attachment: scroll !important;
+    }
+
+    .footer-bottom .bottom-flex {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+    }
+
+    .contact-layout {
+        gap: 40px !important;
+    }
+    
+    .map-container {
+        min-height: 250px !important;
+    }
 }
