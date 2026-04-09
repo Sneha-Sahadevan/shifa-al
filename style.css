@@ -1315,6 +1315,14 @@ body.lang-ar .dept-arabic {
     }
 }
 
+.bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 /* Responsiveness */
 @media (max-width: 768px) {
     .top-bar {
@@ -1323,9 +1331,38 @@ body.lang-ar .dept-arabic {
 
     .bottom-flex {
         flex-direction: column;
-        gap: 15px;
+        justify-content: center;
         text-align: center;
+        gap: 15px;
     }
+}
+
+.developer-credit {
+    margin-top: 0; 
+    font-size: 0.9rem;
+    color: #94A3B8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.developer-credit a {
+    color: #cfa161; /* Gold color from screenshot */
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.developer-credit a:hover {
+    color: #e5b985;
+    transform: scale(1.1);
+}
+
+.developer-credit i {
+    width: 20px;
+    height: 20px;
 }
 
 /* Additions to style.css for Multi-page layout */
