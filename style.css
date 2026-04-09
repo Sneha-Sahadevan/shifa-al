@@ -1842,11 +1842,24 @@ body.lang-ar .dept-arabic {
         width: auto !important;
     }
 
-    /* 🔷 8. Spacing Fix & Hero Gaps */
+    /* 🔷 9. Spacing Fix & Hero Gaps */
     .section-padding {
         padding: 40px 0 !important;
     }
     
+    /* Fix for Modals (like Gentle Pro Max View Details) */
+    #spectra-modal-content,
+    #gentle-modal-content,
+    #eco2-modal-content,
+    #hydra-modal-content,
+    #scalp-modal-content {
+        padding: 20px !important;
+        max-height: 85vh !important;
+        overflow-y: auto !important;
+        width: 95% !important;
+        margin: auto !important;
+    }
+
     .hero {
         height: auto !important;
         min-height: 480px !important;
