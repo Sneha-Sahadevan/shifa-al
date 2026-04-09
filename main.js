@@ -53,7 +53,11 @@ const dict = {
     "Panoramic X-ray": "الأشعة البانورامية",
     "4D Ultrasound": "سونار رباعي الأبعاد",
     "Pharmacy": "الصيدلية",
-    "Opticals": "البصريات"
+    "Opticals": "البصريات",
+    "Select Department": "اختر القسم",
+    "Opticals / Optical Center": "البصريات / مركز البصريات",
+    "Health Packages & Lab Tests": "باقات الصحة وفحوصات المخبر",
+    "24/7 Emergency Services": "خدمات الطوارئ 24/7"
 };
 
 function translateDOM(lang) {
@@ -63,11 +67,11 @@ function translateDOM(lang) {
         if(n.parentElement && n.parentElement.tagName !== 'SCRIPT' && n.parentElement.tagName !== 'STYLE') {
             const trimmed = n.nodeValue.trim();
             if(trimmed.length > 1) {
-                // Save original English
-                if(!n.parentElement.hasAttribute('data-en-text')) {
-                    n.parentElement.setAttribute('data-en-text', trimmed);
+                // Save original English on the node itself to handle multi-line elements correctly
+                if(!n._ogText) {
+                    n._ogText = trimmed;
                 }
-                const og = n.parentElement.getAttribute('data-en-text');
+                const og = n._ogText;
                 
                 if(lang === 'ar' && dict[og]) {
                     n.nodeValue = n.nodeValue.replace(trimmed, dict[og]);

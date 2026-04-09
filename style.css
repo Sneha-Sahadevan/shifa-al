@@ -1413,6 +1413,10 @@ body.lang-ar .dept-arabic {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/clinic2.jpg') center/100% 100% no-repeat;
 }
 
+.store-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/offers_bkd.jpg') center/cover no-repeat;
+}
+
 .internal-header h1 {
     color: white;
     font-size: 2.5rem;

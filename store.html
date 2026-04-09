@@ -45,7 +45,7 @@
             </nav>
             <div class="nav-right">
                 <a href="assets/certificate.pdf" target="_blank" class="accreditation-link">
-                    <img src="assets/accreditation.png" class="accreditation-logo" alt="Accreditation Logo">
+                    <img src="assets/acc2.png" class="accreditation-logo" alt="Accreditation Logo">
                 </a>
                 <div class="nav-actions">
                     <button class="mobile-toggle" id="mobile-toggle"><i data-lucide="menu"></i></button>
@@ -55,7 +55,7 @@
     </header>
 
     <main>
-        <section class="internal-header">
+        <section class="internal-header store-header">
             <div class="container">
                 <h1>Online Medical Store</h1>
                 <p>Browse and purchase our exclusive medical packages, laser sessions, and comprehensive health checks
@@ -88,6 +88,10 @@
                     .custom-option:hover { background: var(--bg-light); }
                     .custom-option.selected { background: var(--primary-light); font-weight: 600; }
                 </style>
+
+                <div class="section-header text-center" style="margin-bottom: 40px;">
+                    <h2 class="section-title">Beauty Offers</h2>
+                </div>
 
                 <div class="category-selector" id="main-categories">
                     <button class="category-sel active" data-cat="all">All Offers</button>
@@ -368,7 +372,90 @@
 
                 </div>
                 
-                <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+
+
+                <!-- Lab Offers Section -->
+                <div class="section-header text-center" style="margin-bottom: 40px; margin-top: 100px; border-top: 1px solid var(--border-color); padding-top: 80px;">
+                    <h2 class="section-title">Lab Offers</h2>
+                    <p class="section-desc">Comprehensive health checkup packages at affordable prices</p>
+                </div>
+
+                <div class="category-selector" id="lab-categories">
+                    <button class="category-sel active" data-cat="all">All Offers</button>
+                    <button class="category-sel" data-cat="hormone">Hormone Package</button>
+                    <button class="category-sel" data-cat="diabetes">Diabetes Package</button>
+                    <button class="category-sel" data-cat="healthy">Healthy Package</button>
+                    <button class="category-sel" data-cat="mother">Mother Care</button>
+                </div>
+
+                <div class="offers-grid active" id="lab-offers-container">
+                    <!-- 1. Female Hormone Package -->
+                    <div class="offer-card package-card" data-cat="hormone">
+                        <div class="popular-badge">Top Seller</div>
+                        <h3>Female Hormone Package</h3>
+                        <p>Essential hormone and blood tests for women</p>
+                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; border-top: 1px solid #eee; padding-top: 10px; margin-top: auto;">
+                            <strong>Tests:</strong> CBC | TSH | FSH | LH | Prolactin
+                        </div>
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select">1 Package - 599<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+                            <div class="custom-options">
+                                <div class="custom-option selected">1 Package - 599<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20the%20Female%20Hormone%20Package." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
+                    </div>
+
+                    <!-- 2. Diabetes Package -->
+                    <div class="offer-card package-card" data-cat="diabetes">
+                        <h3>Diabetes Package</h3>
+                        <p>Basic diabetes screening tests</p>
+                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; border-top: 1px solid #eee; padding-top: 10px; margin-top: auto;">
+                            <strong>Tests:</strong> RBS | HbA1c
+                        </div>
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select">1 Package - 130<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+                            <div class="custom-options">
+                                <div class="custom-option selected">1 Package - 130<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20the%20Diabetes%20Package." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
+                    </div>
+
+                    <!-- 3. Healthy Package -->
+                    <div class="offer-card package-card" data-cat="healthy">
+                        <div class="popular-badge">Top Seller</div>
+                        <h3>Healthy Package</h3>
+                        <p>General health and vitamin screening</p>
+                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; border-top: 1px solid #eee; padding-top: 10px; margin-top: auto;">
+                            <strong>Tests:</strong> CBC | Ferritin | Vitamin D | Vitamin B12 | RBS
+                        </div>
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select">1 Package - 599<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+                            <div class="custom-options">
+                                <div class="custom-option selected">1 Package - 599<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20the%20Healthy%20Package." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
+                    </div>
+
+                    <!-- 4. Mother Care Package -->
+                    <div class="offer-card package-card" data-cat="mother">
+                        <h3>Mother Care Package</h3>
+                        <p>Important tests for maternal care</p>
+                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; border-top: 1px solid #eee; padding-top: 10px; margin-top: auto;">
+                            <strong>Tests:</strong> CBC | Ferritin | GCT | Urine Analysis
+                        </div>
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select">1 Package - 399<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+                            <div class="custom-options">
+                                <div class="custom-option selected">1 Package - 399<img src="assets/sar.jpeg" alt="SAR" style="height: 1em; width: auto; vertical-align: middle; margin-left: 3px; mix-blend-mode: multiply;"></div>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/966536312869?text=Hello%2C%20I%20am%20interested%20in%20booking%20the%20Mother%20Care%20Package." target="_blank" class="btn btn-primary w-100 mt-2">Book Now</a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 60px; margin-bottom: 20px;">
                     <p style="font-weight: 600; color: #555; font-size: 0.95rem;">*PRICES ARE EXCLUSIVE OF VAT</p>
                 </div>
             </div>
@@ -389,101 +476,107 @@
     </footer>
     <script src="main.js"></script>
     <script>
-            // Advanced Packages filtering logic
         document.addEventListener('DOMContentLoaded', () => {
-            const categories = document.querySelectorAll('.category-sel');
-            const subcategories = document.querySelectorAll('.subcat-btn');
-            const cards = document.querySelectorAll('.package-card');
-            const offersGrid = document.getElementById('offers-container');
-            const subLaser = document.getElementById('sub-laser');
+            function setupFiltering(selectorId, gridId, subContainerId = null) {
+                const selector = document.getElementById(selectorId);
+                const btns = selector.querySelectorAll('.category-sel');
+                const grid = document.getElementById(gridId);
+                const cards = grid.querySelectorAll('.offer-card');
+                const subContainer = subContainerId ? document.getElementById(subContainerId) : null;
+                const subBtns = subContainer ? subContainer.querySelectorAll('.subcat-btn') : [];
 
-            function updateView(activeCat, activeSub) {
-                // hide all first
-                cards.forEach(c => c.style.display = 'none');
-                offersGrid.classList.add('active'); // ensure grid is shown
-                
-                // Show subcategory filters if laser is active
-                if(activeCat === 'laser') {
-                    subLaser.classList.add('active');
-                } else {
-                    subLaser.classList.remove('active');
-                }
-
-                cards.forEach(card => {
-                    const cCat = card.getAttribute('data-cat');
-                    const cSub = card.getAttribute('data-sub');
+                function update() {
+                    const activeBtn = selector.querySelector('.category-sel.active');
+                    const activeCat = activeBtn ? activeBtn.getAttribute('data-cat') : 'all';
                     
-                    if (activeCat === 'all') {
-                        card.style.display = 'flex';
-                    } else if (cCat === activeCat) {
-                        if (cCat === 'laser') {
-                            if (cSub === activeSub) {
+                    let activeSub = '';
+                    if (subContainer) {
+                        const activeSubBtn = subContainer.querySelector('.subcat-btn.active');
+                        if (activeSubBtn) activeSub = activeSubBtn.getAttribute('data-sub');
+                        
+                        if (activeCat === 'laser') subContainer.classList.add('active');
+                        else subContainer.classList.remove('active');
+                    }
+
+                    cards.forEach(card => {
+                        const cCat = card.getAttribute('data-cat');
+                        const cSub = card.getAttribute('data-sub');
+                        
+                        if (activeCat === 'all' || cCat === activeCat) {
+                            if (activeCat === 'laser' && activeSub !== '') {
+                                card.style.display = (cSub === activeSub) ? 'flex' : 'none';
+                            } else {
                                 card.style.display = 'flex';
                             }
                         } else {
-                            card.style.display = 'flex';
+                            card.style.display = 'none';
                         }
-                    }
+                    });
+                }
+
+                btns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        btns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        update();
+                    });
+                });
+
+                subBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        subBtns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        update();
+                    });
+                });
+
+                update();
+            }
+
+            // Initialize Beauty filtering
+            setupFiltering('main-categories', 'offers-container', 'sub-laser');
+            // Initialize Lab filtering
+            setupFiltering('lab-categories', 'lab-offers-container');
+
+            // Custom Select dropdown logic
+            function initDropdowns() {
+                document.querySelectorAll('.custom-select-wrapper').forEach(wrapper => {
+                    const select = wrapper.querySelector('.custom-select');
+                    const options = wrapper.querySelectorAll('.custom-option');
+                    
+                    // Remove existing listeners if any by cloning
+                    const newSelect = select.cloneNode(true);
+                    select.parentNode.replaceChild(newSelect, select);
+
+                    newSelect.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        // Close other dropdowns
+                        document.querySelectorAll('.custom-select-wrapper').forEach(w => {
+                            if(w !== wrapper) w.classList.remove('open');
+                        });
+                        wrapper.classList.toggle('open');
+                    });
+
+                    options.forEach(opt => {
+                        opt.addEventListener('click', () => {
+                            newSelect.innerHTML = opt.innerHTML;
+                            options.forEach(o => o.classList.remove('selected'));
+                            opt.classList.add('selected');
+                            wrapper.classList.remove('open');
+                        });
+                    });
                 });
             }
 
-            categories.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    categories.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    const cat = btn.getAttribute('data-cat');
-                    
-                    let sub = '';
-                    if (cat === 'laser') {
-                        // default sub for laser
-                        const actSubBtn = document.querySelector('.subcat-btn.active');
-                        if(actSubBtn) sub = actSubBtn.getAttribute('data-sub');
-                    }
-                    
-                    updateView(cat, sub);
-                });
-            });
+            initDropdowns();
 
-            subcategories.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    subcategories.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    
-                    const cat = document.querySelector('.category-sel.active').getAttribute('data-cat');
-                    const sub = btn.getAttribute('data-sub');
-                    
-                    updateView(cat, sub);
-                });
-            });
-
-            // Start with All Offers active
-            updateView('all', '');
-
-            // Custom Select dropdown logic
-            document.querySelectorAll('.custom-select-wrapper').forEach(wrapper => {
-                const select = wrapper.querySelector('.custom-select');
-                const options = wrapper.querySelectorAll('.custom-option');
-                select.addEventListener('click', () => {
-                    document.querySelectorAll('.custom-select-wrapper').forEach(w => {
-                        if(w !== wrapper) w.classList.remove('open');
-                    });
-                    wrapper.classList.toggle('open');
-                });
-                options.forEach(opt => {
-                    opt.addEventListener('click', () => {
-                        select.innerHTML = opt.innerHTML;
-                        options.forEach(o => o.classList.remove('selected'));
-                        opt.classList.add('selected');
-                        wrapper.classList.remove('open');
-                    });
-                });
-            });
             document.addEventListener('click', (e) => {
                 if(!e.target.closest('.custom-select-wrapper')) {
                     document.querySelectorAll('.custom-select-wrapper').forEach(w => w.classList.remove('open'));
                 }
             });
-        });</script>
+        });
+    </script>
 </body>
 
 </html>
