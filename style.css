@@ -1848,16 +1848,27 @@ body.lang-ar .dept-arabic {
     }
     
     /* Fix for Modals (like Gentle Pro Max View Details) */
+    #spectra-modal,
+    #gentle-modal,
+    #eco2-modal,
+    #hydra-modal,
+    #scalp-modal {
+        align-items: flex-start !important;
+        overflow-y: auto !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
     #spectra-modal-content,
     #gentle-modal-content,
     #eco2-modal-content,
     #hydra-modal-content,
     #scalp-modal-content {
         padding: 20px !important;
-        max-height: 85vh !important;
-        overflow-y: auto !important;
+        max-height: none !important; /* Allow natural height, parent scrolls */
         width: 95% !important;
-        margin: auto !important;
+        margin: 0 auto !important;
+        transform: scale(1) !important;
     }
 
     .hero {
