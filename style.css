@@ -1774,6 +1774,23 @@ body.lang-ar .dept-arabic {
         max-width: 100% !important;
     }
 
+    /* Fix for currency images (SAR) to keep them small like desktop */
+    .offer-price img,
+    .custom-select img,
+    .custom-option img,
+    .logo img,
+    .accreditation-logo {
+        width: auto !important;
+    }
+    
+    .offer-price img,
+    .custom-select img,
+    .custom-option img {
+        height: 1.1em !important;
+        display: inline-block !important;
+        vertical-align: middle !important;
+    }
+
     /* 🔷 7. Navbar Fix (Hamburger) */
     .top-bar {
         display: none !important;
