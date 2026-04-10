@@ -207,7 +207,7 @@ body {
 
 /* --- Navbar --- */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.75) !important;
+    background-color: #000000 !important;
     /* Deeper glass tint */
     backdrop-filter: blur(35px) !important;
     -webkit-backdrop-filter: blur(35px) !important;
@@ -219,7 +219,7 @@ body {
 }
 
 .navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.9) !important;
+    background-color: #000000 !important;
     backdrop-filter: blur(45px) !important;
     -webkit-backdrop-filter: blur(45px) !important;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
@@ -1437,16 +1437,39 @@ body.lang-ar .dept-arabic {
 }
 
 .doctors-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/web banner.png') center/cover no-repeat;
+    background: linear-gradient(rgba(10, 61, 98, 0.5), rgba(10, 61, 98, 0.5)), url('./assets/web banner.png') center/130% no-repeat;
+    padding: 100px 0;
 }
 
 .about-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/lines.png') center/cover no-repeat;
+    background: linear-gradient(rgba(10, 61, 98, 0.5), rgba(10, 61, 98, 0.5)), url('./assets/lines.png') center/cover no-repeat;
+}
+
+.departments-header {
+    background: linear-gradient(rgba(10, 61, 98, 0.85), rgba(10, 61, 98, 0.85)), url('./assets/departments_header_bg.png') center/cover no-repeat;
+}
+
+.contact-header {
+    background: linear-gradient(rgba(10, 61, 98, 0.85), rgba(10, 61, 98, 0.85)), url('./assets/contact_header_bg.png') center/cover no-repeat;
+}
+
+.dermatology-header {
+    background: linear-gradient(rgba(10, 61, 98, 0.85), rgba(10, 61, 98, 0.85)), url('./assets/hero_bg.png') center/cover no-repeat;
 }
 
 @media (max-width: 768px) {
     .internal-header {
         padding: 120px 0 50px; /* More top padding to account for mobile navbar bubble */
+    }
+    .doctors-header, 
+    .about-header, 
+    .departments-header, 
+    .contact-header, 
+    .dermatology-header, 
+    .store-header {
+        background-size: cover !important;
+        background-position: center !important;
+        padding: 140px 0 60px !important;
     }
 }
 
@@ -1463,17 +1486,11 @@ body.lang-ar .dept-arabic {
     margin: 0 auto;
 }
 
-.about-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/lines.png') center/cover no-repeat;
-}
 
 .store-header {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/offers_bkd.jpg') center/cover no-repeat;
 }
 
-.doctors-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/web banner.png') center/cover no-repeat;
-}
 
 
 
