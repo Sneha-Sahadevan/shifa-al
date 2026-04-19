@@ -192,6 +192,26 @@ ul {
     text-decoration: underline;
 }
 
+.custom-lang-select {
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    outline: none;
+    cursor: pointer;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.custom-lang-select:hover {
+    color: #4ADE80;
+}
+
+.custom-lang-select option {
+    color: #333;
+}
+
 /* --- Google Translate Styling --- */
 .goog-te-banner-frame {
     display: none !important;
@@ -1845,9 +1865,48 @@ body.lang-ar .dept-arabic {
         vertical-align: middle !important;
     }
 
-    /* 🔷 7. Navbar Fix (Hamburger) */
+    /* 🔷 Hide boring top bar on mobile */
     .top-bar {
         display: none !important;
+    }
+
+    /* 🔷 Premium Language Switcher Positioning */
+    .custom-lang-wrapper {
+        margin: 0 !important;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-actions {
+        display: flex !important;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .lang-pill-container {
+        background: rgba(255, 255, 255, 0.15) !important;
+        border: 1px solid rgba(255, 255, 255, 0.25) !important;
+        padding: 5px 12px !important;
+        border-radius: 25px !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .custom-lang-select {
+        background: transparent !important;
+        border: none !important;
+        color: white !important;
+        font-size: 0.8rem !important;
+        font-weight: 700 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        appearance: none !important; /* Remove default chevron for ultra-clean look */
+    }
+
+    .custom-lang-select:hover {
+        background: rgba(255, 255, 255, 0.2) !important;
     }
 
     .navbar.hero-nav {
@@ -1858,9 +1917,10 @@ body.lang-ar .dept-arabic {
     }
 
     .navbar-content {
-        padding: 0 15px !important;
+        padding: 0 10px !important;
         display: flex !important;
         justify-content: space-between !important;
+        gap: 10px !important;
     }
 
     .nav-links {

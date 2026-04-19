@@ -110,18 +110,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const langSwitcherWrapper = document.createElement('div');
         langSwitcherWrapper.className = 'custom-lang-wrapper';
         langSwitcherWrapper.innerHTML = `
-            <div style="display: flex; align-items: center; gap: 5px; margin: 0 15px;">
+            <div class="lang-pill-container" style="display: flex; align-items: center; gap: 8px;">
                 <i data-lucide="globe" style="width: 14px; height: 14px; color: white;"></i>
-                <select class="custom-lang-select" onchange="switchLanguage(this.value)" style="background: transparent; border: none; color: white; font-family: 'Open Sans', sans-serif; font-size: 0.85rem; outline: none; cursor: pointer; padding: 2px 5px; border-radius: 4px;">
-                    <option value="en" style="color: #333;" ${currentLang === 'en' ? 'selected' : ''}>English</option>
-                    <option value="ar" style="color: #333;" ${currentLang === 'ar' ? 'selected' : ''}>Arabic (العربية)</option>
+                <select class="custom-lang-select" onchange="switchLanguage(this.value)">
+                    <option value="en" ${currentLang === 'en' ? 'selected' : ''}>EN</option>
+                    <option value="ar" ${currentLang === 'ar' ? 'selected' : ''}>AR</option>
                 </select>
             </div>
         `;
 
-        const topContactElement = document.querySelector('.top-contact');
-        if (topContactElement) {
-            topBarContainer.insertBefore(langSwitcherWrapper, topContactElement);
+        const isMobile = window.innerWidth <= 1024;
+        if (isMobile) {
+            const navActions = document.querySelector('.nav-actions');
+            if (navActions) {
+                navActions.insertBefore(langSwitcherWrapper, navActions.firstChild);
+            }
+        } else {
+            const topContactElement = document.querySelector('.top-contact');
+            if (topContactElement) {
+                topBarContainer.insertBefore(langSwitcherWrapper, topContactElement);
+            }
         }
 
         // Apply translations via JS instead of Google Auto-Translate
