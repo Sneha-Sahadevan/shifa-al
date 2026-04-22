@@ -1,3 +1,6 @@
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap');
+
 :root {
     --primary: #0A3D62;
     /* Deep Clinical Navy */
@@ -34,6 +37,17 @@ body {
     color: var(--text-main);
     background-color: var(--bg-main);
     line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+[dir="rtl"] body, 
+[dir="rtl"] .hero-text-box h1, 
+[dir="rtl"] .section-title, 
+[dir="rtl"] .btn,
+[dir="rtl"] .nav-links a,
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
+    font-family: 'Cairo', 'Tajawal', sans-serif !important;
 }
 
 h1,
@@ -2021,4 +2035,119 @@ body.lang-ar .dept-arabic {
     .map-container {
         min-height: 250px !important;
     }
+}
+
+/* =========================================
+   🌐 FULL RTL SUPPORT (ARABIC)
+   ========================================= */
+
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .logo {
+    justify-content: flex-start; /* In RTL, flex-start is the right side */
+}
+
+[dir="rtl"] .nav-right {
+    justify-content: flex-end; /* In RTL, flex-end is the left side */
+}
+
+/* Reverse layout for feature boxes */
+[dir="rtl"] .feature-box {
+    border-right: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[dir="rtl"] .feature-box:last-child {
+    border-left: none;
+}
+
+/* Align bullets correctly */
+[dir="rtl"] .bullet-item i {
+    /* gap handles this, but ensuring no stray margins */
+}
+
+[dir="rtl"] .content-card ul li::before {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+/* Flip icons that indicate direction */
+[dir="rtl"] .lucide-chevron-right,
+[dir="rtl"] .lucide-arrow-right,
+[dir="rtl"] .btn i[data-lucide="arrow-right"] {
+    transform: rotate(180deg);
+}
+
+/* Watermark position reversal */
+[dir="rtl"] .card-watermark {
+    right: auto;
+    left: -30px;
+}
+
+/* Form and Input fixes */
+[dir="rtl"] input, 
+[dir="rtl"] textarea, 
+[dir="rtl"] select {
+    text-align: right;
+}
+
+/* Language Switcher alignment */
+[dir="rtl"] .custom-lang-wrapper {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* Accreditations and logos */
+[dir="rtl"] .nav-right {
+    gap: 20px;
+}
+
+/* Responsive adjustments for RTL */
+@media (max-width: 1024px) {
+    [dir="rtl"] .nav-links {
+        left: 0;
+        right: 0;
+        text-align: right;
+    }
+    
+    [dir="rtl"] .mobile-toggle {
+        order: -1; /* Move toggle to the left end in RTL mobile */
+    }
+}
+
+/* Section specific RTL adjustments */
+[dir="rtl"] .about-bullets {
+    padding-right: 0;
+}
+
+[dir="rtl"] .footer-col h4::after {
+    left: auto;
+    right: 0;
+}
+
+/* Offer cards and store fixes */
+[dir="rtl"] .offer-card .btn {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .offer-card .btn i {
+    margin-left: 8px;
+    margin-right: 0;
+    transform: rotate(180deg);
+}
+
+/* Ensure font is applied to all elements */
+[dir="rtl"] body, 
+[dir="rtl"] .navbar,
+[dir="rtl"] .nav-links a,
+[dir="rtl"] .hero-text-box h1,
+[dir="rtl"] .section-title,
+[dir="rtl"] .btn,
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] .offer-card h3,
+[dir="rtl"] .practitioner-name {
+    font-family: 'Cairo', 'Tajawal', sans-serif !important;
 }

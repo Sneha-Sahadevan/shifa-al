@@ -11,6 +11,7 @@
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="i18n.js"></script>
 </head>
 
 <body>
@@ -18,8 +19,8 @@
     <div class="top-bar">
         <div class="container top-bar-content">
             <div class="top-info">
-                <span><i data-lucide="clock" class="icon-sm"></i> 24/7 Emergency Services</span>
-                <span><i data-lucide="map-pin" class="icon-sm"></i> Al Makarunah Branch, Jeddah</span>
+                <span data-i18n="emergency_24_7"><i data-lucide="clock" class="icon-sm"></i> 24/7 Emergency Services</span>
+                <span data-i18n="location_jeddah"><i data-lucide="map-pin" class="icon-sm"></i> Al Makarunah Branch, Jeddah</span>
             </div>
             <div class="top-contact">
                 <a href="tel:0126625908"><i data-lucide="phone" class="icon-sm"></i> 012 6625908</a>
@@ -35,13 +36,13 @@
                 <img src="./assets/transparent_logo.png" alt="Shifa Al Bawadi Logo" id="logo-img">
             </a>
             <nav class="nav-links" id="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
-                <a href="departments.html">Departments</a>
-                <a href="doctors.html">Doctors</a>
-                <a href="store.html">Offers & Store</a>
-                <a href="dermatology.html">Dermatology</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html" data-i18n="nav_home">Home</a>
+                <a href="about.html" class="active" data-i18n="nav_about">About</a>
+                <a href="departments.html" data-i18n="nav_departments">Departments</a>
+                <a href="doctors.html" data-i18n="nav_doctors">Doctors</a>
+                <a href="store.html" data-i18n="nav_offers">Offers & Store</a>
+                <a href="dermatology.html" data-i18n="nav_dermatology">Dermatology</a>
+                <a href="contact.html" data-i18n="nav_contact">Contact</a>
             </nav>
             <div class="nav-right">
                 <a href="assets/certificate.pdf" target="_blank" class="accreditation-link">
@@ -57,8 +58,8 @@
     <main>
         <section class="internal-header about-header">
             <div class="container">
-                <h1>About Us</h1>
-                <p>Learn more about our heritage, mission, and the core values that make us a trusted medical partner.
+                <h1 data-i18n="nav_about">About Us</h1>
+                <p data-i18n="about_heritage">Learn more about our heritage, mission, and the core values that make us a trusted medical partner.
                 </p>
             </div>
         </section>
@@ -68,18 +69,18 @@
             <div class="container about-wrapper"
                 style="display: block; max-width: 900px; margin: 0 auto; text-align: center;">
                 <div class="about-content">
-                    <div class="section-badge">Welcome to Shifa Al Bawadi</div>
-                    <h2 class="section-title">Your health, our continuous commitment</h2>
-                    <p class="lead-text">Delivering excellence in healthcare since 2007, Shifa Al Bawadi Medical Service
+                    <div class="section-badge" data-i18n="welcome_title">Welcome to Shifa Al Bawadi</div>
+                    <h2 class="section-title" data-i18n="welcome_subtitle">Your health, our continuous commitment</h2>
+                    <p class="lead-text" data-i18n="excellence_desc">Delivering excellence in healthcare since 2007, Shifa Al Bawadi Medical Service
                         Co. stands as a trusted name in multi-specialty medical services.</p>
-                    <p>We combine advanced medical technology with compassionate, patient-centered care to ensure the
+                    <p data-i18n="standards_desc">We combine advanced medical technology with compassionate, patient-centered care to ensure the
                         highest standards of treatment and patient satisfaction.</p>
 
                     <div class="about-bullets">
-                        <div class="bullet-item"><i data-lucide="check"></i> 20+ Years of Experience</div>
-                        <div class="bullet-item"><i data-lucide="check"></i> Multi-Specialty Services</div>
-                        <div class="bullet-item"><i data-lucide="check"></i> Advanced Medical Technology</div>
-                        <div class="bullet-item"><i data-lucide="check"></i> Thousands of Happy Patients</div>
+                        <div class="bullet-item"><i data-lucide="check"></i> <span data-i18n="exp_years">20+ Years of Experience</span></div>
+                        <div class="bullet-item"><i data-lucide="check"></i> <span data-i18n="multi_specialty">Multi-Specialty Services</span></div>
+                        <div class="bullet-item"><i data-lucide="check"></i> <span data-i18n="adv_tech">Advanced Medical Technology</span></div>
+                        <div class="bullet-item"><i data-lucide="check"></i> <span data-i18n="happy_patients">Thousands of Happy Patients</span></div>
                     </div>
                 </div>
             </div>
@@ -94,11 +95,11 @@
                         <div class="card-header-horizontal">
                             <div class="card-icon-wrapper"><i data-lucide="leaf"></i></div>
                             <div class="card-title-group">
-                                <h3>Our Vision</h3>
-                                <span class="card-subtitle">LEADING WITH PURPOSE</span>
+                                <h3 data-i18n="our_vision">Our Vision</h3>
+                                <span class="card-subtitle" data-i18n="vision_subtitle">LEADING WITH PURPOSE</span>
                             </div>
                         </div>
-                        <p>To be recognized as a leading healthcare provider in the region, known for excellence in
+                        <p data-i18n="about_vision_desc">To be recognized as a leading healthcare provider in the region, known for excellence in
                             medical care, innovation, and exceptional patient experience.</p>
                     </div>
                     <div class="content-card bg-pattern-gradient">
@@ -106,11 +107,11 @@
                         <div class="card-header-horizontal">
                             <div class="card-icon-wrapper"><i data-lucide="target"></i></div>
                             <div class="card-title-group">
-                                <h3>Our Mission</h3>
-                                <span class="card-subtitle">CARE THAT CHANGES LIVES</span>
+                                <h3 data-i18n="our_mission">Our Mission</h3>
+                                <span class="card-subtitle" data-i18n="mission_subtitle">CARE THAT CHANGES LIVES</span>
                             </div>
                         </div>
-                        <p>To provide comprehensive, accessible, and high-quality healthcare services that enhance the
+                        <p data-i18n="about_mission_desc">To provide comprehensive, accessible, and high-quality healthcare services that enhance the
                             well-being and quality of life of our patients.</p>
                     </div>
                     <div class="content-card bg-pattern-gradient">
@@ -118,15 +119,15 @@
                         <div class="card-header-horizontal">
                             <div class="card-icon-wrapper"><i data-lucide="sparkles"></i></div>
                             <div class="card-title-group">
-                                <h3>Our Facilities</h3>
-                                <span class="card-subtitle">BUILT FOR BETTER HEALTH</span>
+                                <h3 data-i18n="our_facilities">Our Facilities</h3>
+                                <span class="card-subtitle" data-i18n="facilities_subtitle">BUILT FOR BETTER HEALTH</span>
                             </div>
                         </div>
                         <ul>
-                            <li>Modern and fully equipped consultation rooms</li>
-                            <li>Advanced diagnostic and imaging technology</li>
-                            <li>Sterile and safe clinical environment</li>
-                            <li>Comfortable and patient-friendly infrastructure</li>
+                            <li data-i18n="facilities_room">Modern and fully equipped consultation rooms</li>
+                            <li data-i18n="facilities_tech">Advanced diagnostic and imaging technology</li>
+                            <li data-i18n="facilities_safe">Sterile and safe clinical environment</li>
+                            <li data-i18n="facilities_infra">Comfortable and patient-friendly infrastructure</li>
                         </ul>
                     </div>
                     <div class="content-card bg-pattern-gradient">
@@ -134,16 +135,16 @@
                         <div class="card-header-horizontal">
                             <div class="card-icon-wrapper"><i data-lucide="gem"></i></div>
                             <div class="card-title-group">
-                                <h3>Our Core Values</h3>
-                                <span class="card-subtitle">THE HEART OF WHO WE ARE</span>
+                                <h3 data-i18n="our_values">Our Core Values</h3>
+                                <span class="card-subtitle" data-i18n="values_subtitle">THE HEART OF WHO WE ARE</span>
                             </div>
                         </div>
                         <ul>
-                            <li>Patient First</li>
-                            <li>Excellence</li>
-                            <li>Integrity</li>
-                            <li>Innovation</li>
-                            <li>Compassion</li>
+                            <li data-i18n="patient_first">Patient First</li>
+                            <li data-i18n="excellence">Excellence</li>
+                            <li data-i18n="integrity">Integrity</li>
+                            <li data-i18n="innovation">Innovation</li>
+                            <li data-i18n="compassion">Compassion</li>
                         </ul>
                     </div>
                 </div>
@@ -159,7 +160,7 @@
                         style="width: 5px; height: 65px; background: linear-gradient(to bottom, #0D9488, #EF4444); margin-right: 25px; border-radius: 10px;">
                     </div>
                     <div>
-                        <h2
+                        <h2 data-i18n="medical_services_title"
                             style="font-family: 'Outfit', sans-serif; font-size: clamp(2.5rem, 5vw, 3.5rem); color: #0F172A; margin: 0; font-weight: 800; line-height: 1.1;">
                             Medical Services</h2>
                     </div>
@@ -175,7 +176,7 @@
                         <div class="service-info-row">
                             <div class="service-icon-box"><i data-lucide="clock"></i></div>
                             <div class="service-text-content">
-                                <h3>24/7 Emergency</h3>
+                                <h3 data-i18n="emergency_24_7">24/7 Emergency</h3>
                             </div>
                         </div>
                     </div>
@@ -187,7 +188,7 @@
                         <div class="service-info-row">
                             <div class="service-icon-box"><i data-lucide="waves"></i></div>
                             <div class="service-text-content">
-                                <h3>Ultrasound</h3>
+                                <h3 data-i18n="ultrasound">Ultrasound</h3>
                             </div>
                         </div>
                     </div>
@@ -199,7 +200,7 @@
                         <div class="service-info-row">
                             <div class="service-icon-box"><i data-lucide="activity"></i></div>
                             <div class="service-text-content">
-                                <h3>X-ray & ECG</h3>
+                                <h3 data-i18n="xray_ecg">X-ray & ECG</h3>
                             </div>
                         </div>
                     </div>
@@ -211,7 +212,7 @@
                         <div class="service-info-row">
                             <div class="service-icon-box"><i data-lucide="scan"></i></div>
                             <div class="service-text-content">
-                                <h3>CT Scan</h3>
+                                <h3 data-i18n="ct_scan">CT Scan</h3>
                             </div>
                         </div>
                     </div>
@@ -223,7 +224,7 @@
                         <div class="service-info-row">
                             <div class="service-icon-box"><i data-lucide="scan"></i></div>
                             <div class="service-text-content">
-                                <h3>Panoramic X-ray</h3>
+                                <h3 data-i18n="panoramic_xray">Panoramic X-ray</h3>
                             </div>
                         </div>
                     </div>
@@ -235,7 +236,7 @@
                         <div class="service-info-row">
                             <div class="service-icon-box"><i data-lucide="smile"></i></div>
                             <div class="service-text-content">
-                                <h3>4D Ultrasound</h3>
+                                <h3 data-i18n="4d_ultrasound">4D Ultrasound</h3>
                             </div>
                         </div>
                     </div>
@@ -247,7 +248,7 @@
                         <div class="service-info-row">
                             <div class="service-icon-box"><i data-lucide="flask-conical"></i></div>
                             <div class="service-text-content">
-                                <h3>Laboratory</h3>
+                                <h3 data-i18n="laboratory">Laboratory</h3>
                             </div>
                         </div>
                     </div>
@@ -259,7 +260,7 @@
                         <div class="service-info-row">
                             <div class="service-icon-box"><i data-lucide="pill"></i></div>
                             <div class="service-text-content">
-                                <h3>Pharmacy</h3>
+                                <h3 data-i18n="pharmacy">Pharmacy</h3>
                             </div>
                         </div>
                     </div>
@@ -271,7 +272,7 @@
                         <div class="service-info-row">
                             <div class="service-icon-box"><i data-lucide="glasses"></i></div>
                             <div class="service-text-content">
-                                <h3>Opticals</h3>
+                                <h3 data-i18n="opticals">Opticals</h3>
                             </div>
                         </div>
                     </div>
@@ -289,10 +290,10 @@
                         style="width: 5px; height: 65px; background: linear-gradient(to bottom, #0D9488, #EF4444); margin-right: 25px; border-radius: 10px;">
                     </div>
                     <div>
-                        <h2
+                        <h2 data-i18n="our_branches"
                             style="font-family: 'Outfit', sans-serif; font-size: clamp(2.5rem, 5vw, 3.5rem); color: #0F172A; margin: 0; font-weight: 800; line-height: 1.1;">
                             Our Branches</h2>
-                        <p
+                        <p data-i18n="our_branches_desc"
                             style="color: #64748B; font-size: 1.2rem; margin-top: 15px; max-width: 650px; font-family: 'Inter', sans-serif; line-height: 1.6;">
                             Exceptional medical care across our specialized facilities, providing advanced treatments
                             with a patient-first approach.</p>
@@ -310,10 +311,10 @@
                         </div>
                     </div>
                     <div class="branch-content" style="flex: 1; min-width: 320px;" data-aos="fade-left">
-                        <h3
+                        <h3 data-i18n="branch_almas_title"
                             style="font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 3.5vw, 2.8rem); color: #0F172A; margin-bottom: 25px; font-weight: 700; line-height: 1.2;">
                             Almas Ideal Medical Center</h3>
-                        <p
+                        <p data-i18n="branch_almas_desc"
                             style="color: #475569; font-size: 1.25rem; line-height: 1.9; margin-bottom: 40px; font-family: 'Inter', sans-serif;">
                             Almas Ideal Medical Center, established in 2015, aims to deliver high-quality medical care
                             to both individuals and corporate clients. We pride ourselves on creating a healing
@@ -321,7 +322,7 @@
                         <div style="display: flex; gap: 20px; align-items: center;">
                             <div class="accent-line"
                                 style="width: 100px; height: 6px; background: #0D9488; border-radius: 10px;"></div>
-                            <span
+                            <span data-i18n="branch_almas_loc"
                                 style="color: #0D9488; font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem;">Al
                                 MAKRONAH
                                 Rd Branch</span>
@@ -333,10 +334,10 @@
                 <div class="branch-block"
                     style="display: flex; align-items: center; gap: clamp(40px, 8vw, 120px); flex-wrap: wrap-reverse;">
                     <div class="branch-content" style="flex: 1; min-width: 320px;" data-aos="fade-right">
-                        <h3
+                        <h3 data-i18n="branch_almas_title"
                             style="font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 3.5vw, 2.8rem); color: #0F172A; margin-bottom: 25px; font-weight: 700; line-height: 1.2;">
                             Almas Ideal Medical Center</h3>
-                        <p
+                        <p data-i18n="branch_seteen_desc"
                             style="color: #475569; font-size: 1.25rem; line-height: 1.9; margin-bottom: 40px; font-family: 'Inter', sans-serif;">
                             Almas Ideal Medical Center, located on Seteen Road, Jeddah, offers high-quality medical
                             services for individuals and corporate clients through medical teams and advanced
@@ -345,7 +346,7 @@
                         <div style="display: flex; gap: 20px; align-items: center;">
                             <div class="accent-line"
                                 style="width: 100px; height: 6px; background: #0D9488; border-radius: 10px;"></div>
-                            <span
+                            <span data-i18n="branch_seteen_loc"
                                 style="color: #0D9488; font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem;">Seteen
                                 Rd Branch</span>
                         </div>
@@ -365,13 +366,13 @@
         <section class="insurance-partners fade-in" style="background: white; padding: 0 0 120px 0; overflow: hidden;">
             <div class="container">
                 <div class="section-header text-center" style="margin-bottom: 60px;">
-                    <h2
+                    <h2 data-i18n="insurance_partners"
                         style="font-family: 'Outfit', sans-serif; font-size: clamp(2.2rem, 4vw, 3rem); color: #0F172A; margin: 0 0 15px 0; font-weight: 800;">
                         Insurance Partners</h2>
                     <div class="accent-line"
                         style="width: 80px; height: 5px; background: linear-gradient(to right, #0D9488, #EF4444); margin: 0 auto; border-radius: 10px;">
                     </div>
-                    <p
+                    <p data-i18n="insurance_partners_desc"
                         style="color: #64748B; font-size: 1.15rem; margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto; font-family: 'Inter', sans-serif;">
                         We partner with leading insurance providers to ensure accessible medical care for everyone.</p>
                 </div>
@@ -506,11 +507,11 @@
             <div style="position: absolute; bottom: -50px; right: -50px; width: 200px; height: 200px; background: rgba(10, 61, 98, 0.03); border-radius: 50%;"></div>
             
             <div class="container text-center" style="max-width: 800px; margin: 0 auto; text-align: center; position: relative; z-index: 2;">
-                <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 4vw, 2.8rem); color: var(--primary); margin-bottom: 20px; font-weight: 800;">Start Your Journey to Better Health Today</h2>
-                <p style="color: #475569; font-size: 1.2rem; margin-bottom: 40px; font-family: 'Inter', sans-serif; line-height: 1.6;">Experience trusted care with our expert medical team.</p>
+                <h2 data-i18n="journey_title" style="font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 4vw, 2.8rem); color: var(--primary); margin-bottom: 20px; font-weight: 800;">Start Your Journey to Better Health Today</h2>
+                <p data-i18n="journey_desc" style="color: #475569; font-size: 1.2rem; margin-bottom: 40px; font-family: 'Inter', sans-serif; line-height: 1.6;">Experience trusted care with our expert medical team.</p>
                 <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://wa.me/966536312869" class="btn btn-cta-primary" style="padding: 15px 35px; border-radius: 50px; font-size: 1.1rem; font-weight: 600; transition: all 0.3s ease;">Book Now &rarr;</a>
-                    <a href="contact.html" class="btn btn-cta-outline" style="padding: 15px 35px; border-radius: 50px; font-size: 1.1rem; font-weight: 600; transition: all 0.3s ease;">Contact Us</a>
+                    <a href="https://wa.me/966536312869" class="btn btn-cta-primary" style="padding: 15px 35px; border-radius: 50px; font-size: 1.1rem; font-weight: 600; transition: all 0.3s ease;" data-i18n="book_now">Book Now &rarr;</a>
+                    <a href="contact.html" class="btn btn-cta-outline" style="padding: 15px 35px; border-radius: 50px; font-size: 1.1rem; font-weight: 600; transition: all 0.3s ease;" data-i18n="nav_contact">Contact Us</a>
                 </div>
             </div>
         </section>
@@ -546,7 +547,7 @@
     <footer class="site-footer">
         <div class="footer-bottom">
             <div class="container bottom-flex">
-                <p>&copy; 2026 Shifa Al Bawadi Medical Services Co. All Rights Reserved.</p>
+                <p>&copy; 2026 Shifa Al Bawadi Medical Services Co. <span data-i18n="all_rights_reserved">All Rights Reserved.</span></p>
                 <div class="developer-credit">
                     Meet the Developers 
                     <a href="https://www.instagram.com/intellex.web?igsh=MWZyenU0bWc3M2RxOQ==" target="_blank" aria-label="Visit Intellex Instagram">

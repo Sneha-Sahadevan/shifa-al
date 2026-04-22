@@ -11,6 +11,7 @@
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="i18n.js"></script>
 </head>
 
 <body>
@@ -18,8 +19,8 @@
     <div class="top-bar">
         <div class="container top-bar-content">
             <div class="top-info">
-                <span><i data-lucide="clock" class="icon-sm"></i> 24/7 Emergency Services</span>
-                <span><i data-lucide="map-pin" class="icon-sm"></i> Al Makarunah Branch, Jeddah</span>
+                <span data-i18n="emergency_24_7"><i data-lucide="clock" class="icon-sm"></i> 24/7 Emergency Services</span>
+                <span data-i18n="location_jeddah"><i data-lucide="map-pin" class="icon-sm"></i> Al Makarunah Branch, Jeddah</span>
             </div>
             <div class="top-contact">
                 <a href="tel:0126625908"><i data-lucide="phone" class="icon-sm"></i> 012 6625908</a>
@@ -35,13 +36,13 @@
                 <img src="./assets/transparent_logo.png" alt="Shifa Al Bawadi Logo" id="logo-img">
             </a>
             <nav class="nav-links" id="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="departments.html" class="active">Departments</a>
-                <a href="doctors.html">Doctors</a>
-                <a href="store.html">Offers & Store</a>
-                <a href="dermatology.html">Dermatology</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html" data-i18n="nav_home">Home</a>
+                <a href="about.html" data-i18n="nav_about">About</a>
+                <a href="departments.html" class="active" data-i18n="nav_departments">Departments</a>
+                <a href="doctors.html" data-i18n="nav_doctors">Doctors</a>
+                <a href="store.html" data-i18n="nav_offers">Offers & Store</a>
+                <a href="dermatology.html" data-i18n="nav_dermatology">Dermatology</a>
+                <a href="contact.html" data-i18n="nav_contact">Contact</a>
             </nav>
             <div class="nav-right">
                 <a href="assets/certificate.pdf" target="_blank" class="accreditation-link">
@@ -57,8 +58,8 @@
     <main>
         <section class="internal-header departments-header">
             <div class="container text-center">
-                <h1 style="color: white; font-family: 'Roboto', sans-serif; font-weight: 700;">Our Medical Departments</h1>
-                <p style="color: #E2E8F0; max-width: 700px; margin: 0 auto; line-height: 1.6;">Comprehensive healthcare facilities backed by state-of-the-art clinical technology.</p>
+                <h1 data-i18n="medical_depts" style="color: white; font-family: 'Roboto', sans-serif; font-weight: 700;">Our Medical Departments</h1>
+                <p data-i18n="dept_header_p" style="color: #E2E8F0; max-width: 700px; margin: 0 auto; line-height: 1.6;">Comprehensive healthcare facilities backed by state-of-the-art clinical technology.</p>
             </div>
         </section>
 
@@ -69,69 +70,69 @@
                     <a href="contact.html" class="dept-card">
                         <img src="./assets/ent.jpg" alt="ENT (Ear, Nose, Throat)">
                         <div class="dept-info">
-                            <h3>ENT (Ear, Nose, Throat)</h3>
-                            <p>From tonsilitis to hearing impairment, we treat all head and neck ailments efficiently.
+                            <h3 data-i18n="ent_name">ENT (Ear, Nose, Throat)</h3>
+                            <p data-i18n="ent_desc">From tonsilitis to hearing impairment, we treat all head and neck ailments efficiently.
                             </p>
                         </div>
                     </a>
                     <a href="contact.html" class="dept-card">
                         <img src="./assets/dental_dept.png" alt="Dental Services">
                         <div class="dept-info">
-                            <h3>Dental Services</h3>
-                            <p>Root canals, braces, teeth whitening, and general dental surgery.</p>
+                            <h3 data-i18n="dental_name">Dental Services</h3>
+                            <p data-i18n="dental_desc">Root canals, braces, teeth whitening, and general dental surgery.</p>
                         </div>
                     </a>
                     <a href="contact.html" class="dept-card">
                         <img src="./assets/ophthalmology.jpg" alt="Ophthalmology">
                         <div class="dept-info">
-                            <h3>Ophthalmology</h3>
-                            <p>Vision correction, cataract surgery, and modern optical center services available all
+                            <h3 data-i18n="ophthal_name">Ophthalmology</h3>
+                            <p data-i18n="ophthal_desc">Vision correction, cataract surgery, and modern optical center services available all
                                 day.</p>
                         </div>
                     </a>
                     <a href="contact.html" class="dept-card">
                         <img src="./assets/orthopedic_dept.jpg" alt="Orthopedic">
                         <div class="dept-info">
-                            <h3>Orthopedic</h3>
-                            <p>Treating sports injuries, bone fractures, and providing comprehensive physical
+                            <h3 data-i18n="ortho_name">Orthopedic</h3>
+                            <p data-i18n="ortho_desc">Treating sports injuries, bone fractures, and providing comprehensive physical
                                 rehabilitation.</p>
                         </div>
                     </a>
                     <a href="contact.html" class="dept-card">
                         <img src="./assets/internal_medicine_dept.jpg" alt="Internal Medicine">
                         <div class="dept-info">
-                            <h3>Internal Medicine</h3>
-                            <p>Managing chronic conditions like diabetes, hypertension, and asthma through routine
+                            <h3 data-i18n="internal_name">Internal Medicine</h3>
+                            <p data-i18n="internal_desc">Managing chronic conditions like diabetes, hypertension, and asthma through routine
                                 checks.</p>
                         </div>
                     </a>
                     <a href="contact.html" class="dept-card">
                         <img src="./assets/pediatrics_special.png" alt="Pediatrics">
                         <div class="dept-info">
-                            <h3>Pediatrics</h3>
-                            <p>Gentle, compassionate, and expert care tailored strictly for newborns, infants, and
+                            <h3 data-i18n="pedia_name">Pediatrics</h3>
+                            <p data-i18n="pedia_desc">Gentle, compassionate, and expert care tailored strictly for newborns, infants, and
                                 adolescents.</p>
                         </div>
                     </a>
                     <a href="dermatology.html" class="dept-card">
                         <img src="./assets/dermatology_special.png" alt="Dermatology & Laser">
                         <div class="dept-info">
-                            <h3>Dermatology & Laser</h3>
-                            <p>Advanced aesthetic treatments, hair removal, and skin rejuvenation logic.</p>
+                            <h3 data-i18n="derma_name">Dermatology & Laser</h3>
+                            <p data-i18n="derma_desc">Advanced aesthetic treatments, hair removal, and skin rejuvenation treatments.</p>
                         </div>
                     </a>
                     <a href="store.html" class="dept-card">
                         <img src="./assets/pharmacy_dept.jpg" alt="24/7 Pharmacy">
                         <div class="dept-info">
-                            <h3>24/7 Pharmacy</h3>
-                            <p>Always stocked, covering prescriptive medicine and over-the-counter supplements.</p>
+                            <h3 data-i18n="pharmacy_name">24/7 Pharmacy</h3>
+                            <p data-i18n="pharmacy_desc">Always stocked, covering prescriptive medicine and over-the-counter supplements.</p>
                         </div>
                     </a>
                     <a href="departments.html" class="dept-card">
                         <img src="./assets/urology_dept.jpg" alt="Urology">
                         <div class="dept-info">
-                            <h3>Urology</h3>
-                            <p>Specialized care for urinary tract conditions and male reproductive health.</p>
+                            <h3 data-i18n="urology_name">Urology</h3>
+                            <p data-i18n="urology_desc">Specialized care for urinary tract conditions and male reproductive health.</p>
                         </div>
                     </a>
                 </div>
@@ -143,7 +144,7 @@
     <footer class="site-footer">
         <div class="footer-bottom">
             <div class="container bottom-flex">
-                <p>&copy; 2026 Shifa Al Bawadi Medical Services Co. All Rights Reserved.</p>
+                <p>&copy; 2026 Shifa Al Bawadi Medical Services Co. <span data-i18n="all_rights_reserved">All Rights Reserved.</span></p>
                 <div class="developer-credit">
                     Meet the Developers 
                     <a href="https://www.instagram.com/intellex.web?igsh=MWZyenU0bWc3M2RxOQ==" target="_blank" aria-label="Visit Intellex Instagram">

@@ -11,6 +11,7 @@
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="i18n.js"></script>
 </head>
 
 <body>
@@ -35,14 +36,13 @@
                 <img src="./assets/transparent_logo.png" alt="Shifa Al Bawadi Logo" id="logo-img">
             </a>
             <nav class="nav-links" id="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="departments.html">Departments</a>
-                <a href="doctors.html">Doctors</a>
-                <a href="store.html">Offers & Store</a>
-                <a href="dermatology.html">Dermatology</a>
-
-                <a href="contact.html" class="active">Contact</a>
+                <a href="index.html" data-i18n="nav_home">Home</a>
+                <a href="about.html" data-i18n="nav_about">About</a>
+                <a href="departments.html" data-i18n="nav_departments">Departments</a>
+                <a href="doctors.html" data-i18n="nav_doctors">Doctors</a>
+                <a href="store.html" data-i18n="nav_offers">Offers & Store</a>
+                <a href="dermatology.html" data-i18n="nav_dermatology">Dermatology</a>
+                <a href="contact.html" class="active" data-i18n="nav_contact">Contact</a>
             </nav>
             <div class="nav-right">
                 <a href="assets/certificate.pdf" target="_blank" class="accreditation-link">
@@ -58,8 +58,8 @@
     <main>
         <section class="internal-header contact-header">
             <div class="container text-center">
-                <h1 style="color: white; font-family: 'Roboto', sans-serif; font-weight: 700;">Contact Us & Appointments</h1>
-                <p style="color: #E2E8F0; max-width: 700px; margin: 0 auto; line-height: 1.6;">Reach out to us for appointments, emergencies, or general medical queries. We are available 24/7.</p>
+                <h1 style="color: white; font-family: 'Roboto', sans-serif; font-weight: 700;" data-i18n="contact_us_appointments">Contact Us & Appointments</h1>
+                <p style="color: #E2E8F0; max-width: 700px; margin: 0 auto; line-height: 1.6;" data-i18n="contact_header_p">Reach out to us for appointments, emergencies, or general medical queries. We are available 24/7.</p>
             </div>
         </section>
 
@@ -70,40 +70,39 @@
 
                     <div class="contact-form-wrapper"
                         style="background: white; padding: 40px; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
-                        <h2 class="section-title" style="font-size: 1.5rem;">Book an Appointment</h2>
+                        <h2 class="section-title" style="font-size: 1.5rem;" data-i18n="book_appointment_title">Book an Appointment</h2>
                         <form id="booking-form"
                             style="display:flex; flex-direction:column; gap:15px; margin-top: 20px;">
-                            <input type="text" placeholder="Full Name"
+                            <input type="text" placeholder="Full Name" data-i18n="[placeholder]name_placeholder"
                                 style="padding:12px; border:1px solid var(--border-color); border-radius:4px;" required>
-                            <input type="email" placeholder="Email Address"
+                            <input type="email" placeholder="Email Address" data-i18n="[placeholder]email_placeholder"
                                 style="padding:12px; border:1px solid var(--border-color); border-radius:4px;" required>
-                            <input type="tel" placeholder="Phone Number"
+                            <input type="tel" placeholder="Phone Number" data-i18n="[placeholder]phone_placeholder"
                                 style="padding:12px; border:1px solid var(--border-color); border-radius:4px;" required>
 
                             <select
-                                style="padding:12px; border:1px solid var(--border-color); border-radius:4px; margin-bottom: 5px;">
-                                <option value="" disabled selected>Select Department</option>
-                                <option>General Consultation / General Physician</option>
-                                <option>24/7 Emergency Services</option>
-                                <option>Dental Checkup</option>
-                                <option>Dermatology / Laser</option>
-                                <option>ENT (Ear, Nose, Throat)</option>
-                                <option>Orthopedics</option>
-                                <option>Ophthalmology</option>
-                                <option>Opticals / Optical Center</option>
-                                <option>Internal Medicine</option>
-                                <option>Gynecology</option>
-                                <option>Pediatrics</option>
-                                <option>Laboratory</option>
-                                <option>Health Packages & Lab Tests</option>
-                                <option>Radiology</option>
-                                <option>Urology</option>
+                                style="padding:12px; border:1px solid var(--border-color); border-radius:4px; margin-bottom: 5px;" data-i18n="[placeholder]select_dept">
+                                <option value="" disabled selected data-i18n="select_dept">Select Department</option>
+                                <option data-i18n="general_consultation">General Consultation / General Physician</option>
+                                <option data-i18n="emergency_services">24/7 Emergency Services</option>
+                                <option data-i18n="dental_checkup">Dental Checkup</option>
+                                <option data-i18n="dermatology_laser">Dermatology / Laser</option>
+                                <option data-i18n="ent">ENT (Ear, Nose, Throat)</option>
+                                <option data-i18n="orthopedic">Orthopedics</option>
+                                <option data-i18n="urology">Urology</option>
+                                <option data-i18n="opticals_center">Opticals / Optical Center</option>
+                                <option data-i18n="internal_medicine">Internal Medicine</option>
+                                <option data-i18n="gynecology">Gynecology</option>
+                                <option data-i18n="pediatrics">Pediatrics</option>
+                                <option data-i18n="laboratory">Laboratory</option>
+                                <option data-i18n="health_packages_tests">Health Packages & Lab Tests</option>
+                                <option data-i18n="radiology">Radiology</option>
                             </select>
 
-                            <textarea rows="4" placeholder="Any specific notes or medical history?"
+                            <textarea rows="4" placeholder="Any specific notes or medical history?" data-i18n="[placeholder]notes_placeholder"
                                 style="padding:12px; border:1px solid var(--border-color); border-radius:4px;"></textarea>
 
-                            <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit
+                            <button type="submit" class="btn btn-primary" style="margin-top: 10px;" data-i18n="submit_request">Submit
                                 Request</button>
                         </form>
                     </div>
@@ -112,15 +111,15 @@
                         <div class="contact-method" style="margin-top: 25px;">
                             <div class="method-icon"><i data-lucide="map-pin"></i></div>
                             <div class="method-details">
-                                <h4>Visit Our Clinic</h4>
-                                <p>Near Masjid Turkey, Al Makarunah Branch,<br>Jeddah, Saudi Arabia</p>
+                                <h4 data-i18n="visit_clinic_title">Visit Our Clinic</h4>
+                                <p data-i18n="address_details">Near Masjid Turkey, Al Makarunah Branch,<br>Jeddah, Saudi Arabia</p>
                             </div>
                         </div>
 
                         <div class="contact-method">
                             <div class="method-icon"><i data-lucide="phone-call"></i></div>
                             <div class="method-details">
-                                <h4>Call Us Now</h4>
+                                <h4 data-i18n="call_us">Call Us Now</h4>
                                 <p><strong>Landline:</strong> 012 6625908<br><strong>Mobile/WhatsApp:</strong> +966
                                     536312869</p>
                             </div>
@@ -129,7 +128,7 @@
                         <div class="contact-method">
                             <div class="method-icon"><i data-lucide="mail"></i></div>
                             <div class="method-details">
-                                <h4>Email</h4>
+                                <h4 data-i18n="email_label">Email</h4>
                                 <p>Shifaalbawadi.customerservice@gmail.com</p>
                             </div>
                         </div>
@@ -152,7 +151,7 @@
     <footer class="site-footer">
         <div class="footer-bottom">
             <div class="container bottom-flex">
-                <p>&copy; 2026 Shifa Al Bawadi Medical Services Co. All Rights Reserved.</p>
+                <p>&copy; 2026 Shifa Al Bawadi Medical Services Co. <span data-i18n="all_rights_reserved">All Rights Reserved.</span></p>
                 <div class="developer-credit">
                     Meet the Developers 
                     <a href="https://www.instagram.com/intellex.web?igsh=MWZyenU0bWc3M2RxOQ==" target="_blank" aria-label="Visit Intellex Instagram">

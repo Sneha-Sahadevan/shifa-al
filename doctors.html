@@ -11,6 +11,7 @@
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="i18n.js"></script>
 </head>
 
 <body>
@@ -35,13 +36,13 @@
                 <img src="./assets/transparent_logo.png" alt="Shifa Al Bawadi Logo" id="logo-img">
             </a>
             <nav class="nav-links" id="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="departments.html">Departments</a>
-                <a href="doctors.html" class="active">Doctors</a>
-                <a href="store.html">Offers & Store</a>
-                <a href="dermatology.html">Dermatology</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html" data-i18n="nav_home">Home</a>
+                <a href="about.html" data-i18n="nav_about">About</a>
+                <a href="departments.html" data-i18n="nav_departments">Departments</a>
+                <a href="doctors.html" class="active" data-i18n="nav_doctors">Doctors</a>
+                <a href="store.html" data-i18n="nav_offers">Offers & Store</a>
+                <a href="dermatology.html" data-i18n="nav_dermatology">Dermatology</a>
+                <a href="contact.html" data-i18n="nav_contact">Contact</a>
             </nav>
             <div class="nav-right">
                 <a href="assets/certificate.pdf" target="_blank" class="accreditation-link">
@@ -57,8 +58,8 @@
     <main>
         <section class="internal-header doctors-header">
             <div class="container text-center">
-                <h1 style="color: white; font-family: 'Roboto', sans-serif; font-weight: 700;">Meet Our Professionals</h1>
-                <p style="color: #E2E8F0; max-width: 700px; margin: 0 auto; line-height: 1.6;">Learn more about our team of specialist doctors, all of whom hold vast experience in their relative fields.</p>
+                <h1 data-i18n="meet_professionals" style="color: white; font-family: 'Roboto', sans-serif; font-weight: 700;">Meet Our Professionals</h1>
+                <p data-i18n="doctors_header_p" style="color: #E2E8F0; max-width: 700px; margin: 0 auto; line-height: 1.6;">Learn more about our team of specialist doctors, all of whom hold vast experience in their relative fields.</p>
             </div>
         </section>
 
@@ -68,19 +69,19 @@
 
                 <!-- Department Filters -->
                 <div class="department-filters" id="doctor-filters">
-                    <button class="filter-btn active" data-filter="ALL">All Departments</button>
-                    <button class="filter-btn" data-filter="DENTAL">Dental</button>
-                    <button class="filter-btn" data-filter="DERMATOLOGY">Dermatology</button>
-                    <button class="filter-btn" data-filter="ENT">ENT</button>
-                    <button class="filter-btn" data-filter="ORTHOPEDIC">Orthopedic</button>
-                    <button class="filter-btn" data-filter="OPHTHALMOLOGY">Ophthalmology</button>
-                    <button class="filter-btn" data-filter="INTERNAL MEDICINE">Internal Medicine</button>
-                    <button class="filter-btn" data-filter="GYNECOLOGY">Gynecology</button>
-                    <button class="filter-btn" data-filter="PEDIATRICS">Pediatrics</button>
-                    <button class="filter-btn" data-filter="GENERAL PHYSICIAN">General Physician</button>
-                    <button class="filter-btn" data-filter="LABORATORY">Laboratory</button>
-                    <button class="filter-btn" data-filter="RADIOLOGY">Radiology</button>
-                    <button class="filter-btn" data-filter="UROLOGY">Urology</button>
+                    <button class="filter-btn active" data-filter="ALL" data-i18n="all_depts">All Departments</button>
+                    <button class="filter-btn" data-filter="DENTAL" data-i18n="dental">Dental</button>
+                    <button class="filter-btn" data-filter="DERMATOLOGY" data-i18n="nav_dermatology">Dermatology</button>
+                    <button class="filter-btn" data-filter="ENT" data-i18n="ent">ENT</button>
+                    <button class="filter-btn" data-filter="ORTHOPEDIC" data-i18n="orthopedic">Orthopedic</button>
+                    <button class="filter-btn" data-filter="OPHTHALMOLOGY" data-i18n="ophthalmology">Ophthalmology</button>
+                    <button class="filter-btn" data-filter="INTERNAL MEDICINE" data-i18n="internal_medicine">Internal Medicine</button>
+                    <button class="filter-btn" data-filter="GYNECOLOGY" data-i18n="gynecology">Gynecology</button>
+                    <button class="filter-btn" data-filter="PEDIATRICS" data-i18n="pediatrics">Pediatrics</button>
+                    <button class="filter-btn" data-filter="GENERAL PHYSICIAN" data-i18n="general_physician">General Physician</button>
+                    <button class="filter-btn" data-filter="LABORATORY" data-i18n="laboratory">Laboratory</button>
+                    <button class="filter-btn" data-filter="RADIOLOGY" data-i18n="radiology">Radiology</button>
+                    <button class="filter-btn" data-filter="UROLOGY" data-i18n="urology">Urology</button>
                 </div>
 
                 <div class="doctors-grid" id="doctors-container">
@@ -95,19 +96,19 @@
                             <img src="./assets/DENTAL/Dr.Kazmeen Afroz (Orthodontist)_standard.png" alt="Dr. Kazmeen Afroz"
                                 class="practitioner-img">
                             <div class="practitioner-hover-info">
-                                <div class="hover-info-item"><i data-lucide="info" class="icon-sm"></i><span>About
+                                <div class="hover-info-item"><i data-lucide="info" class="icon-sm"></i><span data-i18n="about_doctor">About
                                         Doctor</span></div>
                                 <p>Dr. Kazmeen brings over a decade of experience in invisible braces, aligners, and
                                     comprehensive orthodontic care.</p>
                                 <a href="https://wa.me/966536312869" target="_blank" class="btn btn-primary mt-2"
-                                    style="font-size: 0.8rem; padding: 6px 12px; text-align: center;">Book
+                                    style="font-size: 0.8rem; padding: 6px 12px; text-align: center;" data-i18n="book_appointment">Book
                                     Appointment</a>
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Kazmeen Afroz</h3>
-                            <p class="practitioner-spec">Orthodontist Specialist</p>
-                            <div class="practitioner-schedule">FROM 3 PM TO 11 AM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_kazmeen">Dr. Kazmeen Afroz</h3>
+                            <p class="practitioner-spec" data-i18n="spec_orthodontist">Orthodontist Specialist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_3pm_11am">FROM 3 PM TO 11 AM</div>
                         </div>
                     </div>
 
@@ -129,9 +130,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Hanadi Dolani</h3>
-                            <p class="practitioner-spec">General Dentist</p>
-                            <div class="practitioner-schedule">FROM 4 PM TO 12 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_hanadi">Dr. Hanadi Dolani</h3>
+                            <p class="practitioner-spec" data-i18n="spec_gen_dentist">General Dentist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_4pm_12pm">FROM 4 PM TO 12 PM</div>
                         </div>
                     </div>
 
@@ -152,9 +153,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Rimas Alhibb</h3>
-                            <p class="practitioner-spec">Dental Specialist</p>
-                            <div class="practitioner-schedule">FROM 4 PM TO 12 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_rimas">Dr. Rimas Alhibb</h3>
+                            <p class="practitioner-spec" data-i18n="spec_dentist">Dental Specialist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_4pm_12pm">FROM 4 PM TO 12 PM</div>
                         </div>
                     </div>
 
@@ -175,9 +176,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Sumayya Attar</h3>
-                            <p class="practitioner-spec">Dental Specialist</p>
-                            <div class="practitioner-schedule">FROM 8 AM TO 4 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_sumayya">Dr. Sumayya Attar</h3>
+                            <p class="practitioner-spec" data-i18n="spec_dentist">Dental Specialist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_8am_4pm">FROM 8 AM TO 4 PM</div>
                         </div>
                     </div>
 
@@ -199,9 +200,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Arshiya Tabasssum</h3>
-                            <p class="practitioner-spec">Dental Specialist</p>
-                            <div class="practitioner-schedule">FROM 8 AM TO 4 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_arshiya">Dr. Arshiya Tabasssum</h3>
+                            <p class="practitioner-spec" data-i18n="spec_dentist">Dental Specialist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_8am_4pm">FROM 8 AM TO 4 PM</div>
                         </div>
                     </div>
 
@@ -222,9 +223,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Dina Harbi</h3>
-                            <p class="practitioner-spec">Dental Specialist</p>
-                            <div class="practitioner-schedule">FROM 4 PM TO 12 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_dina">Dr. Dina Harbi</h3>
+                            <p class="practitioner-spec" data-i18n="spec_dentist">Dental Specialist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_4pm_12pm">FROM 4 PM TO 12 PM</div>
                         </div>
                     </div>
 
@@ -246,9 +247,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Fathima Patel</h3>
-                            <p class="practitioner-spec">Dental Specialist</p>
-                            <div class="practitioner-schedule">FROM 4 PM TO 12 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_fathima">Dr. Fathima Patel</h3>
+                            <p class="practitioner-spec" data-i18n="spec_dentist">Dental Specialist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_4pm_12pm">FROM 4 PM TO 12 PM</div>
                         </div>
                     </div>
 
@@ -270,9 +271,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Khaleed Baqeel</h3>
-                            <p class="practitioner-spec">Dental Specialist</p>
-                            <div class="practitioner-schedule">FROM 8 AM TO 4 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_khaleed">Dr. Khaleed Baqeel</h3>
+                            <p class="practitioner-spec" data-i18n="spec_dentist">Dental Specialist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_8am_4pm">FROM 8 AM TO 4 PM</div>
                         </div>
                     </div>
 
@@ -294,9 +295,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Mohamed Mustafa</h3>
-                            <p class="practitioner-spec">Dental Specialist</p>
-                            <div class="practitioner-schedule">FROM 4 PM TO 12 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_mustafa">Dr. Mohamed Mustafa</h3>
+                            <p class="practitioner-spec" data-i18n="spec_dentist">Dental Specialist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_4pm_12pm">FROM 4 PM TO 12 PM</div>
                         </div>
                     </div>
 
@@ -317,9 +318,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Rehab Ghunaim</h3>
-                            <p class="practitioner-spec">Dental Specialist</p>
-                            <div class="practitioner-schedule">FROM 8 AM TO 4 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_rehab">Dr. Rehab Ghunaim</h3>
+                            <p class="practitioner-spec" data-i18n="spec_dentist">Dental Specialist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_8am_4pm">FROM 8 AM TO 4 PM</div>
                         </div>
                     </div>
 
@@ -341,9 +342,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Shaikh Eklakh</h3>
-                            <p class="practitioner-spec">Dental Specialist</p>
-                            <div class="practitioner-schedule">FROM 4 PM TO 12 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_eklakh">Dr. Shaikh Eklakh</h3>
+                            <p class="practitioner-spec" data-i18n="spec_dentist">Dental Specialist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_4pm_12pm">FROM 4 PM TO 12 PM</div>
                         </div>
                     </div>
                     <!-- Dental Doctors End -->
@@ -362,7 +363,7 @@
                             <div class="practitioner-hover-info">
                                 <div class="hover-info-item">
                                     <i data-lucide="info" class="icon-sm"></i>
-                                    <span>About Doctor</span>
+                                    <span data-i18n="about_doctor">About Doctor</span>
                                 </div>
                                 <p>Expert in diagnosing and treating urological disorders, managing kidney stones, and
                                     men's health.</p>
@@ -372,9 +373,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Sabri Mohammed</h3>
-                            <p class="practitioner-spec">Urologist</p>
-                            <div class="practitioner-schedule">FROM 9 AM TO 12 PM &amp; FROM 5 PM TO 10 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_sabri">Dr. Sabri Mohammed</h3>
+                            <p class="practitioner-spec" data-i18n="spec_urologist">Urologist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_9am_12pm_5pm_10pm">FROM 9 AM TO 12 PM &amp; FROM 5 PM TO 10 PM</div>
                         </div>
                     </div>
 
@@ -389,7 +390,7 @@
                             <div class="practitioner-hover-info">
                                 <div class="hover-info-item">
                                     <i data-lucide="info" class="icon-sm"></i>
-                                    <span>About Doctor</span>
+                                    <span data-i18n="about_doctor">About Doctor</span>
                                 </div>
                                 <p>Expert in treating ear infections, sinus issues, and conducting delicate head/neck
                                     procedures.</p>
@@ -399,9 +400,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Mohammed Taha</h3>
-                            <p class="practitioner-spec">ENT Specialist</p>
-                            <div class="practitioner-schedule">FROM 9 AM TO 12 PM &amp; FROM 5 PM TO 10 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_taha">Dr. Mohammed Taha</h3>
+                            <p class="practitioner-spec" data-i18n="spec_ent">ENT Specialist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_9am_12pm_5pm_10pm">FROM 9 AM TO 12 PM &amp; FROM 5 PM TO 10 PM</div>
                         </div>
                     </div>
 
@@ -425,9 +426,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Hina Usman</h3>
-                            <p class="practitioner-spec">Pediatrician</p>
-                            <div class="practitioner-schedule">FROM 4 PM TO 12 AM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_hina">Dr. Hina Usman</h3>
+                            <p class="practitioner-spec" data-i18n="spec_pediatrician">Pediatrician</p>
+                            <div class="practitioner-schedule" data-i18n="avail_4pm_12am">FROM 4 PM TO 12 AM</div>
                         </div>
                     </div>
 
@@ -449,9 +450,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Zainul Abedeen</h3>
-                            <p class="practitioner-spec">Pediatrician</p>
-                            <div class="practitioner-schedule">FROM 9 AM TO 1 PM &amp; FROM 5 PM TO 9 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_zainul">Dr. Zainul Abedeen</h3>
+                            <p class="practitioner-spec" data-i18n="spec_pediatrician">Pediatrician</p>
+                            <div class="practitioner-schedule" data-i18n="avail_9am_1pm_5pm_9pm">FROM 9 AM TO 1 PM &amp; FROM 5 PM TO 9 PM</div>
                         </div>
                     </div>
 
@@ -466,7 +467,7 @@
                             <div class="practitioner-hover-info">
                                 <div class="hover-info-item">
                                     <i data-lucide="info" class="icon-sm"></i>
-                                    <span>About Doctor</span>
+                                    <span data-i18n="about_doctor">About Doctor</span>
                                 </div>
                                 <p>Renowned for treating complex skin conditions, performing safe laser procedures, and
                                     providing top-tier aesthetic counseling.</p>
@@ -476,9 +477,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Sahar Mukthar</h3>
-                            <p class="practitioner-spec">Dermatologist</p>
-                            <div class="practitioner-schedule">
+                            <h3 class="practitioner-name" data-i18n="dn_sahar">Dr. Sahar Mukthar</h3>
+                            <p class="practitioner-spec" data-i18n="spec_dermatologist">Dermatologist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_available">
                                 AVAILABLE
                             </div>
                         </div>
@@ -503,9 +504,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Murhaf Alaskari</h3>
-                            <p class="practitioner-spec">Orthopedic Surgeon</p>
-                            <div class="practitioner-schedule">FROM 9 AM TO 12 PM &amp; FROM 5 PM TO 10 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_murhaf">Dr. Murhaf Alaskari</h3>
+                            <p class="practitioner-spec" data-i18n="spec_orthopedic">Orthopedic Surgeon</p>
+                            <div class="practitioner-schedule" data-i18n="avail_9am_12pm_5pm_10pm">FROM 9 AM TO 12 PM &amp; FROM 5 PM TO 10 PM</div>
                         </div>
                     </div>
 
@@ -527,9 +528,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Mohamed Tariq</h3>
-                            <p class="practitioner-spec">Ophthalmologist</p>
-                            <div class="practitioner-schedule">FROM 9 AM TO 12 PM &amp; FROM 4:30 PM TO 9:30 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_tariq">Dr. Mohamed Tariq</h3>
+                            <p class="practitioner-spec" data-i18n="spec_ophthalmologist">Ophthalmologist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_9am_12pm_430pm_930pm">FROM 9 AM TO 12 PM &amp; FROM 4:30 PM TO 9:30 PM</div>
                         </div>
                     </div>
 
@@ -552,9 +553,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Mohamed Abubaker</h3>
-                            <p class="practitioner-spec">Internal Medicine</p>
-                            <div class="practitioner-schedule">FROM 9 AM TO 12 PM &amp; FROM 5 PM TO 10 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_abubaker">Dr. Mohamed Abubaker</h3>
+                            <p class="practitioner-spec" data-i18n="spec_internal">Internal Medicine</p>
+                            <div class="practitioner-schedule" data-i18n="avail_9am_12pm_5pm_10pm">FROM 9 AM TO 12 PM &amp; FROM 5 PM TO 10 PM</div>
                         </div>
                     </div>
 
@@ -569,7 +570,7 @@
                             <div class="practitioner-hover-info">
                                 <div class="hover-info-item">
                                     <i data-lucide="info" class="icon-sm"></i>
-                                    <span>About Doctor</span>
+                                    <span data-i18n="about_doctor">About Doctor</span>
                                 </div>
                                 <p>Specialized in internal medicine, focusing on providing comprehensive and personalized medical care.</p>
                                 <a href="https://wa.me/966536312869" target="_blank" class="btn btn-primary mt-2"
@@ -578,9 +579,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Lina Taha</h3>
-                            <p class="practitioner-spec">Internal Medicine</p>
-                            <div class="practitioner-schedule">FROM 9 AM TO 1 PM &amp; FROM 5 PM TO 9 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_lina">Dr. Lina Taha</h3>
+                            <p class="practitioner-spec" data-i18n="spec_internal">Internal Medicine</p>
+                            <div class="practitioner-schedule" data-i18n="avail_9am_1pm_5pm_9pm">FROM 9 AM TO 1 PM &amp; FROM 5 PM TO 9 PM</div>
                         </div>
                     </div>
 
@@ -603,9 +604,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Nabila Faisal</h3>
-                            <p class="practitioner-spec">Gynecologist</p>
-                            <div class="practitioner-schedule">FROM 9 AM TO 12 PM &amp; FROM 5 PM TO 10 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_nabila">Dr. Nabila Faisal</h3>
+                            <p class="practitioner-spec" data-i18n="spec_gyn">Gynecologist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_9am_12pm_5pm_10pm">FROM 9 AM TO 12 PM &amp; FROM 5 PM TO 10 PM</div>
                         </div>
                     </div>
 
@@ -628,9 +629,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Thahseen Shah</h3>
-                            <p class="practitioner-spec">Gynecologist</p>
-                            <div class="practitioner-schedule">FROM 3 PM TO 11 AM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_thahseen">Dr. Thahseen Shah</h3>
+                            <p class="practitioner-spec" data-i18n="spec_gyn">Gynecologist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_3pm_11am">FROM 3 PM TO 11 AM</div>
                         </div>
                     </div>
 
@@ -651,9 +652,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Khidir Elhadi Babiker</h3>
-                            <p class="practitioner-spec">Pathologist</p>
-                            <div class="practitioner-schedule">FROM 9 AM TO 12 PM &amp; FROM 5 PM TO 10 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_khidir">Dr. Khidir Elhadi Babiker</h3>
+                            <p class="practitioner-spec" data-i18n="spec_pathologist">Pathologist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_9am_12pm_5pm_10pm">FROM 9 AM TO 12 PM &amp; FROM 5 PM TO 10 PM</div>
                         </div>
                     </div>
 
@@ -674,9 +675,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Eman Elsaid</h3>
-                            <p class="practitioner-spec">Radiologist</p>
-                            <div class="practitioner-schedule">FROM 10 AM TO 12 PM &amp; FROM 5 PM TO 11 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_eman">Dr. Eman Elsaid</h3>
+                            <p class="practitioner-spec" data-i18n="spec_radiologist">Radiologist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_10am_12pm_5pm_11pm">FROM 10 AM TO 12 PM &amp; FROM 5 PM TO 11 PM</div>
                         </div>
                     </div>
 
@@ -698,9 +699,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Huda</h3>
-                            <p class="practitioner-spec">Radiologist</p>
-                            <div class="practitioner-schedule">AVAILABLE</div>
+                            <h3 class="practitioner-name" data-i18n="dn_huda">Dr. Huda</h3>
+                            <p class="practitioner-spec" data-i18n="spec_radiologist">Radiologist</p>
+                            <div class="practitioner-schedule" data-i18n="avail_available">AVAILABLE</div>
                         </div>
                     </div>
 
@@ -723,9 +724,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Irshad Ahmed</h3>
-                            <p class="practitioner-spec">General Physician</p>
-                            <div class="practitioner-schedule">FROM 12 AM TO 8 AM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_irshad">Dr. Irshad Ahmed</h3>
+                            <p class="practitioner-spec" data-i18n="spec_gp">General Physician</p>
+                            <div class="practitioner-schedule" data-i18n="avail_12am_8am">FROM 12 AM TO 8 AM</div>
                         </div>
                     </div>
 
@@ -748,9 +749,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Arif Nazeer</h3>
-                            <p class="practitioner-spec">General Physician</p>
-                            <div class="practitioner-schedule">FROM 8 AM TO 9 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_arif">Dr. Arif Nazeer</h3>
+                            <p class="practitioner-spec" data-i18n="spec_gp">General Physician</p>
+                            <div class="practitioner-schedule" data-i18n="avail_8am_9pm">FROM 8 AM TO 9 PM</div>
                         </div>
                     </div>
 
@@ -771,9 +772,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Ejaz Ahmed</h3>
-                            <p class="practitioner-spec">General Physician</p>
-                            <div class="practitioner-schedule">FROM 4 PM TO 12 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_ejaz">Dr. Ejaz Ahmed</h3>
+                            <p class="practitioner-spec" data-i18n="spec_gp">General Physician</p>
+                            <div class="practitioner-schedule" data-i18n="avail_4pm_12pm">FROM 4 PM TO 12 PM</div>
                         </div>
                     </div>
 
@@ -795,9 +796,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Wamiq Akhtar</h3>
-                            <p class="practitioner-spec">General Physician</p>
-                            <div class="practitioner-schedule">FROM 9 AM TO 12 PM &amp; FROM 5 PM TO 10 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_wamiq">Dr. Wamiq Akhtar</h3>
+                            <p class="practitioner-spec" data-i18n="spec_gp">General Physician</p>
+                            <div class="practitioner-schedule" data-i18n="avail_9am_12pm_5pm_10pm">FROM 9 AM TO 12 PM &amp; FROM 5 PM TO 10 PM</div>
                         </div>
                     </div>
 
@@ -820,9 +821,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Shilabatah Barua</h3>
-                            <p class="practitioner-spec">General Physician</p>
-                            <div class="practitioner-schedule">AVAILABLE</div>
+                            <h3 class="practitioner-name" data-i18n="dn_shilabatah">Dr. Shilabatah Barua</h3>
+                            <p class="practitioner-spec" data-i18n="spec_gp">General Physician</p>
+                            <div class="practitioner-schedule" data-i18n="avail_available">AVAILABLE</div>
                         </div>
                     </div>
 
@@ -845,9 +846,9 @@
                             </div>
                         </div>
                         <div class="practitioner-details">
-                            <h3 class="practitioner-name">Dr. Sherin Hameed</h3>
-                            <p class="practitioner-spec">General Physician</p>
-                            <div class="practitioner-schedule">FROM 8 AM TO 4 PM</div>
+                            <h3 class="practitioner-name" data-i18n="dn_sherin">Dr. Sherin Hameed</h3>
+                            <p class="practitioner-spec" data-i18n="spec_gp">General Physician</p>
+                            <div class="practitioner-schedule" data-i18n="avail_8am_4pm">FROM 8 AM TO 4 PM</div>
                         </div>
                     </div>
 
@@ -882,7 +883,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <a href="https://wa.me/966536312869" target="_blank" class="btn btn-primary">Book Appointment</a>
+                <a href="https://wa.me/966536312869" target="_blank" class="btn btn-primary"data-i18n="book_appointment">Book Appointment</a>
             </div>
         </div>
     </div>
@@ -893,7 +894,7 @@
     <footer class="site-footer">
         <div class="footer-bottom">
             <div class="container bottom-flex">
-                <p>&copy; 2026 Shifa Al Bawadi Medical Services Co. All Rights Reserved.</p>
+                <p>&copy; 2026 Shifa Al Bawadi Medical Services Co. <span data-i18n="all_rights_reserved">All Rights Reserved.</span></p>
                 <div class="developer-credit">
                     Meet the Developers 
                     <a href="https://www.instagram.com/intellex.web?igsh=MWZyenU0bWc3M2RxOQ==" target="_blank" aria-label="Visit Intellex Instagram">

@@ -11,6 +11,7 @@
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="i18n.js"></script>
 </head>
 
 <body>
@@ -35,13 +36,13 @@
                 <img src="./assets/transparent_logo.png" alt="Shifa Al Bawadi Logo" id="logo-img">
             </a>
             <nav class="nav-links" id="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="departments.html">Departments</a>
-                <a href="doctors.html">Doctors</a>
-                <a href="store.html">Offers & Store</a>
-                <a href="dermatology.html" class="active">Dermatology</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html" data-i18n="nav_home">Home</a>
+                <a href="about.html" data-i18n="nav_about">About</a>
+                <a href="departments.html" data-i18n="nav_departments">Departments</a>
+                <a href="doctors.html" data-i18n="nav_doctors">Doctors</a>
+                <a href="store.html" data-i18n="nav_offers">Offers & Store</a>
+                <a href="dermatology.html" class="active" data-i18n="nav_dermatology">Dermatology</a>
+                <a href="contact.html" data-i18n="nav_contact">Contact</a>
             </nav>
             <div class="nav-right">
                 <a href="assets/certificate.pdf" target="_blank" class="accreditation-link">
@@ -57,10 +58,9 @@
     <main>
         <section class="internal-header dermatology-header">
             <div class="container text-center">
-                <h1
-                    style="color: white; font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 2.5rem; margin-bottom: 15px;">
+                <h1 style="color: white; font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 2.5rem; margin-bottom: 15px;" data-i18n="dermatology_cosmetology">
                     Dermatology & Cosmetology</h1>
-                <p style="color: #E2E8F0; max-width: 600px; margin: 0 auto; line-height: 1.6;">Discover our advanced
+                <p style="color: #E2E8F0; max-width: 600px; margin: 0 auto; line-height: 1.6;" data-i18n="derma_header_p">Discover our advanced
                     skin care and laser treatments using the latest international medical equipment.</p>
             </div>
         </section>
@@ -69,9 +69,9 @@
         <section class="section-padding" style="background-color: white;">
             <div class="container">
                 <div class="text-center" style="margin-bottom: 50px;">
-                    <div class="section-badge">Cosmetology & Dermatology</div>
-                    <h2 class="section-title">Our Premium Services</h2>
-                    <p style="max-width: 700px; margin: 0 auto; color: #64748B;">Discover our wide array of skin care,
+                    <div class="section-badge" data-i18n="cosmetology_dermatology">Cosmetology & Dermatology</div>
+                    <h2 class="section-title" data-i18n="premium_services">Our Premium Services</h2>
+                    <p style="max-width: 700px; margin: 0 auto; color: #64748B;" data-i18n="derma_premium_desc">Discover our wide array of skin care,
                         laser, and aesthetic treatments designed to highlight your natural beauty and treat skin
                         conditions safely.</p>
                 </div>
@@ -84,12 +84,10 @@
                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.05)';">
                         <img src="./assets/derma fillers.jpeg" alt="Dermal Fillers"
                             style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 20px; border-radius: 8px;">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;" data-i18n="dermal_fillers">
                             Dermal Fillers</h3>
-                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Lips, jawline, cheek contouring</p>
-                        <a href="https://wa.me/966536312869" target="_blank"
-                            style="text-decoration: none; color: var(--secondary); font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 15px;">
+                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;" data-i18n="dermal_fillers_desc">Lips, jawline, cheek contouring</p>
+                        <a href="https://wa.me/966536312869" target="_blank" style="text-decoration: none; color: inherit; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 15px;" data-i18n="book_appointment">
                             Book Appointment <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
                         </a>
                     </div>
@@ -101,10 +99,9 @@
                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.05)';">
                         <img src="./assets/botox.jpeg" alt="Botox Treatments"
                             style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 20px; border-radius: 8px;">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;" data-i18n="botox_treatments">
                             Botox Treatments</h3>
-                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Wrinkles & fine lines</p>
+                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;" data-i18n="botox_treatments_desc">Wrinkles & fine lines</p>
                         <a href="https://wa.me/966536312869" target="_blank"
                             style="text-decoration: none; color: #8B5CF6; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 15px;">
                             Book Appointment <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
@@ -118,10 +115,9 @@
                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.05)';">
                         <img src="./assets/skin.jpeg" alt="Skin Boosters & Rejuvenation"
                             style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 20px; border-radius: 8px;">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;" data-i18n="skin_boosters">
                             Skin Boosters & Rejuvenation</h3>
-                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Hydration injections</p>
+                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;" data-i18n="skin_boosters_desc">Hydration injections</p>
                         <a href="https://wa.me/966536312869" target="_blank"
                             style="text-decoration: none; color: #3B82F6; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 15px;">
                             Book Appointment <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
@@ -135,10 +131,9 @@
                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.05)';">
                         <img src="./assets/laser hair .jpeg" alt="Laser Hair Removal"
                             style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 20px; border-radius: 8px;">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;" data-i18n="laser_hair_removal">
                             Laser Hair Removal</h3>
-                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Full body / face / underarm</p>
+                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;" data-i18n="laser_hair_removal_desc">Full body / face / underarm</p>
                         <a href="https://wa.me/966536312869" target="_blank"
                             style="text-decoration: none; color: #EAB308; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 15px;">
                             Book Appointment <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
@@ -152,10 +147,9 @@
                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.05)';">
                         <img src="./assets/carbon.jpeg" alt="Laser Toning & Carbon Peel"
                             style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 20px; border-radius: 8px;">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;" data-i18n="laser_toning">
                             Laser Toning & Carbon Peel</h3>
-                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Pigmentation & melasma</p>
+                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;" data-i18n="laser_toning_desc">Pigmentation & melasma</p>
                         <a href="https://wa.me/966536312869" target="_blank"
                             style="text-decoration: none; color: #EC4899; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 15px;">
                             Book Appointment <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
@@ -169,10 +163,9 @@
                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.05)';">
                         <img src="./assets/chemical.jpeg" alt="Chemical Peeling"
                             style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 20px; border-radius: 8px;">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;" data-i18n="chemical_peeling">
                             Chemical Peeling</h3>
-                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Acne, dull skin, pigmentation</p>
+                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;" data-i18n="chemical_peeling_desc">Acne, dull skin, pigmentation</p>
                         <a href="https://wa.me/966536312869" target="_blank"
                             style="text-decoration: none; color: #F97316; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 15px;">
                             Book Appointment <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
@@ -186,10 +179,9 @@
                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.05)';">
                         <img src="./assets/acne.jpeg" alt="Acne & Scar Treatments"
                             style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 20px; border-radius: 8px;">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;" data-i18n="acne_scar_treatments">
                             Acne & Scar Treatments</h3>
-                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">eCO2 laser resurfacing</p>
+                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;" data-i18n="acne_scar_desc">eCO2 laser resurfacing</p>
                         <a href="https://wa.me/966536312869" target="_blank"
                             style="text-decoration: none; color: #DC2626; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 15px;">
                             Book Appointment <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
@@ -203,10 +195,9 @@
                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.05)';">
                         <img src="./assets/prp.jpeg" alt="PRP Therapy"
                             style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 20px; border-radius: 8px;">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;" data-i18n="prp_therapy">
                             PRP Therapy</h3>
-                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Face rejuvenation</p>
+                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;" data-i18n="prp_therapy_desc">Face rejuvenation</p>
                         <a href="https://wa.me/966536312869" target="_blank"
                             style="text-decoration: none; color: #EF4444; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 15px;">
                             Book Appointment <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
@@ -220,10 +211,9 @@
                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.05)';">
                         <img src="./assets/dermapen.jpeg" alt="Microneedling / Dermapen"
                             style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 20px; border-radius: 8px;">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;" data-i18n="microneedling">
                             Microneedling / Dermapen</h3>
-                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Skin texture improvement</p>
+                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;" data-i18n="microneedling_desc">Skin texture improvement</p>
                         <a href="https://wa.me/966536312869" target="_blank"
                             style="text-decoration: none; color: #14B8A6; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 15px;">
                             Book Appointment <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
@@ -237,10 +227,9 @@
                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.05)';">
                         <img src="./assets/hydrafaciall.jpeg" alt="HydraFacial & Skin Care"
                             style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 20px; border-radius: 8px;">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;" data-i18n="hydrafacial">
                             HydraFacial & Skin Care</h3>
-                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Deep cleansing & hydration</p>
+                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;" data-i18n="hydrafacial_desc">Deep cleansing & hydration</p>
                         <a href="https://wa.me/966536312869" target="_blank"
                             style="text-decoration: none; color: #06B6D4; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 15px;">
                             Book Appointment <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
@@ -254,10 +243,9 @@
                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.05)';">
                         <img src="./assets/mesotherapy.jpeg" alt="Mesotherapy"
                             style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 20px; border-radius: 8px;">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;" data-i18n="mesotherapy">
                             Mesotherapy</h3>
-                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Skin & hair nourishment</p>
+                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;" data-i18n="mesotherapy_desc">Skin & hair nourishment</p>
                         <a href="https://wa.me/966536312869" target="_blank"
                             style="text-decoration: none; color: #6366F1; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 15px;">
                             Book Appointment <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
@@ -271,10 +259,9 @@
                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.05)';">
                         <img src="./assets/tattoo.jpeg" alt="Tattoo Removal"
                             style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 20px; border-radius: 8px;">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 12px;" data-i18n="tattoo_removal">
                             TATTOO REMOVAL</h3>
-                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Safe & effective laser</p>
+                        <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6; flex-grow: 1;" data-i18n="tattoo_removal_desc">Safe & effective laser</p>
                         <a href="https://wa.me/966536312869" target="_blank"
                             style="text-decoration: none; color: #4B5563; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 15px;">
                             Book Appointment <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
@@ -288,9 +275,9 @@
         <section class="section-padding bg-light">
             <div class="container">
                 <div class="text-center" style="margin-bottom: 50px;">
-                    <div class="section-badge">Advanced Technology</div>
-                    <h2 class="section-title">Our Clinical Equipment</h2>
-                    <p style="max-width: 700px; margin: 0 auto; color: #64748B;">We have invested in the world’s leading
+                    <div class="section-badge" data-i18n="adv_tech">Advanced Technology</div>
+                    <h2 class="section-title" data-i18n="clinical_equipment">Our Clinical Equipment</h2>
+                    <p style="max-width: 700px; margin: 0 auto; color: #64748B;" data-i18n="equipment_desc">We have invested in the world’s leading
                         aesthetic technology. Our FDA-approved machines ensure you receive the safest and most effective
                         results.</p>
                 </div>
@@ -304,8 +291,7 @@
                         onclick="let m = document.getElementById('gentle-modal'); m.style.display = 'flex'; setTimeout(() => { m.style.opacity = '1'; document.getElementById('gentle-modal-content').style.transform = 'scale(1)'; }, 10);">
                         <img src="./assets/gentle.jpeg" alt="Gentle Pro Max"
                             style="width: 100%; height: 200px; object-fit: contain; margin-bottom: 20px; border-radius: 8px; mix-blend-mode: multiply; filter: contrast(1.05) brightness(1.05);">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 15px; flex-grow: 1; display: flex; align-items: center;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 15px; flex-grow: 1; display: flex; align-items: center;" data-i18n="gentle_pro_max">
                             Gentle Pro Max (Hair Removal Laser)</h3>
 
                         <div
@@ -321,12 +307,10 @@
                         onclick="let m = document.getElementById('spectra-modal'); m.style.display = 'flex'; setTimeout(() => { m.style.opacity = '1'; document.getElementById('spectra-modal-content').style.transform = 'scale(1)'; }, 10);">
                         <img src="./assets/spectra.jpeg" alt="Spectra XT"
                             style="width: 100%; height: 200px; object-fit: contain; margin-bottom: 20px; border-radius: 8px; mix-blend-mode: multiply; filter: contrast(1.05) brightness(1.05);">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 15px; flex-grow: 1; display: flex; align-items: center;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 15px; flex-grow: 1; display: flex; align-items: center;" data-i18n="spectra_xt">
                             Spectra XT (Carbon Laser)</h3>
 
-                        <div
-                            style="color: var(--secondary); font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%;">
+                        <div style="color: var(--secondary); font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%;" data-i18n="view_details">
                             View Details <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
                         </div>
                     </div>
@@ -338,12 +322,10 @@
                         onclick="let m = document.getElementById('eco2-modal'); m.style.display = 'flex'; setTimeout(() => { m.style.opacity = '1'; document.getElementById('eco2-modal-content').style.transform = 'scale(1)'; }, 10);">
                         <img src="./assets/eco2.jpeg" alt="ECO2"
                             style="width: 100%; height: 200px; object-fit: contain; margin-bottom: 20px; border-radius: 8px; mix-blend-mode: multiply; filter: contrast(1.4) brightness(1.2);">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 15px; flex-grow: 1; display: flex; align-items: center;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 15px; flex-grow: 1; display: flex; align-items: center;" data-i18n="eco2">
                             ECO2 (Fractional Laser)</h3>
 
-                        <div
-                            style="color: var(--secondary); font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%;">
+                        <div style="color: var(--secondary); font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%;" data-i18n="view_details">
                             View Details <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
                         </div>
                     </div>
@@ -355,12 +337,10 @@
                         onclick="let m = document.getElementById('hydra-modal'); m.style.display = 'flex'; setTimeout(() => { m.style.opacity = '1'; document.getElementById('hydra-modal-content').style.transform = 'scale(1)'; }, 10);">
                         <img src="./assets/hydrafacial.jpeg" alt="Hydrafacial"
                             style="width: 100%; height: 200px; object-fit: contain; margin-bottom: 20px; border-radius: 8px; mix-blend-mode: multiply; filter: contrast(1.1) brightness(1.05);">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 15px; flex-grow: 1; display: flex; align-items: center;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 15px; flex-grow: 1; display: flex; align-items: center;" data-i18n="hydrafacial_device">
                             Hydrafacial Device</h3>
 
-                        <div
-                            style="color: var(--secondary); font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%;">
+                        <div style="color: var(--secondary); font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%;" data-i18n="view_details">
                             View Details <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
                         </div>
                     </div>
@@ -372,12 +352,10 @@
                         onclick="let m = document.getElementById('scalp-modal'); m.style.display = 'flex'; setTimeout(() => { m.style.opacity = '1'; document.getElementById('scalp-modal-content').style.transform = 'scale(1)'; }, 10);">
                         <img src="./assets/scalp.jpeg" alt="Scalp Cleaning"
                             style="width: 100%; height: 200px; object-fit: contain; margin-bottom: 20px; border-radius: 8px; mix-blend-mode: multiply; filter: contrast(1.1) brightness(1.05);">
-                        <h3
-                            style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 15px; flex-grow: 1; display: flex; align-items: center;">
+                        <h3 style="font-family: 'Roboto', sans-serif; color: #1E293B; font-size: 1.25rem; margin-bottom: 15px; flex-grow: 1; display: flex; align-items: center;" data-i18n="scalp_device">
                             Scalp Cleaning Device</h3>
 
-                        <div
-                            style="color: var(--secondary); font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%;">
+                        <div style="color: var(--secondary); font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%;" data-i18n="view_details">
                             View Details <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
                         </div>
                     </div>
@@ -389,14 +367,12 @@
         <!-- CTA Section -->
         <section class="section-padding" style="background: var(--primary); color: white; text-align: center;">
             <div class="container">
-                <h2 style="font-family: 'Roboto', sans-serif; font-size: 2rem; margin-bottom: 20px;">Ready to revitalise
+                <h2 style="font-family: 'Roboto', sans-serif; font-size: 2rem; margin-bottom: 20px;" data-i18n="ready_revitalize">Ready to revitalise
                     your skin?</h2>
-                <p
-                    style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;" data-i18n="ready_revitalize_desc">
                     Book a consultation with our expert dermatologists to determine the best technology and treatment
                     plan for your skin type.</p>
-                <a href="contact.html" class="btn"
-                    style="background: white; color: var(--primary); font-weight: bold; padding: 12px 30px;">Book
+                <a href="contact.html" class="btn" style="background: white; color: var(--primary); font-weight: bold; padding: 12px 30px;" data-i18n="book_appointment">Book
                     Appointment Today</a>
             </div>
         </section>
@@ -725,7 +701,7 @@
     <footer class="site-footer">
         <div class="footer-bottom">
             <div class="container bottom-flex">
-                <p>&copy; 2026 Shifa Al Bawadi Medical Services Co. All Rights Reserved.</p>
+                <p>&copy; 2026 Shifa Al Bawadi Medical Services Co. <span data-i18n="all_rights_reserved">All Rights Reserved.</span></p>
                 <div class="developer-credit">
                     Meet the Developers 
                     <a href="https://www.instagram.com/intellex.web?igsh=MWZyenU0bWc3M2RxOQ==" target="_blank" aria-label="Visit Intellex Instagram">

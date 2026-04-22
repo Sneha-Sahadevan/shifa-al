@@ -1,112 +1,100 @@
-const dict = {
-    "Home": "الرئيسية",
-    "About": "من نحن",
-    "Departments": "الأقسام",
-    "Doctors": "الأطباء",
-    "Offers & Store": "العروض والمتجر",
-    "Dermatology": "الأمراض الجلدية",
-    "Contact": "اتصل بنا",
-    "24/7 Emergency Services": "خدمات الطوارئ 24/7",
-    "Al Makarunah Branch, Jeddah": "فرع المكرونة، جدة",
-    "Contact Us": "تواصل معنا",
-    "About Us": "من نحن",
-    "Welcome to Shifa Al Bawadi": "مرحبا بك في شفاء البوادي",
-    "Your health, our continuous commitment": "صحتك، التزامنا الدائم",
-    "20+ Years of Experience": "أكثر من 20 عامًا من الخبرة",
-    "Multi-Specialty Services": "خدمات متعددة التخصصات",
-    "Advanced Medical Technology": "تكنولوجيا طبية متقدمة",
-    "Thousands of Happy Patients": "آلاف المرضى السعداء",
-    "Our Vision": "رؤيتنا",
-    "Our Mission": "مهمتنا",
-    "Our Facilities": "مرافقنا",
-    "Our Core Values": "قيمنا الأساسية",
-    "Patient First": "المريض أولاً",
-    "Excellence": "التميز",
-    "Integrity": "النزاهة",
-    "Innovation": "الابتكار",
-    "Compassion": "التعاطف",
-    "Our Branches": "فروعنا",
-    "Insurance Partners": "شركاء التأمين",
-    "Start Your Journey to Better Health Today": "ابدأ رحلتك نحو صحة أفضل اليوم",
-    "Experience trusted care with our expert medical team.": "جرب الرعاية الموثوقة مع فريقنا الطبي الخبير.",
-    "Book an Appointment": "احجز موعدا",
-    "Submit Request": "إرسال طلب",
-    "Visit Our Clinic": "قم بزيارة عيادتنا",
-    "Call Us Now": "اتصل بنا الآن",
-    "Our Medical Departments": "أقسامنا الطبية",
-    "Meet Our Professionals": "تعرف على أطبائنا",
-    "All Departments": "جميع الأقسام",
-    "Dental": "الأسنان",
-    "ENT": "الأنف والأذن والحنجرة",
-    "General Physician": "طبيب عام",
-    "Orthopedic": "العظام",
-    "Internal Medicine": "باطنية",
-    "Gynecology": "نسائية",
-    "Pediatrics": "أطفال",
-    "Laboratory": "مختبر",
-    "Radiology": "أشعة",
-    "Urology": "مسالك بولية",
-    "24/7 Emergency": "طوارئ 24/7",
-    "Ultrasound": "السونار",
-    "X-ray & ECG": "الأشعة وتخطيط القلب",
-    "CT Scan": "الأشعة المقطعية",
-    "Panoramic X-ray": "الأشعة البانورامية",
-    "4D Ultrasound": "سونار رباعي الأبعاد",
-    "Pharmacy": "الصيدلية",
-    "Opticals": "البصريات",
-    "Select Department": "اختر القسم",
-    "Opticals / Optical Center": "البصريات / مركز البصريات",
-    "Health Packages & Lab Tests": "باقات الصحة وفحوصات المخبر",
-    "24/7 Emergency Services": "خدمات الطوارئ 24/7"
-};
 
 function translateDOM(lang) {
+    const translations = window.i18n[lang];
+    if (!translations) return;
+
+    // 1. Translate elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[key]) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = translations[key];
+            } else {
+                el.textContent = translations[key];
+            }
+        }
+    });
+
+    // 2. Translate hardcoded text nodes using the global dictionary (one-way mapping for legacy support)
+    // We'll build a reverse dictionary if it's 'en', but it's easier to just use the original text saved on the node
     const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
     let n;
     while(n = walk.nextNode()) {
-        if(n.parentElement && n.parentElement.tagName !== 'SCRIPT' && n.parentElement.tagName !== 'STYLE') {
+        const parent = n.parentElement;
+        if(parent && parent.tagName !== 'SCRIPT' && parent.tagName !== 'STYLE' && !parent.hasAttribute('data-i18n')) {
             const trimmed = n.nodeValue.trim();
             if(trimmed.length > 1) {
-                // Save original English on the node itself to handle multi-line elements correctly
                 if(!n._ogText) {
                     n._ogText = trimmed;
                 }
                 const og = n._ogText;
                 
-                if(lang === 'ar' && dict[og]) {
-                    n.nodeValue = n.nodeValue.replace(trimmed, dict[og]);
+                // Use a legacy mapping from window.i18n.ar (since keys are often English)
+                if(lang === 'ar' && window.i18n.ar[og]) {
+                   n.nodeValue = n.nodeValue.replace(trimmed, window.i18n.ar[og]);
                 } else if(lang === 'en' && og) {
-                    n.nodeValue = n.nodeValue.replace(trimmed, og);
+                   n.nodeValue = n.nodeValue.replace(trimmed, og);
                 }
             }
         }
+    }
+
+    // 3. Update common attributes
+    document.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(el => {
+        const ph = el.getAttribute('placeholder');
+        if (lang === 'ar' && window.i18n.ar[ph]) {
+            el.placeholder = window.i18n.ar[ph];
+        }
+    });
+}
+
+function updateLanguageUI(lang) {
+    const isAr = lang === 'ar';
+    document.documentElement.setAttribute('lang', lang);
+    document.documentElement.setAttribute('dir', isAr ? 'rtl' : 'ltr');
+    
+    if (isAr) {
+        document.body.classList.add('lang-ar');
+    } else {
+        document.body.classList.remove('lang-ar');
+    }
+    
+    // Update all language select elements
+    document.querySelectorAll('.custom-lang-select').forEach(select => {
+        select.value = lang;
+    });
+
+    translateDOM(lang);
+    
+    // Re-initialize Lucide icons if needed
+    if (window.lucide) {
+        lucide.createIcons();
     }
 }
 
 window.switchLanguage = function (lang) {
     localStorage.setItem('shifa_lang', lang);
-    window.location.hash = `#lang=${lang}`;
-    window.location.reload();
+    // Update hash for consistency
+    const url = new URL(window.location);
+    url.hash = `lang=${lang}`;
+    window.history.replaceState(null, '', url);
+    updateLanguageUI(lang);
 };
 
 document.addEventListener('DOMContentLoaded', () => {
     const topBarContainer = document.querySelector('.top-bar-content');
-    if (topBarContainer) {
-        let currentLang = 'en';
-        if (window.location.hash.includes('lang=ar') || localStorage.getItem('shifa_lang') === 'ar') {
-            currentLang = 'ar';
-        }
+    
+    let currentLang = localStorage.getItem('shifa_lang') || 'en';
+    if (window.location.hash.includes('lang=ar')) {
+        currentLang = 'ar';
+    }
 
-        if (currentLang === 'ar') {
-            document.documentElement.setAttribute('lang', 'ar');
-            document.documentElement.setAttribute('dir', 'rtl');
-            document.body.classList.add('lang-ar');
-        } else {
-            document.documentElement.setAttribute('lang', 'en');
-            document.documentElement.setAttribute('dir', 'ltr');
-            document.body.classList.remove('lang-ar');
-        }
+    // Initial load
+    updateLanguageUI(currentLang);
 
+    // Sync with existing switcher or create one
+    const existingPill = document.querySelector('.lang-pill-container');
+    if (!existingPill && topBarContainer) {
         const langSwitcherWrapper = document.createElement('div');
         langSwitcherWrapper.className = 'custom-lang-wrapper';
         langSwitcherWrapper.innerHTML = `
@@ -114,26 +102,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 <i data-lucide="globe" style="width: 14px; height: 14px; color: white;"></i>
                 <select class="custom-lang-select" onchange="switchLanguage(this.value)">
                     <option value="en" ${currentLang === 'en' ? 'selected' : ''}>EN</option>
-                    <option value="ar" ${currentLang === 'ar' ? 'selected' : ''}>AR</option>
+                    <option value="ar" ${currentLang === 'ar' ? 'selected' : ''}>العربية</option>
                 </select>
             </div>
         `;
 
         const isMobile = window.innerWidth <= 1024;
-        if (isMobile) {
-            const navActions = document.querySelector('.nav-actions');
-            if (navActions) {
-                navActions.insertBefore(langSwitcherWrapper, navActions.firstChild);
-            }
-        } else {
-            const topContactElement = document.querySelector('.top-contact');
-            if (topContactElement) {
-                topBarContainer.insertBefore(langSwitcherWrapper, topContactElement);
-            }
+        const target = isMobile ? document.querySelector('.nav-actions') : document.querySelector('.top-contact');
+        if (target) {
+            target.parentElement.insertBefore(langSwitcherWrapper, target);
         }
-
-        // Apply translations via JS instead of Google Auto-Translate
-        translateDOM(currentLang);
     }
 
     // Initialize Lucide icons
