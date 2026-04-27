@@ -10,8 +10,27 @@ function translateDOM(lang) {
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                 el.placeholder = translations[key];
             } else {
-                el.textContent = translations[key];
+                let textNodeReplaced = false;
+                for (let i = 0; i < el.childNodes.length; i++) {
+                    const node = el.childNodes[i];
+                    if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim() !== '') {
+                        node.nodeValue = translations[key];
+                        textNodeReplaced = true;
+                        break;
+                    }
+                }
+                if (!textNodeReplaced) {
+                    el.textContent = translations[key];
+                }
             }
+        }
+    });
+
+    // 1b. Translate elements with data-i18n-html (innerHTML replacement for rich text)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (translations[key]) {
+            el.innerHTML = translations[key];
         }
     });
 
