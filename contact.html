@@ -19,8 +19,8 @@
     <div class="top-bar">
         <div class="container top-bar-content">
             <div class="top-info">
-                <span><i data-lucide="clock" class="icon-sm"></i> 24/7 Emergency Services</span>
-                <span><i data-lucide="map-pin" class="icon-sm"></i> Al Makarunah Branch, Jeddah</span>
+                <span data-i18n="emergency_24_7"><i data-lucide="clock" class="icon-sm"></i> 24/7 Emergency Services</span>
+                <span data-i18n="location_jeddah"><i data-lucide="map-pin" class="icon-sm"></i> Al Makarunah Branch, Jeddah</span>
             </div>
             <div class="top-contact">
                 <a href="tel:0126625908"><i data-lucide="phone" class="icon-sm"></i> 012 6625908</a>
@@ -73,15 +73,15 @@
                         <h2 class="section-title" style="font-size: 1.5rem;" data-i18n="book_appointment_title">Book an Appointment</h2>
                         <form id="booking-form"
                             style="display:flex; flex-direction:column; gap:15px; margin-top: 20px;">
-                            <input type="text" placeholder="Full Name" data-i18n="[placeholder]name_placeholder"
+                            <input type="text" placeholder="Full Name" data-i18n="name_placeholder"
                                 style="padding:12px; border:1px solid var(--border-color); border-radius:4px;" required>
-                            <input type="email" placeholder="Email Address" data-i18n="[placeholder]email_placeholder"
+                            <input type="email" placeholder="Email Address" data-i18n="email_placeholder"
                                 style="padding:12px; border:1px solid var(--border-color); border-radius:4px;" required>
-                            <input type="tel" placeholder="Phone Number" data-i18n="[placeholder]phone_placeholder"
+                            <input type="tel" placeholder="Phone Number" data-i18n="phone_placeholder"
                                 style="padding:12px; border:1px solid var(--border-color); border-radius:4px;" required>
 
                             <select
-                                style="padding:12px; border:1px solid var(--border-color); border-radius:4px; margin-bottom: 5px;" data-i18n="[placeholder]select_dept">
+                                style="padding:12px; border:1px solid var(--border-color); border-radius:4px; margin-bottom: 5px;">
                                 <option value="" disabled selected data-i18n="select_dept">Select Department</option>
                                 <option data-i18n="general_consultation">General Consultation / General Physician</option>
                                 <option data-i18n="emergency_services">24/7 Emergency Services</option>
@@ -99,7 +99,7 @@
                                 <option data-i18n="radiology">Radiology</option>
                             </select>
 
-                            <textarea rows="4" placeholder="Any specific notes or medical history?" data-i18n="[placeholder]notes_placeholder"
+                            <textarea rows="4" placeholder="Any specific notes or medical history?" data-i18n="notes_placeholder"
                                 style="padding:12px; border:1px solid var(--border-color); border-radius:4px;"></textarea>
 
                             <button type="submit" class="btn btn-primary" style="margin-top: 10px;" data-i18n="submit_request">Submit
@@ -112,7 +112,7 @@
                             <div class="method-icon"><i data-lucide="map-pin"></i></div>
                             <div class="method-details">
                                 <h4 data-i18n="visit_clinic_title">Visit Our Clinic</h4>
-                                <p data-i18n="address_details">Near Masjid Turkey, Al Makarunah Branch,<br>Jeddah, Saudi Arabia</p>
+                                <p data-i18n-html="address_details">Near Masjid Turkey, Al Makarunah Branch,<br>Jeddah, Saudi Arabia</p>
                             </div>
                         </div>
 
@@ -120,7 +120,7 @@
                             <div class="method-icon"><i data-lucide="phone-call"></i></div>
                             <div class="method-details">
                                 <h4 data-i18n="call_us">Call Us Now</h4>
-                                <p><strong>Landline:</strong> 012 6625908<br><strong>Mobile/WhatsApp:</strong> +966
+                                <p><strong data-i18n="landline">Landline:</strong> 012 6625908<br><strong data-i18n="mobile_whatsapp">Mobile/WhatsApp:</strong> +966
                                     536312869</p>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
             <div class="container bottom-flex">
                 <p>&copy; 2026 <span data-i18n="company_name">Shifa Al Bawadi Medical Services Co.</span> <span data-i18n="all_rights_reserved">All Rights Reserved.</span></p>
                 <div class="developer-credit">
-                    Meet the Developers 
+                    <span data-i18n="meet_developers">Meet the Developers</span> 
                     <a href="https://www.instagram.com/intellex.web?igsh=MWZyenU0bWc3M2RxOQ==" target="_blank" aria-label="Visit Intellex Instagram">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                     </a>
@@ -165,7 +165,9 @@
     <script>
         document.getElementById('booking-form').addEventListener('submit', function (e) {
             e.preventDefault();
-            alert('Your appointment request has been submitted. Our response team will call you back shortly.');
+            const lang = localStorage.getItem('shifa_lang') || 'en';
+            const alertMsg = window.i18n[lang].alert_appointment_submitted || 'Your appointment request has been submitted.';
+            alert(alertMsg);
             this.reset();
         });
     </script>
