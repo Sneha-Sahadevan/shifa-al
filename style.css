@@ -442,14 +442,14 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('./assets/clinic.jpeg') no-repeat center center fixed;
+    background: url('./assets/clinic.jpeg') no-repeat center center;
     background-size: cover;
     z-index: 1;
 }
 
 @media (max-width: 768px) {
     .hero-bg {
-        background-attachment: scroll; /* Better for mobile devices */
+        background-attachment: scroll;
     }
 }
 
@@ -459,7 +459,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: linear-gradient(rgba(10, 61, 98, 0.5), rgba(10, 61, 98, 0.5));
     z-index: 2;
 }
 
@@ -1476,7 +1476,7 @@ body.lang-ar .dept-arabic {
 }
 
 .about-header {
-    background: linear-gradient(rgba(10, 61, 98, 0.5), rgba(10, 61, 98, 0.5)), url('./assets/lines.png') center/cover no-repeat;
+    background: linear-gradient(rgba(10, 61, 98, 0.5), rgba(10, 61, 98, 0.5)), url('./assets/clinic.jpeg') center/cover no-repeat;
 }
 
 .departments-header {
