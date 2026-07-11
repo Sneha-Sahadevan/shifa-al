@@ -9,23 +9,25 @@ def generate_favicons():
 
     img = Image.open(logo_path)
     
-    # Crop the icon (Segment 1 bounds detected: X: 19 to 278, Y: 36 to 346)
-    x1, y1, x2, y2 = 19, 36, 278, 346
-    icon = img.crop((x1, y1, x2 + 1, y2 + 1))
-    print(f"Isolated icon size: {icon.size}")
+    # Get exact bounding box of non-transparent content
+    bbox = img.getbbox()
+    print(f"Original content bounding box: {bbox}")
     
-    # We want to place the icon on a square canvas with a nice, professional padding
-    # Icon size is 260x311. Let's use a 360x360 canvas.
-    canvas_size = 360
+    cropped = img.crop(bbox)
+    width, height = cropped.size
+    print(f"Cropped logo size: {width}x{height}")
+
+    # To keep it square, we use the maximum dimension (width) as canvas size
+    canvas_size = max(width, height)
     canvas = Image.new("RGBA", (canvas_size, canvas_size), (0, 0, 0, 0))
     
-    # Calculate offset to center the icon
-    offset_x = (canvas_size - icon.width) // 2
-    offset_y = (canvas_size - icon.height) // 2
-    canvas.paste(icon, (offset_x, offset_y), icon)
-    print(f"Pasted icon at ({offset_x}, {offset_y}) on a {canvas_size}x{canvas_size} canvas.")
+    # Center the logo vertically on the square canvas
+    offset_x = (canvas_size - width) // 2
+    offset_y = (canvas_size - height) // 2
+    canvas.paste(cropped, (offset_x, offset_y), cropped)
+    print(f"Centered on square canvas at ({offset_x}, {offset_y}) of size {canvas_size}x{canvas_size}")
 
-    # Resampling filter: LANCZOS (fallback to ANTIALIAS for older Pillow versions)
+    # Resampling filter: LANCZOS
     try:
         resample_filter = Image.Resampling.LANCZOS
     except AttributeError:
@@ -36,6 +38,7 @@ def generate_favicons():
         "favicon-16x16.png": 16,
         "favicon-32x32.png": 32,
         "favicon-48x48.png": 48,
+        "favicon-64x64.png": 64,
         "apple-touch-icon.png": 180
     }
 
@@ -44,11 +47,10 @@ def generate_favicons():
         resized.save(filename, "PNG")
         print(f"Saved {filename} ({size}x{size})")
 
-    # Generate multi-resolution ICO file containing 16x16, 32x32, and 48x48
-    # ICO expects sizes as a list of tuples
+    # Generate multi-resolution ICO file containing 16x16, 32x32, 48x48, 64x64
     ico_img = canvas.copy()
-    ico_img.save("favicon.ico", format="ICO", sizes=[(16, 16), (32, 32), (48, 48)])
-    print("Saved favicon.ico (multi-resolution containing 16x16, 32x32, 48x48)")
+    ico_img.save("favicon.ico", format="ICO", sizes=[(16, 16), (32, 32), (48, 48), (64, 64)])
+    print("Saved favicon.ico (multi-resolution containing 16x16, 32x32, 48x48, 64x64)")
 
 if __name__ == "__main__":
     generate_favicons()
