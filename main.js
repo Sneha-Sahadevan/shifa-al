@@ -9,6 +9,10 @@ function translateDOM(lang) {
         if (translations[key]) {
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                 el.placeholder = translations[key];
+            } else if (el.tagName === 'META') {
+                el.setAttribute('content', translations[key]);
+            } else if (el.tagName === 'TITLE') {
+                document.title = translations[key];
             } else {
                 let textNodeReplaced = false;
                 for (let i = 0; i < el.childNodes.length; i++) {
@@ -65,6 +69,17 @@ function translateDOM(lang) {
             el.placeholder = window.i18n.ar[ph];
         }
     });
+
+    // 4. Update canonical link dynamically for search engines
+    const canonicalLink = document.getElementById('canonical-link');
+    if (canonicalLink) {
+        const currentUrlWithoutSearch = window.location.protocol + '//' + window.location.host + window.location.pathname;
+        if (lang === 'ar') {
+            canonicalLink.setAttribute('href', `${currentUrlWithoutSearch}?lang=ar`);
+        } else {
+            canonicalLink.setAttribute('href', currentUrlWithoutSearch);
+        }
+    }
 }
 
 function updateLanguageUI(lang) {
@@ -93,8 +108,8 @@ function updateLanguageUI(lang) {
 
 window.switchLanguage = function (lang) {
     localStorage.setItem('shifa_lang', lang);
-    // Update hash for consistency
     const url = new URL(window.location);
+    url.searchParams.set('lang', lang);
     url.hash = `lang=${lang}`;
     window.history.replaceState(null, '', url);
     updateLanguageUI(lang);
@@ -103,7 +118,8 @@ window.switchLanguage = function (lang) {
 document.addEventListener('DOMContentLoaded', () => {
     const topBarContainer = document.querySelector('.top-bar-content');
     
-    let currentLang = localStorage.getItem('shifa_lang') || 'en';
+    const urlParams = new URLSearchParams(window.location.search);
+    let currentLang = urlParams.get('lang') || localStorage.getItem('shifa_lang') || 'en';
     if (window.location.hash.includes('lang=ar')) {
         currentLang = 'ar';
     }

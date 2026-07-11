@@ -489,7 +489,21 @@ const translations = {
         "desc_ejaz": "Dedicated to delivering personalized outpatient care and wellness strategies.",
         "desc_wamiq": "Focuses on acute illness treatment, routine diagnostics, and overall patient management.",
         "desc_shilabatah": "Committed to preventative care, early disease detection, and continuous health maintenance.",
-        "desc_sherin": "Skilled in managing a broad spectrum of acute ailments and general medical checkups."
+        "desc_sherin": "Skilled in managing a broad spectrum of acute ailments and general medical checkups.",
+        "meta_title_index": "Shifa Al Bawadi Medical Services Jeddah | 24/7 Healthcare & Clinic",
+        "meta_desc_index": "Trusted multi-specialty medical services in Jeddah since 2007. 24/7 emergency care, dental, ENT, dermatology, pediatrics, and more. Book your appointment today.",
+        "meta_title_about": "About Us | Shifa Al Bawadi Medical Services Jeddah",
+        "meta_desc_about": "Learn about Shifa Al Bawadi Medical Services Co., providing affordable, high-quality healthcare and advanced medical services in Jeddah since 2007.",
+        "meta_title_departments": "Medical Departments | Shifa Al Bawadi Medical Clinic Jeddah",
+        "meta_desc_departments": "Explore our specialized medical departments in Jeddah including Dental, ENT, Dermatology, Orthopedics, Pediatrics, Gynaecology, Urology, Radiology, and Laboratory.",
+        "meta_title_doctors": "Our Specialist Doctors | Shifa Al Bawadi Medical Jeddah",
+        "meta_desc_doctors": "Meet our team of highly experienced specialist doctors and medical professionals at Shifa Al Bawadi Medical Services in Jeddah.",
+        "meta_title_store": "Medical Offers & Packages Store | Shifa Al Bawadi Jeddah",
+        "meta_desc_store": "Buy exclusive medical packages, dental checkups, laser sessions, dermatology treatments, and comprehensive lab health checks online at Shifa Al Bawadi.",
+        "meta_title_dermatology": "Dermatology & Cosmetology Clinic | Shifa Al Bawadi Jeddah",
+        "meta_desc_dermatology": "Advanced skin care, laser hair removal, fillers, Botox, chemical peeling, and rejuvenation treatments using FDA-approved technology in Jeddah.",
+        "meta_title_contact": "Contact Us & Book Appointment | Shifa Al Bawadi Jeddah",
+        "meta_desc_contact": "Get in touch with Shifa Al Bawadi Medical Services in Jeddah. Call 0126625908 or WhatsApp 0536312869 for appointments and 24/7 emergency services."
     },
     "ar": {
         "nav_home": "الرئيسية",
@@ -981,7 +995,21 @@ const translations = {
         "desc_ejaz": "مكرس لتقديم رعاية خارجية شخصية واستراتيجيات العافية.",
         "desc_wamiq": "يركز على علاج الأمراض الحادة، والتشخيص الروتيني، والإدارة العامة للمرضى.",
         "desc_shilabatah": "ملتزم بالرعاية الوقائية، والكشف المبكر عن الأمراض، والمحافظة المستمرة على الصحة.",
-        "desc_sherin": "ماهرة في إدارة مجموعة واسعة من الأمراض الحادة والفحوصات الطبية العامة."
+        "desc_sherin": "ماهرة في إدارة مجموعة واسعة من الأمراض الحادة والفحوصات الطبية العامة.",
+        "meta_title_index": "مجمع شفاء البوادي الطبي في جدة | خدمات طبية وطوارئ 24/7",
+        "meta_desc_index": "خدمات طبية متعددة التخصصات وموثوقة في جدة منذ عام 2007. طوارئ 24/7، أسنان، أنف وأذن وحنجرة، جلدية، أطفال، والمزيد. احجز موعدك اليوم.",
+        "meta_title_about": "من نحن | مجمع شفاء البوادي الطبي في جدة",
+        "meta_desc_about": "تعرف على شركة مجمع شفاء البوادي الطبي، التي تقدم رعاية صحية عالية الجودة وبأسعار معقولة وخدمات طبية متقدمة في جدة منذ عام 2007.",
+        "meta_title_departments": "الأقسام الطبية | مجمع شفاء البوادي الطبي في جدة",
+        "meta_desc_departments": "تصفح أقسامنا الطبية المتخصصة في جدة بما في ذلك الأسنان، الأنف والأذن والحنجرة، الجلدية، العظام، الأطفال، أمراض النساء، المسالك البولية، الأشعة، والمختبر.",
+        "meta_title_doctors": "أطباؤنا الأخصائيون | مجمع شفاء البوادي الطبي في جدة",
+        "meta_desc_doctors": "تعرف على فريقنا من الأطباء الأخصائيين والكوادر الطبية ذوي الخبرة العالية في مجمع شفاء البوادي الطبي في جدة.",
+        "meta_title_store": "متجر العروض والباقات الطبية | شفاء البوادي جدة",
+        "meta_desc_store": "اشترِ باقات طبية حصرية، فحوصات أسنان، جلسات ليزر، علاجات جلدية، وفحوصات مخبرية شاملة عبر الإنترنت من مجمع شفاء البوادي.",
+        "meta_title_dermatology": "عيادة الجلدية والتجميل | شفاء البوادي جدة",
+        "meta_desc_dermatology": "عناية متقدمة بالبشرة، إزالة الشعر بالليزر، فيلر، بوتوكس، تقشير كيميائي، وعلاجات نضارة باستخدام تقنيات معتمدة من هيئة الغذاء والدواء في جدة.",
+        "meta_title_contact": "اتصل بنا واحجز موعداً | شفاء البوادي جدة",
+        "meta_desc_contact": "تواصل مع مجمع شفاء البوادي الطبي في جدة. اتصل على 0126625908 أو واتساب 0536312869 للمواعيد وخدمات الطوارئ 24/7."
     }
 };
 
